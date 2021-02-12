@@ -10,7 +10,7 @@ const Header = () => {
   //   auth 
   //   cart
   return (
-    <div>Header</div>
+    <div className="text-center">Header</div>
   )
 }
 

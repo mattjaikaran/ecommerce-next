@@ -7,7 +7,7 @@ const Footer = () => {
     //   instagram, pinterest, youtube, facebook
     // add legal links below
   return (
-    <div>Footer</div>
+    <div className="text-center">Footer</div>
   )
 }
 

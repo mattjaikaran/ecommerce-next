@@ -1,10 +1,14 @@
 import styles from '../styles/Home.module.css'
+import Layout from '@components/Layout'
 
 const Home = () => {
   return (
-    <div className={styles.container}>
-      Hello World
-    </div>
+    <Layout className={styles.container}>
+      <div>
+        <h1>Welcome to Ecommerce Store</h1>
+        <h6>Built with NextJS</h6>
+      </div>
+    </Layout>
   )
 }
 

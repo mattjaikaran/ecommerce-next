@@ -1,4 +1,4 @@
-# Ecommerce Next
+# Ecommerce Store Next
 
 Built with:\
 -NextJS\
@@ -9,8 +9,9 @@ Built with:\
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+git clone https://github.com/mattjaikaran/ecommerce-store-nextjs
+cd ecommerce-store-nextjs
+yarn
 yarn dev
 ```
 
