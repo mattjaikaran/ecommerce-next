@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './Header.module.scss'
 
 const Header = () => {
@@ -10,7 +11,13 @@ const Header = () => {
   //   auth 
   //   cart
   return (
-    <div className="text-center">Header</div>
+    <div className="text-center">
+      <Link href="/">Header</Link>
+      <br />
+      <Link href="/product">Product Detail Page</Link>
+      <br />
+      <Link href="/auth">Login/Register</Link>
+    </div>
   )
 }
 
