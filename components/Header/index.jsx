@@ -12,7 +12,7 @@ const Header = () => {
   //   cart
   return (
     <div className="text-center">
-      <Link href="/">Header</Link>
+      <Link href="/">Home</Link>
       <br />
       <Link href="/product">Product Detail Page</Link>
       <br />

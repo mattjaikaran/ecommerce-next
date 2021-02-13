@@ -1,5 +1,6 @@
 import { Row, Col } from 'react-bootstrap'
 import Layout from '@components/Layout'
+import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
 import LeftSideImgCard from '@components/LeftSideImgCard'
@@ -13,6 +14,7 @@ const Home = () => {
         <h6>Built with NextJS</h6>
       </div>
       <div>
+        <Hero />
         <ProductCard />
         <Categories />
         <Row>

@@ -2,7 +2,10 @@
 
 Built with:\
 -NextJS\
--React Bootstrap
+-SCSS\
+-React Bootstrap\
+-React Hook Form\
+
 
 ## Getting Started
 

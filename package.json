@@ -1,6 +1,7 @@
 {
   "name": "ecommerce-next",
   "version": "0.1.0",
+  "author": "Matthew Jaikaran",
   "private": true,
   "scripts": {
     "dev": "next dev",
