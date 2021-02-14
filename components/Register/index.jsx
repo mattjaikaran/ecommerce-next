@@ -1,7 +1,7 @@
 import './Register.module.scss'
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Row, Col, Container } from 'react-bootstrap';
+import { Form, Button, Row, Container } from 'react-bootstrap';
 
 const Register = () => {
 
