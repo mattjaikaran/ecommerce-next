@@ -19,13 +19,14 @@ const Register = () => {
   };
 
   return <>
+
     <form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group controlId="registerEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
           type="email"
           placeholder="email"
-          name="Email"
+          name="email"
           ref={register({
             required: true, pattern:
               /^\S+@\S+$/i
@@ -36,7 +37,7 @@ const Register = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control
           maxLength="10"
-          minLength="10"
+          minLength="6"
           type={passwordShown ? "text" : "password"}
           placeholder="password"
           name="password" ref={register} />
@@ -44,15 +45,13 @@ const Register = () => {
       <Form.Check
         onChange={togglePasswordVisiblity}
         type="checkbox"
-        label="Check me out" />
+        label="view pw" />
       <Form.Group controlId="confirmpassword">
         <Form.Label
           className='mt-3'>
           Password Confirmation</Form.Label>
         <Form.Control
           type={passwordShown ? "text" : "password"}
-          maxLength="10"
-          minLength="10"
           placeholder="password confirmation"
           name="passwordconfirmation"
           ref={register({ max: 0 })} />
