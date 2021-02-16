@@ -1,84 +1,86 @@
 import './Register.module.scss'
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Row, Container, Alert } from 'react-bootstrap';
+import { Form, Button, Row, Container, InputGroup } from 'react-bootstrap';
 
 const Register = () => {
 
   const { register, handleSubmit } = useForm();
-  const [pwError, setPwError] = useState('')
   const [passwordShown, setPasswordShown] = useState(false)
+  const [passwordShownTwo, setPasswordShownTwo] = useState(false)
 
   const onSubmit = (data) => {
     console.log(data)
-    setPwError(data)
   }
 
   const togglePasswordVisiblity = () => {
-    setPasswordShown(passwordShown ? false : true);
+    setPasswordShown(!passwordShown);
+  };
+  
+  const togglePasswordVisiblityTwo = () => {
+    setPasswordShownTwo(!passwordShownTwo);
   };
 
   return <>
 
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Form.Group controlId="registerEmail">
-        <Form.Label>Email address</Form.Label>
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form.Label>Email address</Form.Label>
+      <InputGroup controlId="registerEmail">
         <Form.Control
+          className="mb-3"
           type="email"
           placeholder="email"
           name="email"
           ref={register({
             required: true, pattern:
               /^\S+@\S+$/i
-          })}
-        />
-      </Form.Group>
-      <Form.Group controlId="registerPassword">
-        <Form.Label>Password</Form.Label>
+          })} />
+      </InputGroup>
+      <Form.Label>Password</Form.Label>
+      <InputGroup>
         <Form.Control
           maxLength="10"
           minLength="6"
           type={passwordShown ? "text" : "password"}
           placeholder="password"
           name="password" ref={register} />
-      </Form.Group>
-      <Form.Check
-        onChange={togglePasswordVisiblity}
-        type="checkbox"
-        label="view pw" />
-      <Form.Group controlId="confirmpassword">
-        <Form.Label
-          className='mt-3'>
-          Password Confirmation</Form.Label>
+        <InputGroup.Append>
+          <InputGroup.Text onClick={togglePasswordVisiblity}>
+            Show
+          </InputGroup.Text>
+        </InputGroup.Append>
+      </InputGroup>
+      <Form.Label className='mt-3'>Password Confirmation</Form.Label>
+      <InputGroup>
         <Form.Control
-          type={passwordShown ? "text" : "password"}
+          type={passwordShownTwo ? "text" : "password"}
           placeholder="password confirmation"
-          name="passwordconfirmation"
+          name="passwordConfirmation"
           ref={register({ max: 0 })} />
-      </Form.Group>
-      <Button variant="primary" type="submit">
+        <InputGroup.Append>
+          <InputGroup.Text onClick={togglePasswordVisiblityTwo}>
+            Show
+          </InputGroup.Text>
+        </InputGroup.Append>
+      </InputGroup>
+      <Button variant="primary" type="submit" className='mt-3'>
         Submit
-        </Button>
+      </Button>
       <Container className='button_Container mt-3'>
         <Row>
-          <Button variant="primary" size="md"
-            className="ml-3">
+          <Button variant="primary" size="md">
             FaceBook
-    </Button>{' '}
+          </Button>
           <Button variant="primary" size="md"
-            className="ml-3">
+            className=" mx-5">
             Google
-    </Button>{' '}
-          <Button variant="primary" size="md"
-            className="ml-3">
+          </Button>
+          <Button variant="primary" size="md">
             Apple
-    </Button>{' '}
+          </Button>
         </Row>
-        {pwError.password !==
-          pwError.passwordconfirmation ?
-          <Alert className="mt-3" variant={'warning'}>passwords do not match</Alert> : ''}
       </Container>
-    </form>
+    </Form>
   </>
 }
 export default Register
