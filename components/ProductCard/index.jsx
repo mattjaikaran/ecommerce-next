@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Badge, Button } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
+import styles from './ProductCard.module.scss'
 
 const ProductCard = (props) => {
   // refactor w/ props
@@ -15,8 +16,15 @@ const ProductCard = (props) => {
   }
   
   return (
-    <>
-      <Card style={{ width: '18rem' }}>
+    <div>
+      <div className={`${styles.badgeContainer} text-right`}>
+        <Badge 
+          variant="danger" 
+          className={styles.badge}>
+          Sale
+        </Badge>
+      </div>
+      <Card className={styles.productCard}>
         <Card.Img variant="top" src="https://dummyimage.com/300x400/000/fff" />
         <Card.Body>
           <Card.Title className="text-muted">
@@ -25,7 +33,7 @@ const ProductCard = (props) => {
           <Card.Subtitle className="mb-3">
             ${price.toFixed(2)}
           </Card.Subtitle>
-          <div className="text-center mt-3">
+          <div className="mt-3">
             <Button variant="primary" onClick={handleShow}>
               Quick View
             </Button>
@@ -37,7 +45,7 @@ const ProductCard = (props) => {
         product={props.product}
         addToCart={handleCart} 
         onHide={handleClose} />
-    </>
+    </div>
   )
 }
 

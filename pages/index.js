@@ -21,7 +21,20 @@ const Home = () => {
       </div>
       <div>
         <Hero />
-        <ProductCard product={productObj} />
+        <Row>
+          <Col xs={6} sm={6} md={6} lg={3}>
+            <ProductCard product={productObj} />
+          </Col>
+          <Col xs={6} md={6} lg={3}>
+            <ProductCard product={productObj} />
+          </Col>
+          <Col xs={6} md={6} lg={3}>
+            <ProductCard product={productObj} />
+          </Col>
+          <Col xs={6} md={6} lg={3}>
+            <ProductCard product={productObj} />
+          </Col>
+        </Row>
         <Categories />
         <Row>
           <Col>
