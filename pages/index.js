@@ -7,6 +7,12 @@ import LeftSideImgCard from '@components/LeftSideImgCard'
 import styles from '../styles/Home.module.css'
 
 const Home = () => {
+  const productObj = {
+  id: 1, 
+  title: 'Buckle Wrap Wooden Table',
+  price: 52,
+  quantity: 1
+}
   return (
     <Layout className={styles.container}>
       <div>
@@ -15,7 +21,7 @@ const Home = () => {
       </div>
       <div>
         <Hero />
-        <ProductCard />
+        <ProductCard product={productObj} />
         <Categories />
         <Row>
           <Col>

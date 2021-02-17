@@ -1,6 +1,5 @@
 import { Carousel, Image } from 'react-bootstrap'
 
-
 const slides = [
   {
     id: 1,
@@ -45,6 +44,7 @@ const Hero = () => {
 
   return (
     <Carousel 
+      interval={null}
       controls={false}
       fade={true}>
       {renderHeroImages()}
