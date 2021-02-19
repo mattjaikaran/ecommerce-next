@@ -1,45 +1,67 @@
 import { useState } from 'react'
-import { Card, Badge, Button } from 'react-bootstrap'
+import { Card, Row, Col, Modal, Badge, Button } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
 import styles from './ProductCard.module.scss'
 
 const ProductCard = (props) => {
-  // refactor w/ props
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-  const { title, price } = props.product
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const { title, price, sale, newProduct } = props.product
 
   const handleCart = (e) => {
-    e.preventDefault()
     console.log(props.product)
   }
-  
+
+  const renderBadge = () => {
+    if (newProduct) {
+      return (
+         <Col>
+          <div className={`${styles.badgeContainer} text-left ml-2`}>
+            <Badge 
+              variant="success" 
+              className={styles.badge}>
+              New
+            </Badge>
+          </div>
+        </Col>
+      )
+    }
+    if (sale) {
+      return (
+        <Col>
+          <div className={`${styles.badgeContainer} text-right mr-2`}>
+            <Badge 
+              variant="danger" 
+              className={styles.badge}>
+              Sale
+            </Badge>
+          </div>
+        </Col>
+      )
+    }
+  }
+
   return (
-    <div>
-      <div className={`${styles.badgeContainer} text-right`}>
-        <Badge 
-          variant="danger" 
-          className={styles.badge}>
-          Sale
-        </Badge>
-      </div>
-      <Card className={styles.productCard}>
-        <Card.Img variant="top" src="https://dummyimage.com/300x400/000/fff" />
-        <Card.Body>
-          <Card.Title className="text-muted">
+    <div className={`${styles.productCardContainer} mt-3`}>
+      <Row>
+        {renderBadge()}
+      </Row>
+      <Card className={`${styles.productCard} ${!sale && !newProduct ? 'mt-3' : ''}`}>
+        <Card.Img variant="top" src="https://dummyimage.com/275x360/ccc/000" />
+        <Card.Body className="d-flex flex-column pt-2  px-0">
+          <Card.Title className="text-muted mb-auto h6">
             {title}
           </Card.Title>
-          <Card.Subtitle className="mb-3">
+          <Card.Subtitle>
             ${price.toFixed(2)}
+            {sale && <small className={styles.salePrice}>${sale.salePrice.toFixed(2)}</small>}
           </Card.Subtitle>
-          <div className="mt-3">
-            <Button variant="primary" onClick={handleShow}>
-              Quick View
-            </Button>
-          </div>
         </Card.Body>
       </Card>
+      <Button className={styles.quickView} variant="primary" onClick={handleShow}>
+        Quick View
+      </Button>
       <ProductModal 
         show={show} 
         product={props.product}

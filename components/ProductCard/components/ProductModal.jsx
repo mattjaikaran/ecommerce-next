@@ -1,4 +1,12 @@
-import { Modal, Carousel, Container, Row, Col, Image,  Button } from 'react-bootstrap'
+import { 
+  Modal, 
+  Carousel, 
+  Container, 
+  Row, 
+  Col, 
+  Image, 
+  Button 
+} from 'react-bootstrap'
 
 const slides = [
   {

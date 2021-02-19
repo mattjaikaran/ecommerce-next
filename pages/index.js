@@ -8,16 +8,44 @@ import styles from '../styles/Home.module.css'
 
 const Home = () => {
   const productObj = {
-  id: 1, 
-  title: 'Buckle Wrap Wooden Table',
-  price: 52,
-  quantity: 1
-}
+    id: 1, 
+    title: 'Buckle Wrap Wooden Table',
+    price: 52,
+    quantity: 1,
+    sale: {
+      salePrice: 40
+    },
+    newProduct: false,
+  }
+  const productObjTwo = {
+    id: 2, 
+    title: 'Wooden Coffee Mug',
+    price: 23.99,
+    quantity: 1,
+    sale: false,
+    newProduct: false,
+  }
+  const productObjThree = {
+    id: 3, 
+    title: 'Wooden Bluetooth Speaker',
+    price: 23,
+    quantity: 1,
+    sale: false,
+    newProduct: true,
+  }
+  const productObjFour = {
+    id: 4, 
+    title: 'Wood White Chair',
+    price: 45,
+    quantity: 1,
+    sale: false,
+    newProduct: false,
+  }
+
   return (
     <Layout className={styles.container}>
       <div>
-        <h1>Welcome to Ecommerce Store</h1>
-        <h6>Built with NextJS</h6>
+        <h1>Ecommerce Store</h1>
       </div>
       <div>
         <Hero />
@@ -25,22 +53,22 @@ const Home = () => {
           <Col xs={6} sm={6} md={6} lg={3}>
             <ProductCard product={productObj} />
           </Col>
-          <Col xs={6} md={6} lg={3}>
-            <ProductCard product={productObj} />
+          <Col xs={6} sm={6} md={6} lg={3}>
+            <ProductCard product={productObjTwo} />
           </Col>
-          <Col xs={6} md={6} lg={3}>
-            <ProductCard product={productObj} />
+          <Col xs={6} sm={6} md={6} lg={3}>
+            <ProductCard product={productObjThree} />
           </Col>
-          <Col xs={6} md={6} lg={3}>
-            <ProductCard product={productObj} />
+          <Col xs={6} sm={6} md={6} lg={3}>
+            <ProductCard product={productObjFour} />
           </Col>
         </Row>
         <Categories />
         <Row>
-          <Col>
+          <Col md={6}>
             <LeftSideImgCard />
           </Col>
-          <Col>
+          <Col md={6}>
             <LeftSideImgCard />
           </Col>
         </Row>
