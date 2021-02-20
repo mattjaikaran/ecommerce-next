@@ -4,7 +4,7 @@ import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
 import LeftSideImgCard from '@components/LeftSideImgCard'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 const Home = () => {
   const productObj = {
@@ -50,16 +50,16 @@ const Home = () => {
       <div>
         <Hero />
         <Row>
-          <Col xs={6} sm={6} md={6} lg={3}>
+          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
             <ProductCard product={productObj} />
           </Col>
-          <Col xs={6} sm={6} md={6} lg={3}>
+          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
             <ProductCard product={productObjTwo} />
           </Col>
-          <Col xs={6} sm={6} md={6} lg={3}>
+          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
             <ProductCard product={productObjThree} />
           </Col>
-          <Col xs={6} sm={6} md={6} lg={3}>
+          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
             <ProductCard product={productObjFour} />
           </Col>
         </Row>
