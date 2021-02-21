@@ -18,8 +18,18 @@ const Register = () => {
     console.log('event', event)
   }
 
-  const togglePasswordVisiblity = () => setPasswordShown(!passwordShown)
-  const togglePasswordVisiblityTwo = () => setPasswordConfirmationShown(!passwordConfirmationShown)
+  const togglePasswordVisiblity = (event) => {
+    event.preventDefault()
+    setPasswordShown(!passwordShown)
+  }
+  const togglePasswordVisiblityTwo = (event) => {
+    event.preventDefault()
+    setPasswordConfirmationShown(!passwordConfirmationShown)
+  }
+
+  if(errors) {
+    console.log(errors)
+  }
 
   return (
     <>
@@ -29,11 +39,12 @@ const Register = () => {
           <Form.Control
             className="mb-3"
             type="email"
-            placeholder="email"
+            placeholder="Email"
             name="email"
             ref={register({
               required: true, 
-              pattern: /^\S+@\S+$/i
+              pattern: /^\S+@\S+$/i,
+              message: "Enter a valid email"
             })} />
         </InputGroup>
         <Form.Label>Password</Form.Label>
@@ -42,7 +53,7 @@ const Register = () => {
             maxLength="10"
             minLength="6"
             type={passwordShown ? "text" : "password"}
-            placeholder="password"
+            placeholder="Password"
             name="password" 
             ref={register({
               required: "You must specify a password",
@@ -66,7 +77,7 @@ const Register = () => {
         <InputGroup>
           <Form.Control
             type={passwordConfirmationShown ? "text" : "password"}
-            placeholder="password confirmation"
+            placeholder="Password Confirmation"
             name="passwordConfirmation"
             ref={register({
               validate: value => value === password.current || "The passwords do not match"}
@@ -94,9 +105,13 @@ const Register = () => {
             Apple
           </Button>
         </Row>
-        {errors.passwordConfirmation && (
+        {errors && (
           <Row className="mt-3">
-            <Alert variant="warning">{errors.passwordConfirmation.message}</Alert>
+            {Object.values(errors).map((error, i) => {
+              console.log('error', error)
+              console.log('i', i)
+              return <Alert variant="warning">{error[i].message}</Alert>
+            })}
           </Row>
         )}
       </Form>
