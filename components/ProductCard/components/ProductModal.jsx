@@ -1,3 +1,4 @@
+import { addToCart } from '../../../hooks/addToCart'
 import { 
   Modal, 
   Carousel, 
@@ -30,7 +31,7 @@ const slides = [
 ]
 
 const ProductModal = (props) => {
-  const { product, onHide, addToCart } = props
+  const { product, onHide } = props
 
   const renderSliderImages = () => {
     return slides.map(slide => {
@@ -51,7 +52,7 @@ const ProductModal = (props) => {
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Using Grid in Modal
+          {product.title}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="show-grid">
@@ -74,7 +75,7 @@ const ProductModal = (props) => {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onHide}>Close</Button>
-        <Button onClick={addToCart}>Add to Cart</Button>
+        <Button onClick={() => addToCart(props.product)}>Add to Cart</Button>
       </Modal.Footer>
     </Modal>
   )

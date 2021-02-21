@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { addToCart } from '../../hooks/addToCart'
 import { Card, Row, Col, Modal, Badge, Button } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
 import styles from './ProductCard.module.scss'
@@ -8,10 +9,6 @@ const ProductCard = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { title, price, sale, newProduct } = props.product
-
-  const handleCart = (e) => {
-    console.log(props.product)
-  }
 
   const renderBadge = () => {
     if (newProduct) {
@@ -44,6 +41,14 @@ const ProductCard = (props) => {
 
   return (
     <div className={`${styles.productCardContainer} mt-3`}>
+      <div className={styles.addToCartBtnWrapper}>
+        <Button 
+          variant="outline-secondary" 
+          className={styles.addToCartBtn} 
+          onClick={() => addToCart(props.product)}>
+          Add To Cart
+        </Button>
+      </div>
       <Row>
         {renderBadge()}
       </Row>
@@ -59,16 +64,12 @@ const ProductCard = (props) => {
           </Card.Subtitle>
         </Card.Body>
       </Card>
-      <div className={styles.addToCartBtnWrapper}>
-        <Button variant="outline-secondary" className={styles.addToCartBtn} onClick={handleCart}>Add To Cart</Button>
-      </div>
       <Button className={styles.quickView} variant="primary" onClick={handleShow}>
         Quick View
       </Button>
       <ProductModal 
         show={show} 
         product={props.product}
-        addToCart={handleCart} 
         onHide={handleClose} />
     </div>
   )
