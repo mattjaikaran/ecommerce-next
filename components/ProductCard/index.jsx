@@ -48,7 +48,7 @@ const ProductCard = (props) => {
         {renderBadge()}
       </Row>
       <Card className={`${styles.productCard} ${!sale && !newProduct ? 'mt-3' : ''}`}>
-        <Card.Img variant="top" src="https://dummyimage.com/275x360/ccc/000" fluid={true} />
+        <Card.Img variant="top" src="https://dummyimage.com/275x360/ccc/000" fluid="true" />
         <Card.Body className="d-flex flex-column pt-2 px-0">
           <Card.Title className="text-muted h6">
             {title}
