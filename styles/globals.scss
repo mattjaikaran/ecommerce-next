@@ -1,4 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_root.scss";
 
 a {
   color: inherit;
