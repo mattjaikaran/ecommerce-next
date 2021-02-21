@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { addToCart } from '../../hooks/addToCart'
-import { Card, Row, Col, Modal, Badge, Button } from 'react-bootstrap'
+import { Card, Row, Col, Badge, Button } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
 import styles from './ProductCard.module.scss'
 
@@ -54,12 +54,12 @@ const ProductCard = (props) => {
       </Row>
       <Card className={`${styles.productCard} ${!sale && !newProduct ? 'mt-3' : ''}`}>
         <Card.Img variant="top" src="https://dummyimage.com/275x360/ccc/000" fluid="true" />
-        <Card.Body className="d-flex flex-column pt-2 px-0">
-          <Card.Title className="text-muted h6">
+        <Card.Body className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}>
+          <Card.Title className={`${styles.cardTitle} text-muted`}>
             {title}
           </Card.Title>
-          <Card.Subtitle>
-            ${price.toFixed(2)}
+          <Card.Subtitle className={`${styles.cardSubtitle}`}>
+            <span className={`${sale && 'text-danger'}`}>${price.toFixed(2)}</span>
             {sale && <small className={styles.salePrice}>${sale.salePrice.toFixed(2)}</small>}
           </Card.Subtitle>
         </Card.Body>

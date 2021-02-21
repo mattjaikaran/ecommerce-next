@@ -26,6 +26,13 @@
 
 // mobile
 @media (max-width: 767px) {
+  .productCard {
+    .cardBody {
+      .cardTitle, .cardSubtitle {
+        font-size: 0.75rem !important;
+      }
+    }
+  }
   .addToCartBtnWrapper {
     top: 225px;
   }

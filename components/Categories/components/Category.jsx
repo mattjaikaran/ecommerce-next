@@ -1,11 +1,12 @@
+import { Image } from 'react-bootstrap'
 import '../Categories.module.scss'
 
 
 // single category
-const Category = () => {
+const Category = (props) => {
   return (
     <div>
-      Category
+      <Image src={props.img} fluid />
     </div>
   )
 }
