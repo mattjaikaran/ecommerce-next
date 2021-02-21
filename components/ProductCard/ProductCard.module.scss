@@ -29,7 +29,7 @@
   .productCard {
     .cardBody {
       .cardTitle, .cardSubtitle {
-        font-size: 0.75rem !important;
+        font-size: 0.75rem;
       }
     }
   }
@@ -41,7 +41,11 @@
 // tablet / small desktop
 @media (min-width: 768px) and (max-width: 991px) {
   .productCard {
-    // background-color: var(--blue);
+    .cardBody {
+      .cardTitle, .cardSubtitle {
+        font-size: 0.8rem;
+      }
+    }
   }
   .addToCartBtnWrapper {
     top: 420px;
@@ -50,7 +54,13 @@
 
 // medium desktop
 @media (min-width: 991px) and (max-width: 1199px) {
-  .productCard {}
+  .productCard {
+    .cardBody {
+      .cardTitle, .cardSubtitle {
+        font-size: 0.8rem;
+      }
+    }
+  }
   .addToCartBtnWrapper {
     top: 280px;
   }
@@ -58,7 +68,13 @@
 
 // large desktop
 @media (min-width: 1200px) {
-  .productCard {}
+  .productCard {
+    .cardBody {
+      .cardTitle, .cardSubtitle {
+        font-size: 0.9rem;
+      }
+    }
+  }
   .addToCartBtnWrapper {
     top: 330px;
   }
