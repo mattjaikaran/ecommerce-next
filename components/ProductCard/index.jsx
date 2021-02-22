@@ -59,8 +59,8 @@ const ProductCard = (props) => {
             {title}
           </Card.Title>
           <Card.Subtitle className={`${styles.cardSubtitle}`}>
-            <span className={`${sale && 'text-danger'}`}>${price.toFixed(2)}</span>
-            {sale && <small className={styles.salePrice}>${sale.salePrice.toFixed(2)}</small>}
+            <span className={`${sale && 'text-danger'}`}>${sale ? sale.salePrice.toFixed(2) : price.toFixed(2)}</span>
+            {sale && <small className={styles.salePrice}>${price.toFixed(2)}</small>}
           </Card.Subtitle>
         </Card.Body>
       </Card>
