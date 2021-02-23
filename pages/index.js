@@ -4,6 +4,7 @@ import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
 import MiniProductCard from '@components/MiniProductCard'
+import MiniProductCarousel from '@components/MiniProductCarousel'
 import LeftSideImgCard from '@components/LeftSideImgCard'
 import styles from '../styles/Home.module.scss'
 
@@ -73,6 +74,7 @@ const Home = () => {
           </Col>
         </Row>
         <Categories />
+        <MiniProductCarousel />
         <Row>
           <Col xs={6} sm={4}>
             <MiniProductCard product={productObj} />
