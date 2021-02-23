@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Layout from '@components/Layout'
 import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'

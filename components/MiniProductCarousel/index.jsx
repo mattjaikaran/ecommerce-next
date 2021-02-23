@@ -1,77 +1,57 @@
 import { useState, useEffect } from 'react'
+// import { useAsync } from '@hooks/useAsync'
 import axios from 'axios'
-import { Carousel, Row, Col, Image } from 'react-bootstrap'
+import Slider from 'react-slick'
+import { Container, Row, Col, Image, Button } from 'react-bootstrap'
 import MiniProductCard from '@components/MiniProductCard'
 
-const slides = [
-  {
-    id: 1,
-    img: 'https://dummyimage.com/800x400/000/fff',
-    title: 'First Slide',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    id: 2,
-    img: 'https://dummyimage.com/800x400/000/fff',
-    title: 'Second Slide',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    id: 3,
-    img: 'https://dummyimage.com/800x400/000/fff',
-    title: 'Third Slide',
-    description: ''
-  },
-]
 
 const MiniProductCarousel = () => {
-  const [loading, setLoading] = useState(false)
-  const [products, setProducts] = useState([])
-
-  const renderData = async () => {
-      setLoading(true)
-      try {
-        const response = await axios.get('http://localhost:3000/api/products')
-        console.log(response)
-        setProducts(response.data.products)
-      } catch (err) {
-        console.log(err)
-      }
-      setLoading(false)
-    }
-
-  const renderHeroImages = () => {
-    console.log('product!!!!!', products)
-    if (products) {
-      return products.map(product => {
-        const { id } = product
-        return (
-          <Carousel.Item key={id}>
-            <MiniProductCard {...product} />
-          </Carousel.Item>
-        )
-      })
-    }
+  const [slides, setSlides] = useState([1, 2, 3, 4, 5, 6])
+  const [products, setProducts] = useState(null)
+  const sliderSettings = {
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
   }
 
-  
-  useEffect(() => {
-    renderData()
-  }, [])
+  const handleClick = () => {
+    console.log(slides)
+    setSlides(slides.length === 3 ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [1, 2, 3])
+  }
+
+  const renderSlides = () => {
+    if (!products) {
+      return <p>Loading....</p>
+    }
+    return products.map(product => (
+      <Col 
+        key={product.id}
+        className="px-0"
+        xs={6} sm={6} md={4}>
+        <MiniProductCard {...product} />
+      </Col>
+    ))
+  }
+
+  const renderData = async () => {
+    const response = await axios.get('http://localhost:3000/api/products')
+    return setProducts(response.data.products)
+  }
+
+  useEffect(() => renderData(), [])
 
   return (
-    <div>
-      {loading && <p>Loading...</p>}
-      {/* {products && renderHeroImages()} */}
-      {products && (
-        <Carousel 
-          interval={null}
-          controls={false}
-          fade={true}>
-          {renderHeroImages()}
-        </Carousel>
-      )}
-    </div>
+    <Container>
+      <p>carousel</p>
+      <Row className="text-center px-3">
+        {renderSlides()}
+      </Row>
+      {/* <Button onClick={handleClick}>Click</Button> */}
+    </Container>
   )
 }
 
