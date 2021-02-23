@@ -3,6 +3,7 @@ import Layout from '@components/Layout'
 import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
+import CategorySlider from '@components/CategorySlider'
 import LeftSideImgCard from '@components/LeftSideImgCard'
 import styles from '../styles/Home.module.scss'
 
@@ -64,6 +65,12 @@ const Home = () => {
           </Col>
         </Row>
         <Categories />
+        <CategorySlider 
+          title="Decoration"
+          description="Small be and the rain would phase distance, succeed align." />
+        <CategorySlider 
+          title="Architect"
+          description="Small be and the rain would phase distance, succeed align." />
         <Row>
           <Col md={6}>
             <LeftSideImgCard />
