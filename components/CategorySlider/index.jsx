@@ -39,9 +39,9 @@ const productObjFour = {
 
 const CategorySlider = (props) => {
   return (
-    <div className="mt-3 p-5">
+    <div className="mt-3 p-md-5">
       <Row>
-        <Col sm={4}>
+        <Col md={4}>
           <h3>{props.title}</h3>
           <p className="pr-5">
             <small className="text-muted">
@@ -50,32 +50,33 @@ const CategorySlider = (props) => {
           </p>
           <Button>Shop Now</Button>
         </Col>
-        <Col sm={8}>
+        <Col md={8}>
           <Carousel 
+            id="categoryCarousel"
             interval={null}
             indicators={false}>
-            <Carousel.Item>
-              <Row>
-                <Col>
+            <Carousel.Item className={styles.categoryCarouselItem}>
+              <Row className={styles.categoryCarouselItemRow}>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObj} />
                 </Col>
-                <Col>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObjTwo} />
                 </Col>
-                <Col>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObjThree} />
                 </Col>
               </Row>
             </Carousel.Item>
-            <Carousel.Item>
-              <Row>
-                <Col>
+            <Carousel.Item className={styles.categoryCarouselItem}>
+              <Row className={styles.categoryCarouselItemRow}>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObj} />
                 </Col>
-                <Col>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObjTwo} />
                 </Col>
-                <Col>
+                <Col className={styles.categoryCarouselItemRowCol}>
                   <ProductCard product={productObjFour} />
                 </Col>
               </Row>

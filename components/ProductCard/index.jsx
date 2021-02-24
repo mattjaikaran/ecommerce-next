@@ -5,9 +5,9 @@ import ProductModal from './components/ProductModal'
 import styles from './ProductCard.module.scss'
 
 const ProductCard = (props) => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
   const { title, price, sale, newProduct } = props.product
 
   const renderBadge = () => {
