@@ -12,3 +12,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 767px) {
+  .d-xs-none {
+    display: none !important;
+  }
+}

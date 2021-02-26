@@ -48,11 +48,14 @@ const ProductCard = (props) => {
           onClick={() => addToCart(props.product)}>
           Add To Cart
         </Button>
+         <Button className={styles.quickView} variant="primary" onClick={handleShow}>
+          Quick View
+        </Button>
       </div>
       <Row>
         {renderBadge()}
       </Row>
-      <Card className={`${styles.productCard} ${!sale && !newProduct ? 'mt-3' : ''}`}>
+      <Card onClick={handleShow} className={`${styles.productCard} ${!sale && !newProduct ? 'mt-3' : ''}`}>
         <Card.Img variant="top" src="https://dummyimage.com/275x360/ccc/000" fluid="true" />
         <Card.Body className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}>
           <Card.Title className={`${styles.cardTitle} text-muted`}>
@@ -64,7 +67,7 @@ const ProductCard = (props) => {
           </Card.Subtitle>
         </Card.Body>
       </Card>
-      <Button className={styles.quickView} variant="primary" onClick={handleShow}>
+       <Button className={`${styles.quickViewDesktop} d-xs-none`} variant="primary" onClick={handleShow}>
         Quick View
       </Button>
       <ProductModal 

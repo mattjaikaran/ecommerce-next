@@ -14,7 +14,6 @@
   .addToCartBtnWrapper {
     position: relative;
     text-align: center;
-    .addToCartBtn {}
   }
 
   .salePrice {
@@ -35,6 +34,12 @@
   }
   .addToCartBtnWrapper {
     top: 225px;
+    .addToCartBtn {
+      font-size: 10px;
+    }
+    .quickView {
+     font-size: 10px;
+    }
   }
 }
 
@@ -76,9 +81,6 @@
     }
   }
   .addToCartBtnWrapper {
-    // top: 330px;
+    top: 330px;
   }
 }
-
-
-
