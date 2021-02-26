@@ -8,6 +8,12 @@
       "@hooks/*": [
         "hooks/*"
       ],
+      "@icons/*": [
+        "assets/icons/*"
+      ],
+      "@images/*": [
+        "assets/images/*"
+      ],
     }
   }
 }

@@ -8,7 +8,7 @@ const products = [
       salePrice: 40
     },
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -18,7 +18,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -28,7 +28,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: true,
   },
   {
@@ -38,7 +38,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -50,7 +50,7 @@ const products = [
       salePrice: 49.99
     },
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -60,7 +60,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -70,7 +70,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: true,
   },
   {
@@ -80,7 +80,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
   {
@@ -90,7 +90,7 @@ const products = [
     quantity: 1,
     sale: false,
     img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
+    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
 ]
