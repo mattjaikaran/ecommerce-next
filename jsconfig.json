@@ -7,7 +7,7 @@
       ],
       "@hooks/*": [
         "hooks/*"
-      ],
+      ]
       // "@icons/*": [
       //   "assets/icons/*"
       // ],
