@@ -1,0 +1,39 @@
+.salePrice {
+    margin-left: 0.75rem;
+    text-decoration: line-through;
+  }
+
+.productImgWrapper {
+  padding-left: 0 !important;
+  padding-right: .5rem !important;
+  padding-top: .5rem !important;
+}
+
+.cardBody {
+  padding: 0.5rem;
+}
+
+.cardSubtitle {
+  margin-top: auto;
+}
+.titleWrapper {
+  margin-top: 2%;
+  line-height: 20px !important; 
+}
+
+  @media (max-width: 767px) {
+    .productImgWrapper {
+      padding-left: 0 !important;
+      padding-right: .5rem !important;
+      padding-top: .3rem !important;
+    }
+    .card-body {
+      padding: 0.9rem;
+    }
+    .titleWrapper {
+      line-height: 10px !important; 
+      .title {
+        font-size: 50%;
+      }
+    }
+  }
