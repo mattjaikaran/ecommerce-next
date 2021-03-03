@@ -38,12 +38,16 @@
     }
   }
   .addToCartBtnWrapper {
-    top: 225px;
+    bottom: 100px;
     .addToCartBtn {
       font-size: 10px;
+      display: inline;
+      width: 150px !important;
     }
     .quickView {
-     font-size: 10px;
+      font-size: 10px;
+      display: inline;
+      width: 150px !important;
     }
   }
 }
@@ -59,7 +63,7 @@
     }
   }
   .addToCartBtnWrapper {
-    // top: 420px;
+    bottom: 130px;
   }
 }
 
@@ -74,7 +78,7 @@
     }
   }
   .addToCartBtnWrapper {
-    // top: 280px;
+    bottom: 150px;
   }
 }
 
@@ -89,7 +93,6 @@
     }
   }
   .addToCartBtnWrapper {
-    // top: 330px;
     margin-top: -130px;
     margin-bottom: 100px;
   }

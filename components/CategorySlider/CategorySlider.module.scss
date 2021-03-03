@@ -1,8 +1,9 @@
 
 .categoryCarousel {
-  a {
-    width: 3% !important;
-  }
+  // a {
+  //   width: 14% !important;
+  //   right: -32px;
+  // }
   .categoryCarouselItemRowCol {
     div {
       div {
@@ -16,6 +17,17 @@
 
 @media (max-width: 767px) {
   .categoryCarousel {
+    a {
+      width: 6% !important;
+      bottom: 170px !important;
+    }
+    
+    // .carousel-control-next, .carousel-control-prev {
+    //   width: 10% !important;
+    //   bottom: 50px !important;
+    // }
+    .carousel-control-prev {
+    }
     .categoryCarouselItemRowCol {
       div {
         left: 0;
@@ -39,9 +51,31 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .categoryCarousel {
+    a {
+      width: 8% !important;
+      bottom: 130px !important;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .categoryCarousel {
+    a {
+      width: 5% !important;
+      bottom: 130px !important;
+    }
+  }
+}
+
 
 @media (min-width: 1200px) {
   .categoryCarousel {
+    a {
+      bottom: 80px !important;
+      width: 8% !important;
+    }
     .categoryCarouselItemRowCol {
       div {
         div {
