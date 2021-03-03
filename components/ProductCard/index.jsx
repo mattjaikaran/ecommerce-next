@@ -64,11 +64,11 @@ const ProductCard = (props) => {
           className={styles.addToCartBtn} 
           onClick={() => addToCart(props.product)}>
           <span>Add To Cart</span>
-          <Image src={ShoppingCart} className={styles.shoppingCartIcon} alt="cart" />
+          {/* <Image src={ShoppingCart} className={styles.shoppingCartIcon} alt="cart" /> */}
         </Button>
          <Button className={styles.quickView} variant="primary" onClick={handleShow}>
           Quick View
-          <Image src={View} className={styles.shoppingCartIcon} alt="cart" />
+          {/* <Image src={View} className={styles.shoppingCartIcon} alt="cart" /> */}
         </Button>
       </div>
        {/* <Button className={`${styles.quickViewDesktop} d-xs-none`} variant="primary" onClick={handleShow}>

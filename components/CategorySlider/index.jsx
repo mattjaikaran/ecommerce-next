@@ -42,7 +42,7 @@ const CategorySlider = (props) => {
   return (
     <div className="mt-3">
       <Row>
-        <Col md={3}>
+        <Col className="mt-md-5 mb-xs-3" md={3}>
           <h3>{title}</h3>
           <p className="pr-5">
             <small className="text-muted">
