@@ -1,10 +1,9 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import Layout from '@components/Layout'
 import Hero from '@components/Hero'
 import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
-import MiniProductCard from '@components/MiniProductCard'
-import MiniProductCardGrid from '@components/MiniProductCardGrid'
+import CategorySlider from '@components/CategorySlider'
 import LeftSideImgCard from '@components/LeftSideImgCard'
 import styles from '../styles/Home.module.scss'
 
@@ -17,8 +16,6 @@ const Home = () => {
     sale: {
       salePrice: 40
     },
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
     newProduct: false,
   }
   const productObjTwo = {
@@ -27,8 +24,6 @@ const Home = () => {
     price: 23.99,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
     newProduct: false,
   }
   const productObjThree = {
@@ -37,8 +32,6 @@ const Home = () => {
     price: 23,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
     newProduct: true,
   }
   const productObjFour = {
@@ -47,8 +40,6 @@ const Home = () => {
     price: 45,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/100x100/ccc/000',
     newProduct: false,
   }
 
@@ -74,18 +65,12 @@ const Home = () => {
           </Col>
         </Row>
         <Categories />
-        <MiniProductCardGrid />
-        <Row>
-          <Col xs={6} sm={4}>
-            <MiniProductCard product={productObj} />
-          </Col>
-          <Col xs={6} sm={4}>
-            <MiniProductCard product={productObjTwo} />
-          </Col>
-          <Col xs={6} sm={4}>
-            <MiniProductCard product={productObjThree} />
-          </Col>
-        </Row>
+        <CategorySlider 
+          title="Decoration"
+          description="Small be and the rain would phase distance, succeed align." />
+        <CategorySlider 
+          title="Architect"
+          description="Small be and the rain would phase distance, succeed align." />
         <Row>
           <Col md={6}>
             <LeftSideImgCard />

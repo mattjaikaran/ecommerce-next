@@ -5,6 +5,9 @@
       "@components/*": [
         "components/*"
       ],
+      "@icons/*": [
+        "assets/icons/*"
+      ],
       "@hooks/*": [
         "hooks/*"
       ]

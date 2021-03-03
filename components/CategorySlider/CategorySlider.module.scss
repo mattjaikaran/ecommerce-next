@@ -1,0 +1,54 @@
+
+.categoryCarousel {
+  a {
+    width: 3% !important;
+  }
+  .categoryCarouselItemRowCol {
+    div {
+      div {
+        // background-color: blue;
+        // top: 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .categoryCarousel {
+    .categoryCarouselItemRowCol {
+      div {
+        left: 0;
+        div {
+          bottom: 45px;
+          margin-left: 0px;
+          
+          button {
+            width: 90px;
+            font-size: 10px;
+          }
+        }
+        // quick view btn
+        button {
+          // width: 95px;
+          // margin-top: 5px;
+          // font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .categoryCarousel {
+    .categoryCarouselItemRowCol {
+      div {
+        div {
+          // background-color: blue;
+          // top: 0;
+        }
+      }
+    }
+  }
+}
