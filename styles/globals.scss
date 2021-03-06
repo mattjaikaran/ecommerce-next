@@ -5,8 +5,8 @@
 @import "~bootstrap/scss/_root.scss";
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: black !important;
+  text-decoration: underline !important;
 }
 
 * {

@@ -8,6 +8,9 @@
       "@icons/*": [
         "assets/icons/*"
       ],
+      "@images/*": [
+        "assets/images/*"
+      ],
       "@hooks/*": [
         "hooks/*"
       ]

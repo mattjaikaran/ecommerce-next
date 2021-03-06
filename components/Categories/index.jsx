@@ -1,29 +1,64 @@
 import { Row, Col} from 'react-bootstrap'
 import Category from './components/Category'
-
+import barstool from '@images/barstool.png'
+import barstoolBlack from '@images/barstool-black.png'
+import chair from '@images/chair.png'
+import chair2 from '@images/chair2.png'
+import couch from '@images/couch.png'
 
 const Categories = () => {
   return (
-    <div className="text-center mt-5">
+    <div className='text-center mt-5'>
       <Row>
         <Col md={9}>
           <Row>
-            <Col className="mb-3" xs={12} md={7}>
-              <Category img="https://dummyimage.com/650x390/f1d1d0/000" />
+            <Col className='mb-3' xs={12} md={7}>
+              <Category
+                color='pink'
+                img={barstool}
+                hashtag='New Arrivals'
+                title='Suitable Wood Tool'
+                link='/product-detail'
+              />
             </Col>
-            <Col className="mb-3" xs={6} md={5}>
-              <Category img="https://dummyimage.com/350x300/c7ffd8/000" />
+            <Col className='mb-3' xs={6} md={5}>
+              <Category
+                color='teal'
+                img={chair}
+                hashtag='Featured'
+                title='Wood Chair'
+                link='/product-detail'
+              />
             </Col>
-            <Col className="mb-3" xs={6} md={5}>
-              <Category img="https://dummyimage.com/350x300/6ddccf/000" />
+            <Col className='mb-3' xs={6} md={5}>
+              <Category
+                color='green'
+                img={chair2}
+                hashtag='Most Popular'
+                title='Living Room Furniture'
+                link='/product-detail'
+              />
             </Col>
-            <Col className="mb-3" md={7}>
-              <Category img="https://dummyimage.com/650x390/a7c5eb/000" />
+            <Col className='mb-3' md={7}>
+              <Category
+                color='purple'
+                img={couch}
+                hashtag='Hot Collection'
+                title='Couches'
+                link='/product-detail'
+              />
             </Col>
           </Row>
         </Col>
-        <Col className="mb-3" md={3}>
-          <Category img="https://dummyimage.com/450x1020/ffefa1/000" />
+        <Col className='mb-3' md={3}>
+          <Category
+            imgRight
+            color='yellow'
+            img={barstoolBlack}
+            hashtag='Trending Now'
+            title='Barstools for Kitchen'
+            link='/product-detail'
+          />
         </Col>
       </Row>
     </div>
