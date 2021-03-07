@@ -8,56 +8,56 @@ import couch from '@images/couch.png'
 
 const Categories = () => {
   return (
-    <div className='text-center mt-5'>
+    <div className="text-center mt-5">
       <Row>
         <Col md={9}>
           <Row>
-            <Col className='mb-3' xs={12} md={7}>
+            <Col className="mb-3" xs={12} md={7}>
               <Category
-                color='pink'
+                color="pink"
                 img={barstool}
-                hashtag='New Arrivals'
-                title='Suitable Wood Tool'
-                link='/product-detail'
+                hashtag="New Arrivals"
+                title="Suitable Wood Tool"
+                link="/product-detail"
               />
             </Col>
-            <Col className='mb-3' xs={6} md={5}>
+            <Col className="mb-3" xs={6} md={5}>
               <Category
-                color='teal'
+                color="teal"
                 img={chair}
-                hashtag='Featured'
-                title='Wood Chair'
-                link='/product-detail'
+                hashtag="Featured"
+                title="Wood Chair"
+                link="/product-detail"
               />
             </Col>
-            <Col className='mb-3' xs={6} md={5}>
+            <Col className="mb-3" xs={6} md={5}>
               <Category
-                color='green'
+                color="green"
                 img={chair2}
-                hashtag='Most Popular'
-                title='Living Room Furniture'
-                link='/product-detail'
+                hashtag="Most Popular"
+                title="Living Room Furniture"
+                link="/product-detail"
               />
             </Col>
-            <Col className='mb-3' md={7}>
+            <Col className="mb-3" md={7}>
               <Category
-                color='purple'
+                color="purple"
                 img={couch}
-                hashtag='Hot Collection'
-                title='Couches'
-                link='/product-detail'
+                hashtag="Hot Collection"
+                title="Couches"
+                link="/product-detail"
               />
             </Col>
           </Row>
         </Col>
-        <Col className='mb-3' md={3}>
+        <Col className="mb-3" md={3}>
           <Category
             imgRight
-            color='yellow'
+            color="yellow"
             img={barstoolBlack}
-            hashtag='Trending Now'
-            title='Barstools for Kitchen'
-            link='/product-detail'
+            hashtag="Trending Now"
+            title="Barstools for Kitchen"
+            link="/product-detail"
           />
         </Col>
       </Row>

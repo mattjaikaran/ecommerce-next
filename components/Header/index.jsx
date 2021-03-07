@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TopNav from './components/TopNav'
+import MainNav from './components/MainNav'
 import './Header.module.scss'
 
 const Header = () => {
@@ -12,11 +14,8 @@ const Header = () => {
   //   cart
   return (
     <div className="text-center">
-      <Link href="/">Home</Link>
-      <br />
-      <Link href="/product">Product Detail Page</Link>
-      <br />
-      <Link href="/auth">Login/Register</Link>
+      <TopNav />
+      <MainNav />
     </div>
   )
 }
