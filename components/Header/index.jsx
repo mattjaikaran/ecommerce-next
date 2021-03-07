@@ -14,7 +14,7 @@ const Header = () => {
   //   cart
   return (
     <div className="text-center">
-      <TopNav />
+      <TopNav /> 
       <MainNav />
     </div>
   )

@@ -8,6 +8,10 @@ a {
   color: black !important;
   text-decoration: underline !important;
 }
+.nav-item {
+  .dropdown-menu {
+  }
+}
 
 * {
   box-sizing: border-box;

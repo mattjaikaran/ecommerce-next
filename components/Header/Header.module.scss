@@ -1,5 +1,7 @@
 .navbarContainer {
-  padding: 3% 0;
+  // padding: 3% 0;
+  text-transform: uppercase;
+  font-weight: 300;
   a {
     text-decoration: none !important;
     &:hover {
@@ -11,6 +13,8 @@
 .topNavContainer {
   a {
     text-decoration: none !important;
+    color: #6c757d !important;
+    font-weight: 3;
     &:hover {
       text-decoration: underline;
     }
@@ -25,14 +29,15 @@
     .brandContainer {
       text-align: left;
     }
-    .toggleDropdownContainer {
-    }
+    .toggleDropdownContainer {}
   }
   .topNavContainer {
     .leftSide {
-      text-align: center;
+      justify-content: center;
     }
-    .rightSide {}
+    .rightSide {
+      justify-content: center;
+    }
   }
 }
 
@@ -49,8 +54,13 @@
 @media (min-width: 768px) {
   .topNavContainer {
     .leftSide {
-      text-align: left;
+      justify-content: start;
     }
-    .rightSide {}
+    .rightSide {
+      justify-content: end;
+    }
+  }
+  .navbarContainer {
+    padding: 3%;
   }
 }
