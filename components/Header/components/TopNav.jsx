@@ -30,7 +30,7 @@ const TopNav = () => {
               <small>Blog</small>
             </Nav.Link>
             <span className="pt-2">•</span>
-            <Nav.Link href="#">
+            <Nav.Link href="/login">
               <small>Login</small>
             </Nav.Link>
           </Nav>

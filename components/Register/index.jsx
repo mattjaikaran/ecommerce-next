@@ -91,7 +91,8 @@ const Register = () => {
         <Button variant="primary" type="submit" className="mt-3">
           Submit
         </Button>
-        <Row className="mt-3">
+        <div className="mt-3">
+          <p>Or</p>
           <Button variant="primary" size="md">
             FaceBook
           </Button>
@@ -104,7 +105,7 @@ const Register = () => {
           <Button variant="primary" size="md">
             Apple
           </Button>
-        </Row>
+        </div>
         {errors && (
           <Row className="mt-3">
             {Object.values(errors).map((error, i) => {

@@ -1,11 +1,11 @@
 import Layout from "@components/Layout"
 
-const ProductID = () => {
+const CategoryID = () => {
   return (
     <Layout>
-      <h2>Product ID</h2>
+      <h1>Category ID</h1>
     </Layout>
   )
 }
 
-export default ProductID
+export default CategoryID
