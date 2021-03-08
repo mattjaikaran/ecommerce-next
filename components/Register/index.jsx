@@ -73,7 +73,7 @@ const Register = () => {
             <Alert variant="warning">{errors.password.message}</Alert>
           </Row>
         )}
-        <Form.Label className='mt-3'>Password Confirmation</Form.Label>
+        <Form.Label className="mt-3">Password Confirmation</Form.Label>
         <InputGroup>
           <Form.Control
             type={passwordConfirmationShown ? "text" : "password"}

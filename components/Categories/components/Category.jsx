@@ -17,7 +17,7 @@ const Category = (props) => {
   if (imgRight) {
     return (
       <div className={`${colorProp} ${styles.categoryCard} text-left`}>
-        <Row className='p-5'>
+        <Row className="p-5">
           <Col>
             <p>
               <small>#{hashtag}</small>
@@ -36,7 +36,7 @@ const Category = (props) => {
   }
     return (
       <div className={`${colorProp} ${styles.categoryCard} text-left`}>
-        <Row className='p-5'>
+        <Row className="p-5">
           <Col xs={6}>
             <Image src={img} fluid />
           </Col>
