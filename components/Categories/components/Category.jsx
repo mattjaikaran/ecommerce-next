@@ -37,10 +37,10 @@ const Category = (props) => {
     return (
       <div className={`${colorProp} ${styles.categoryCard} text-left`}>
         <Row className="p-5">
-          <Col xs={6}>
-            <Image src={img} fluid />
+          <Col xs={{ order: 2 }} sm={{ order: 2 }} md={6}>
+            <Image className={styles.productImg} src={img} />
           </Col>
-          <Col xs={6}>
+          <Col xs={{ order: 1 }} sm={{ order: 1 }} md={6}>
             <p>
               <small>#{hashtag}</small>
             </p>
