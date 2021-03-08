@@ -17,8 +17,8 @@ const Category = (props) => {
   if (imgRight) {
     return (
       <div className={`${colorProp} ${styles.categoryCard} text-left`}>
-        <Row className="p-5">
-          <Col>
+        <Row className="py-3">
+          <Col className="text-left py-4 px-5">
             <p>
               <small>#{hashtag}</small>
             </p>
@@ -27,7 +27,7 @@ const Category = (props) => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12} className="pb-3 text-center">
             <Image src={img} fluid />
           </Col>
         </Row>
@@ -35,12 +35,20 @@ const Category = (props) => {
     )
   }
     return (
-      <div className={`${colorProp} ${styles.categoryCard} text-left`}>
-        <Row className="p-5">
-          <Col xs={{ order: 2 }} sm={{ order: 2 }} md={6}>
+      <div className={`${colorProp} ${styles.categoryCard}`}>
+        <Row className="py-3">
+          <Col
+            className="text-center"
+            xs={{ order: 2, span: 12 }}
+            sm={{ order: 2, span: 6 }}
+            md={7}>
             <Image className={styles.productImg} src={img} />
           </Col>
-          <Col xs={{ order: 1 }} sm={{ order: 1 }} md={6}>
+          <Col
+            className="text-left pt-5 pr-sm-0 pl-5"
+            xs={{ order: 1, span: 12 }}
+            sm={{ order: 1, span: 6 }}
+            md={5}>
             <p>
               <small>#{hashtag}</small>
             </p>
