@@ -5,10 +5,10 @@ import styles from "./ProductGraphic.module.scss"
 const ProductGraphic = ({ leftSide, img, description, product, productDescription, cta }) => {
   if (leftSide) {
     return (
-      <div className="bg-light text-center p-3">
+      <div className="bg-light text-center p-3 mb-3">
         <Row>
-          <Col sm={6} />
-          <Col sm={6}>
+          <Col sm={5} />
+          <Col sm={7}>
             <h5 className={styles.title}>
               {description} <span className={styles.product}>{product}</span>
             </h5>
@@ -31,9 +31,9 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
     )
   }
   return (
-    <div className="bg-light text-center p-3">
+    <div className="bg-light text-center p-3 mb-3">
       <Row>
-        <Col sm={9}>
+        <Col sm={12}>
           <h5 className={styles.title}>
             {description} <span className={styles.product}>{product}</span>
           </h5>
