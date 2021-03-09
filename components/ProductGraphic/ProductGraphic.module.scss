@@ -11,6 +11,13 @@
     color: #6c757d!important;
     font-weight: 300 !important;
   }
+  a {
+    color: black;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 @media (max-width: 767px) {

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Row, Col, Image } from 'react-bootstrap'
 import styles from "./ProductGraphic.module.scss"
 
-const ProductGraphic = ({ leftSide, img, description, product, productDescription, cta }) => {
+const ProductGraphic = ({ leftSide, img, description, product, productDescription, ctaText, ctaLink }) => {
   if (leftSide) {
     return (
       <div className="bg-light text-center p-3 mb-3">
@@ -18,7 +18,9 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
                   {productDescription}
                 </small>
               </p>
-              <Link href="/">{cta}</Link>
+              <div className={styles.cta}>
+                <Link href={ctaLink}>{ctaText}</Link>
+              </div>
             </div>
           </Col>
         </Row>
@@ -43,7 +45,9 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
                 {productDescription}
               </small>
             </p>
-            <Link href="/">{cta}</Link>
+            <Link className={styles.cta} href={ctaLink}>
+              {ctaText}
+            </Link>
           </div>
         </Col>
       </Row>

@@ -57,7 +57,8 @@ const Home = () => {
             description="Comfortable"
             product="Chair"
             productDescription="Browse our collection."
-            cta="View Now"
+            ctaText="View Now"
+            ctaLink="/category/living-room"
           />
         </Col>
         <Col md={6}>
@@ -66,7 +67,8 @@ const Home = () => {
             description="Modern"
             product="Entertainment Center"
             productDescription="Browse living room furniture."
-            cta="View Now"
+            ctaText="View Now"
+            ctaLink="/category/living-room"
           />
         </Col>
       </Row>
@@ -87,11 +89,11 @@ const Home = () => {
       <MiniProductCardGrid />
       <Categories />
       <CategorySlider
-        title="Decoration"
+        title="Featured"
         description="Small be and the rain would phase distance, succeed align."
       />
       <CategorySlider
-        title="Architect"
+        title="New Arrivals"
         description="Small be and the rain would phase distance, succeed align."
       />
     </Layout>
