@@ -5,8 +5,8 @@ const TopNav = () => {
   return (
     <Container className={styles.topNavContainer}>
       <Row>
-        <Col md={6} lg={8} className={styles.leftSide}>
-          <Nav activeKey="/home">
+        <Col md={6} lg={7} xl={8} className={styles.leftSide}>
+          <Nav>
             <Nav.Link href="#">
               <small>(888)-555-0197</small>
             </Nav.Link>
@@ -16,8 +16,8 @@ const TopNav = () => {
             </Nav.Link>
           </Nav>
         </Col>
-        <Col md={6} lg={4} className={styles.rightSide}>
-          <Nav activeKey="/home">
+        <Col md={6} lg={5} xl={4} className={styles.rightSide}>
+          <Nav>
             <Nav.Link href="#">
               <small>Account</small>
             </Nav.Link>
