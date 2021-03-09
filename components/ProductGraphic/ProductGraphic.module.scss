@@ -1,0 +1,32 @@
+.title {
+  font-weight: 100 !important;
+  text-align: left;
+  .product {
+    font-weight: 400 !important;
+  }
+}
+.productDescriptionContainer {
+  text-align: left;
+  .productDescription {
+    color: #6c757d!important;
+    font-weight: 300 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+  .productDescriptionContainer {
+  text-align: center;
+  }
+  .imgContainer {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .imgContainer {
+    margin-top: -2%;
+  }
+}

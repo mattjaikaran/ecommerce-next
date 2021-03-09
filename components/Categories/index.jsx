@@ -17,7 +17,7 @@ const Categories = () => {
                 color="pink"
                 img={table}
                 hashtag="New Arrivals"
-                title="Suitable Wood Tool"
+                title="Kitchen Table"
                 link="/product-detail"
               />
             </Col>
@@ -26,7 +26,7 @@ const Categories = () => {
                 color="teal"
                 img={chair}
                 hashtag="Featured"
-                title="Wood Chair"
+                title="Wooden Couch"
                 link="/product-detail"
               />
             </Col>
@@ -35,7 +35,7 @@ const Categories = () => {
                 color="green"
                 img={chair2}
                 hashtag="Most Popular"
-                title="Living Room Furniture"
+                title="Living Room"
                 link="/product-detail"
               />
             </Col>
@@ -56,7 +56,7 @@ const Categories = () => {
             color="yellow"
             img={barstoolBlack}
             hashtag="Trending Now"
-            title="Barstools for Kitchen"
+            title="Kitchen Barstools"
             link="/product-detail"
           />
         </Col>

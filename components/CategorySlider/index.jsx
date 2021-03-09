@@ -37,22 +37,19 @@ const productObjFour = {
   newProduct: false,
 }
 
-const CategorySlider = (props) => {
-  const { title, description } = props
+const CategorySlider = ({ title, description }) => {
   return (
     <div className="mt-3">
       <Row>
         <Col className="mt-md-5 mb-xs-3" md={3}>
           <h3>{title}</h3>
           <p className="pr-5">
-            <small className="text-muted">
-              {description}
-            </small>
+            <small className="text-muted">{description}</small>
           </p>
           <Button>Shop Now</Button>
         </Col>
         <Col md={9} className="px-1">
-          <Carousel 
+          <Carousel
             className={styles.categoryCarousel}
             interval={null}
             indicators={false}>
@@ -84,7 +81,6 @@ const CategorySlider = (props) => {
             </Carousel.Item>
           </Carousel>
         </Col>
-
       </Row>
     </div>
   )
