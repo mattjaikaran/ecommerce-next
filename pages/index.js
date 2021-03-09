@@ -52,7 +52,7 @@ const Home = () => {
       <Row className="mt-3">
         <Col md={6}>
           <ProductGraphic
-            leftSide
+            // leftSide
             img={couchBlue}
             description="Comfortable"
             product="Chair"

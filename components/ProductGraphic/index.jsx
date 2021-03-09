@@ -7,8 +7,8 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
     return (
       <div className="bg-light text-center p-3 mb-3">
         <Row>
-          <Col sm={5} />
-          <Col sm={7}>
+          <Col sm={7} md={6} xl={7} />
+          <Col sm={5} md={6} xl={5}>
             <h5 className={styles.title}>
               {description} <span className={styles.product}>{product}</span>
             </h5>
@@ -31,7 +31,7 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
     )
   }
   return (
-    <div className="bg-light text-center p-3 mb-3">
+    <div className={`bg-light text-center p-3 mb-3 ${styles.productGraphic}`}>
       <Row>
         <Col sm={12}>
           <h5 className={styles.title}>
