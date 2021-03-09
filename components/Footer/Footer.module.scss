@@ -1,0 +1,41 @@
+// .footerContainerFluid {
+  
+  .footerContainer {
+    background-color: #00917c; 
+    color: white;
+    font-weight: 100;
+    .footerRow {
+      .footerCol {
+        .navCustom {
+          .navLink {
+            color: white;
+            line-height: 1.5rem;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+// }
+
+@media (max-width: 767px) {
+  // .footerContainerFluid {
+  .footerContainer {
+    .footerRow {
+      text-align: center;
+      .footerCol {
+        .navTitle {
+          text-align: center;
+        }
+        .navCustom {
+          .navLink {
+          }
+        }
+      }
+    }
+  }
+}
+// }
