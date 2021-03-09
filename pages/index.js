@@ -7,6 +7,8 @@ import MiniProductCardGrid from '@components/MiniProductCardGrid'
 import CategorySlider from '@components/CategorySlider'
 import LeftSideImgCard from '@components/LeftSideImgCard'
 import styles from '../styles/Home.module.scss'
+import chairWood from '@images/chair-wood.png'
+import entertainmentCenter from '@images/entertainment-center.png'
 
 const Home = () => {
   const productObj = {
@@ -68,19 +70,31 @@ const Home = () => {
         <MiniProductCardGrid />
         <Categories />
         <CategorySlider
-          title='Decoration'
-          description='Small be and the rain would phase distance, succeed align.'
+          title="Decoration"
+          description="Small be and the rain would phase distance, succeed align."
         />
         <CategorySlider
-          title='Architect'
-          description='Small be and the rain would phase distance, succeed align.'
+          title="Architect"
+          description="Small be and the rain would phase distance, succeed align."
         />
         <Row>
           <Col md={6}>
-            <LeftSideImgCard />
+            <LeftSideImgCard
+              img={chairWood}
+              description="Comfortable"
+              product="Chair"
+              productDescription="Browse our collection of very comfortable chairs."
+              cta="View Now"
+            />
           </Col>
           <Col md={6}>
-            <LeftSideImgCard />
+            <LeftSideImgCard
+              img={entertainmentCenter}
+              description="Comfortable"
+              product="Chair"
+              productDescription="Browse our collection of very comfortable chairs."
+              cta="View Now"
+            />
           </Col>
         </Row>
       </div>
