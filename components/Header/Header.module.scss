@@ -48,6 +48,25 @@
     .leftSide {}
     .rightSide {}
   }
+  .navbarContainer {
+    .navbarCollapse {
+      .navItems {
+        .navLink {}
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbarContainer {
+    .navbarCollapse {
+      .navItems {
+        .navLink {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
 
 
