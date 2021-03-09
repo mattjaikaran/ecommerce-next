@@ -5,9 +5,9 @@ import ProductCard from '@components/ProductCard'
 import Categories from '@components/Categories'
 import MiniProductCardGrid from '@components/MiniProductCardGrid'
 import CategorySlider from '@components/CategorySlider'
-import LeftSideImgCard from '@components/LeftSideImgCard'
+import ProductGraphic from '@components/ProductGraphic'
 import styles from '../styles/Home.module.scss'
-import chairWood from '@images/chair-wood.png'
+import couchBlue from '@images/couch-blue.png'
 import entertainmentCenter from '@images/entertainment-center.png'
 
 const Home = () => {
@@ -48,56 +48,52 @@ const Home = () => {
 
   return (
     <Layout className={styles.container}>
-      <div>
-        <h1>Ecommerce Store</h1>
-      </div>
-      <div>
-        <Hero />
-        <Row>
-          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
-            <ProductCard product={productObj} />
-          </Col>
-          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
-            <ProductCard product={productObjTwo} />
-          </Col>
-          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
-            <ProductCard product={productObjThree} />
-          </Col>
-          <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
-            <ProductCard product={productObjFour} />
-          </Col>
-        </Row>
-        <MiniProductCardGrid />
-        <Categories />
-        <CategorySlider
-          title="Decoration"
-          description="Small be and the rain would phase distance, succeed align."
-        />
-        <CategorySlider
-          title="Architect"
-          description="Small be and the rain would phase distance, succeed align."
-        />
-        <Row>
-          <Col md={6}>
-            <LeftSideImgCard
-              img={chairWood}
-              description="Comfortable"
-              product="Chair"
-              productDescription="Browse our collection of very comfortable chairs."
-              cta="View Now"
-            />
-          </Col>
-          <Col md={6}>
-            <LeftSideImgCard
-              img={entertainmentCenter}
-              description="Comfortable"
-              product="Chair"
-              productDescription="Browse our collection of very comfortable chairs."
-              cta="View Now"
-            />
-          </Col>
-        </Row>
-      </div>
+      <Hero />
+      <Row className="mt-3">
+        <Col md={6}>
+          <ProductGraphic
+            leftSide
+            img={couchBlue}
+            description="Comfortable"
+            product="Chair"
+            productDescription="Browse our collection."
+            cta="View Now"
+          />
+        </Col>
+        <Col md={6}>
+          <ProductGraphic
+            img={entertainmentCenter}
+            description="Modern"
+            product="Entertainment Center"
+            productDescription="Browse living room furniture."
+            cta="View Now"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+          <ProductCard product={productObj} />
+        </Col>
+        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+          <ProductCard product={productObjTwo} />
+        </Col>
+        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+          <ProductCard product={productObjThree} />
+        </Col>
+        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+          <ProductCard product={productObjFour} />
+        </Col>
+      </Row>
+      <MiniProductCardGrid />
+      <Categories />
+      <CategorySlider
+        title="Decoration"
+        description="Small be and the rain would phase distance, succeed align."
+      />
+      <CategorySlider
+        title="Architect"
+        description="Small be and the rain would phase distance, succeed align."
+      />
     </Layout>
   )
 }
