@@ -9,16 +9,15 @@ const ProductDetail = () => {
   return (
     <div>
       <Row>
-        <Col>
+        <Col className="mb-3" md={6}>
           <ProductSlider />
         </Col>
-        <Col>
+        <Col className="mb-3" md={6}>
           <ProductVariants />
         </Col>
       </Row>
       <Row>
-        <Col>
-        </Col>
+        <Col></Col>
       </Row>
       <Row>
         <RecommendationSlider />
