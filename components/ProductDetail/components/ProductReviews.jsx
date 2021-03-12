@@ -79,9 +79,27 @@ const ProductReviews = () => {
           </Button>
         </Col>
       </Row>
-      <ProductReview />
-      <ProductReview />
-      <ProductReview />
+      <ProductReview
+        title="This product is awesome. I love it."
+        date="Jan 24, 2020"
+        fit="true to size"
+        width="slightly small"
+        review="The shoes are very nice looking but they started squeaking after a couple of hours of wearing them. I would recommend buying a different boot."
+      />
+      <ProductReview
+        title="This product is terrible. I hate it."
+        date="Jan 24, 2020"
+        fit="slightly large"
+        width="slightly large"
+        review="Ordered the black leather 1st. Boot looks, fits so good, ordered the black, gray, tan suede. Looks like the more expensive boot costing 3-4-5x's more. L"
+      />
+      <ProductReview
+        title="This product is ok."
+        date="Jan 24, 2020"
+        fit="slightly small"
+        width="slightly small"
+        review="This one is almost perfect."
+      />
     </div>
   )
 }
