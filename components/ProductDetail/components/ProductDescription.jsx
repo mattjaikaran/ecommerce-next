@@ -27,16 +27,14 @@ const ProductDescription = () => {
     },
   }
 
-  // const renderItems = () => {}
-
   return (
     <div>
       <Row>
         <Col xs={6}>
           <h5>Size Info</h5>
           <ul>
-            {details.sizeInfo.map((item) => (
-              <li>{item}</li>
+            {details.sizeInfo.map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ul>
         </Col>
@@ -47,8 +45,8 @@ const ProductDescription = () => {
         <Col xs={6}>
           <h5>Details &amp; Care</h5>
           <ul>
-            {details.detailsAndCare.details.map((item) => (
-              <li>{item}</li>
+            {details.detailsAndCare.details.map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ul>
         </Col>

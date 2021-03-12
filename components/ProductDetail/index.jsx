@@ -16,14 +16,8 @@ const ProductDetail = () => {
           <ProductVariants />
         </Col>
       </Row>
-      <Row>
-        <Col md={8}>
-          <ProductDescription />
-        </Col>
-      </Row>
-      <Row>
-        <ProductReviews />
-      </Row>
+      <ProductDescription />
+      <ProductReviews />
     </div>
   )
 }
