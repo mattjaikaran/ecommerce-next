@@ -25,6 +25,9 @@ a {
 * {
   box-sizing: border-box;
 }
+.line-through {
+  text-decoration: line-through;
+}
 
 @media (max-width: 767px) {
   .d-xs-none {

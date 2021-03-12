@@ -73,16 +73,24 @@ const Home = () => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+        <Col 
+          className={styles.productCardColumn} 
+          xs={6} sm={6} md={6} lg={3}>
           <ProductCard product={productObj} />
         </Col>
-        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+        <Col 
+          className={styles.productCardColumn} 
+          xs={6} sm={6} md={6} lg={3}>
           <ProductCard product={productObjTwo} />
         </Col>
-        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+        <Col 
+          className={styles.productCardColumn} 
+          xs={6} sm={6} md={6} lg={3}>
           <ProductCard product={productObjThree} />
         </Col>
-        <Col className={styles.productCardColumn} xs={6} sm={6} md={6} lg={3}>
+        <Col 
+          className={styles.productCardColumn} 
+          xs={6} sm={6} md={6} lg={3}>
           <ProductCard product={productObjFour} />
         </Col>
       </Row>
