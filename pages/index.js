@@ -58,7 +58,7 @@ const Home = () => {
             product="Chair"
             productDescription="Browse our collection."
             ctaText="View Now"
-            ctaLink="/category/living-room"
+            ctaLink="/product/123"
           />
         </Col>
         <Col md={6}>

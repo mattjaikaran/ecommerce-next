@@ -7,13 +7,15 @@ const ProductReview = (props) => {
   return (
     <div>
       <Row>
-        <Col md={6}>
+        <Col lg={6}>
           <p>Stars</p>
           <p className="font-weight-bold">{props.title}</p>
         </Col>
-        <Col>
+        <Col lg={6}>
           <p className="">{props.date}</p>
-          <p>Fit: {props.fit}</p>
+          <p>
+            Fit: <span>{props.fit}</span>
+          </p>
           <p>Width: {props.width}</p>
         </Col>
       </Row>

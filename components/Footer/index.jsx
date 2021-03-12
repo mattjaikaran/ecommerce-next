@@ -1,4 +1,3 @@
-import { Container, Nav, Row, Col } from 'react-bootstrap'
 import MainFooter from './components/MainFooter'
 import Legal from './components/Legal'
 import styles from './Footer.module.scss'
@@ -10,10 +9,10 @@ const Footer = () => {
     //   instagram, pinterest, youtube, facebook
     // add legal links below
   return (
-    <Container fluid>
+    <>
       <MainFooter />
       <Legal />
-    </Container>
+    </>
   )
 }
 

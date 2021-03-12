@@ -6,7 +6,7 @@ const ProductReviews = () => {
   return (
     <div>
       <Row>
-        <Col xs={6} sm={6} md={3} lg={3}>
+        <Col md={3} lg={3}>
           <h3>Reviews</h3>
           <h5>4.2 out of 5</h5>
           <p>

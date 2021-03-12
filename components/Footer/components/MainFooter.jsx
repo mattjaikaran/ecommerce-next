@@ -3,7 +3,7 @@ import styles from "../Footer.module.scss"
 
 const MainFooter = () => {
   return (
-    <Container className={styles.footerContainerFluid} fluid>
+    <div className={styles.footerContainerFluid}>
       <Container className={`${styles.footerContainer} p-5`}>
         <Row className={styles.footerRow}>
           <Col className={`${styles.footerCol} mb-3`} sm={9} md={9} lg={6}>
@@ -67,7 +67,7 @@ const MainFooter = () => {
           </Col>
         </Row>
       </Container>
-    </Container>
+    </div>
   )
 }
 

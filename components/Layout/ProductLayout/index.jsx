@@ -1,13 +1,13 @@
 import { Container } from 'react-bootstrap'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import './Layout.module.scss'
+import '../Layout.module.scss'
 
-const Layout = ({ children }) => {
+const ProductLayout = ({ children }) => {
   return (
     <>
-      <Header /> 
-      <Container>
+      <Header />
+      <Container fluid>
         {children}
       </Container>
       <Footer />
@@ -15,4 +15,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default ProductLayout
