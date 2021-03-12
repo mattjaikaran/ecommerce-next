@@ -6,14 +6,14 @@ import { Row, Col, Card } from 'react-bootstrap'
 const LoginPage = () => {
   return (
     <Layout>
-      <Row className="mt-5 text-center">
+      <Row className="mt-5">
         <Col sm={2} />
         <Col sm={8}>
-          <Card className="p-5 bg-light">
+          <Card className="p-md-1 p-lg-5 bg-light">
             <Card.Body>
-              <h2 className="mt-3">Login</h2>
+              <h2 className="mt-3 text-center">Login</h2>
               <Login />
-              <div className="mt-3">
+              <div className="mt-3 text-center">
                 <Link href="/register">Click here to Register</Link>
               </div>
             </Card.Body>

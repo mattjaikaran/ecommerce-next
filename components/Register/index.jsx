@@ -88,21 +88,20 @@ const Register = () => {
             </InputGroup.Text>
           </InputGroup.Append>
         </InputGroup>
-        <Button variant="primary" type="submit" className="mt-3">
+        <Button variant="primary" type="submit" className="mt-3 btn-xs-block">
           Submit
         </Button>
-        <div className="mt-3">
+        <div className="text-center mt-3">
           <p>Or</p>
-          <Button variant="primary" size="md">
-            FaceBook
+          <Button variant="primary">
+            Facebook
           </Button>
           <Button 
             variant="primary" 
-            size="md"
-            className="mx-xs-3 mx-sm-3 mx-md-5">
+            className="mx-sm-2 mx-lg-5">
             Google
           </Button>
-          <Button variant="primary" size="md">
+          <Button variant="primary">
             Apple
           </Button>
         </div>

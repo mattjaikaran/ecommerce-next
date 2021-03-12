@@ -30,7 +30,7 @@ const Login = () => {
         <Form.Group controlId="loginRemember">
           <Form.Check type="checkbox" label="Remember Me" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="btn-xs-block">
           Submit
         </Button>
       </Form>
