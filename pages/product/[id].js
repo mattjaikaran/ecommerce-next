@@ -1,13 +1,12 @@
-import Layout from '@components/Layout'
 import ProductDetail from "@components/ProductDetail"
-import { Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 const ProductID = () => {
   return (
-    <Layout>
+    <Container fluid>
       <h2>Product ID</h2>
       <ProductDetail />
-    </Layout>
+    </Container>
   )
 }
 

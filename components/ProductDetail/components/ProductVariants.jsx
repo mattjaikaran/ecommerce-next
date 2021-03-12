@@ -20,12 +20,12 @@ const ProductVariants = () => {
 
         <div className="mt-3">
           <div className="">
-            <h6 className="d-inline ml-2">$39.20</h6>
+            <h6 className="d-inline">$39.20</h6>
             <p className="text-muted d-inline ml-2">
-              <small>49.00</small>
+              <small className="line-through">49.00</small>
             </p>
-            <p className="d-md-inline ml-2">20% off</p>
-            <p className="d-md-inline ml-2">FREE SHIPPING</p>
+            <p className="d-md-inline ml-md-2">20% off</p>
+            <p className="d-md-inline ml-md-2">FREE SHIPPING</p>
           </div>
           <p className="">
             Get a $40 Bonus Note when you use a new Shop credit card.
@@ -39,13 +39,13 @@ const ProductVariants = () => {
         </div>
 
         <Row className="mt-3">
-          <Col xs={7}>
+          <Col xs={6}>
             <p>
               <span className="font-weight-bold">Fit:</span>
               <span className="ml-1">True to size.</span>
             </p>
           </Col>
-          <Col xs={5}>
+          <Col xs={6}>
             <DropdownButton id="dropdown-item-button" title="Dropdown button">
               <Dropdown.ItemText>Choose a Size: True to Size</Dropdown.ItemText>
               <Dropdown.Item as="button">X-Small</Dropdown.Item>

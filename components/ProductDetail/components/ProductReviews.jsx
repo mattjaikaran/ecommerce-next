@@ -16,7 +16,7 @@ const ProductReviews = () => {
             <span className="">Width Rating:</span> fits true to size
           </p>
         </Col>
-        <Col sm={6} md={3} lg={3}>
+        <Col className="mb-3" sm={8} md={6} lg={4} xl={3}>
           <Row className="mt-3">
             <Col xs={3}>
               <small>5 stars</small>
@@ -73,7 +73,7 @@ const ProductReviews = () => {
             </Col>
           </Row>
         </Col>
-        <Col sm={6} md={3} lg={3}>
+        <Col className="mt-md-3" sm={6} md={3} lg={3}>
           <Button variant="outline-dark" block>
             Write a Review
           </Button>
