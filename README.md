@@ -4,7 +4,8 @@ Built with:\
 -NextJS\
 -SCSS\
 -React Bootstrap\
--React Hook Form
+-React Hook Form\
+-Axios
 
 
 ## Getting Started

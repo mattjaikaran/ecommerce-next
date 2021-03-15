@@ -107,7 +107,7 @@ const NewReviewModal = (props) => {
       </Modal.Body>
       <Modal.Footer>
         <Button type="submit">Submit Review</Button>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide}>Cancel</Button>
       </Modal.Footer>
     </Modal>
   )
