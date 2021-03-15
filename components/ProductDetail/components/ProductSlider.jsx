@@ -3,7 +3,7 @@ import styles from '../ProductDetail.module.scss'
 
 const ProductSlider = () => {
   return (
-    <Carousel fade>
+    <Carousel interval={null} fade>
       <Carousel.Item>
         <Image
           className="d-block w-100"
