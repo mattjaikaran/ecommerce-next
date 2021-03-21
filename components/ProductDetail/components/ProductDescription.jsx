@@ -30,7 +30,7 @@ const ProductDescription = () => {
   return (
     <div>
       <Row>
-        <Col xs={6}>
+        <Col sm={6}>
           <h5>Size Info</h5>
           <ul>
             {details.sizeInfo.map((item, i) => (
@@ -38,11 +38,11 @@ const ProductDescription = () => {
             ))}
           </ul>
         </Col>
-        <Col xs={6}>
+        <Col sm={6}>
           <h5>Gift Options</h5>
           <p>{details.giftOptions}</p>
         </Col>
-        <Col xs={6}>
+        <Col sm={6}>
           <h5>Details &amp; Care</h5>
           <ul>
             {details.detailsAndCare.details.map((item, i) => (

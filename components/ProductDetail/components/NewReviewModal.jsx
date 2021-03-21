@@ -1,19 +1,38 @@
 import { useState, useRef } from 'react'
-import { Modal, Form, Overlay, Tooltip, Button } from 'react-bootstrap'
+import { Modal, Form, Overlay, Tooltip, Button, Alert } from 'react-bootstrap'
 
 const NewReviewModal = (props) => {
   const [reviewEmail, setReviewEmail] = useState('')
   const [reviewName, setReviewName] = useState('')
+  const [reviewSize, setReviewSize] = useState('')
   const [reviewHeadline, setReviewHeadline] = useState('')
   const [reviewText, setReviewText] = useState('')
   const [reviewFitRange, setReviewFitRange] = useState(0)
+  const [reviewStatus, setReviewStatus] = useState('false')
 
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
+  const [show, setShow] = useState(false)
+  const target = useRef(null)
 
-  const handleSubmitReview = (e) => {
+  const handleSubmitReview = async (e) => {
     e.preventDefault()
     console.log('Review Submitted!')
+    const reviewObj = {
+      email: reviewEmail,
+      displayName: reviewName,
+      size: reviewSize,
+      headline: reviewHeadline,
+      reviewText: reviewText,
+      fit: `${reviewFitRange}/100`
+    }
+    console.log(reviewObj)
+    setReviewStatus('success')
+    // try {
+    //   const response = await axios.post(url, reviewObj)
+    //   setReviewStatus('success')
+    // } catch (err) {
+    //   setReviewStatus('danger')
+    //   console.error(err.message)
+    // }
   }
   return (
     <Modal
@@ -26,87 +45,106 @@ const NewReviewModal = (props) => {
           Modal heading
         </Modal.Title>
       </Modal.Header>
+      {reviewStatus === 'success' || reviewStatus === 'danger' ? (
+        <Alert variant={reviewStatus}>
+          { 
+            reviewStatus === 'success' ? 
+            'Review submitted successfully' : 
+            'There was an error. Try again' 
+          }
+        </Alert>
+      ) : null}
       <Modal.Body>
         <h4>Write a Review</h4>
-        <p>
-          Product Name
-        </p>
+        <p>Product Name</p>
         <Form onSubmit={handleSubmitReview}>
           <Form.Group controlId="reviewForm.email">
             <Form.Label>Email Address</Form.Label>
-            <Form.Control 
-              type="email" 
+            <Form.Control
+              type="email"
               placeholder="name@example.com"
               value={reviewEmail}
-              onChange={e => setReviewEmail(e.target.value)} />
+              onChange={(e) => setReviewEmail(e.target.value)}
+            />
           </Form.Group>
           <Form.Group controlId="reviewForm.displayName">
             <Form.Label>Display Name</Form.Label>
-            <Form.Control 
-              type="text" 
+            <Form.Control
+              type="text"
               placeholder="Your name will be displayed in the review"
               value={reviewName}
-              onChange={e => setReviewName(e.target.value)} />
+              onChange={(e) => setReviewName(e.target.value)}
+            />
           </Form.Group>
           <Form.Group controlId="reviewForm.size">
             <Form.Label>Size</Form.Label>
-            <Form.Control as="select">
-              <option>X-Small</option>
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
-              <option>X-Large</option>
+            <Form.Control
+              as="select"
+              onChange={(e) => setReviewSize(e.target.value)}>
+              <option value="1">X-Small</option>
+              <option value="2">Small</option>
+              <option value="3">Medium</option>
+              <option value="4">Large</option>
+              <option value="5">X-Large</option>
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="reviewForm.reviewHeadline">
             <Form.Label>Review Headline</Form.Label>
-            <Form.Control 
-              type="text" 
+            <Form.Control
+              type="text"
               placeholder="Your name will be displayed in the review"
               value={reviewHeadline}
-              onChange={e => setReviewHeadline(e.target.value)} />
+              onChange={(e) => setReviewHeadline(e.target.value)}
+            />
           </Form.Group>
           <Form.Group controlId="reviewForm.reviewText">
             <Form.Label>Review</Form.Label>
-            <Form.Control 
-              as="textarea" 
+            <Form.Control
+              as="textarea"
               rows={3}
               value={reviewText}
               placeholder="Write your thoughts on this product"
-              onChange={e => setReviewText(e.target.value)} />
+              onChange={(e) => setReviewText(e.target.value)}
+            />
           </Form.Group>
           <Form.Group controlId="reviewRange">
             <Form.Label>How does it fit?</Form.Label>
-            <Form.Control 
+            <Form.Control
               type="range"
               value={reviewFitRange}
-              onChange={e => setReviewFitRange(e.target.value)} />
+              onChange={(e) => setReviewFitRange(e.target.value)}
+            />
           </Form.Group>
         </Form>
         <p>
           <small>
-            By submitting this review, you agree to our 
-            <a href="#" 
-              ref={target} 
+            By submitting this review, you agree to our
+            <a
+              href="#"
+              ref={target}
               onClick={(e) => {
                 e.preventDefault()
                 setShow(!show)
               }}>
-              {' '}Customer Review Terms &amp; Conditions
-            </a>.
+              {" "}
+              Customer Review Terms &amp Conditions
+            </a>
+            .
           </small>
           <Overlay target={target.current} show={show} placement="bottom">
-          {(props) => (
-            <Tooltip id="overlay-example"  {...props}>
-              The terms: <br /> 
-              We can do whatever we want with your data
-            </Tooltip>
-          )}
-        </Overlay>
+            {(props) => (
+              <Tooltip id="overlay-example" {...props}>
+                The terms: <br />
+                We can do whatever we want with your data
+              </Tooltip>
+            )}
+          </Overlay>
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button type="submit">Submit Review</Button>
+        <Button type="submit" onClick={handleSubmitReview}>
+          Submit Review
+        </Button>
         <Button onClick={props.onHide}>Cancel</Button>
       </Modal.Footer>
     </Modal>
