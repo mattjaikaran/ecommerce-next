@@ -3,23 +3,23 @@ import styles from '../ProductDetail.module.scss'
 
 
 // single review
-const ProductReview = (props) => {
+const ProductReview = ({ title, date, fit, width, review }) => {
   return (
     <div>
       <Row>
         <Col lg={6}>
           <p>Stars</p>
-          <p className="font-weight-bold">{props.title}</p>
+          <p className="font-weight-bold">{title}</p>
         </Col>
         <Col lg={6}>
-          <p className="">{props.date}</p>
+          <p className="">{date}</p>
           <p>
-            Fit: <span>{props.fit}</span>
+            Fit: <span>{fit}</span>
           </p>
-          <p>Width: {props.width}</p>
+          <p>Width: {width}</p>
         </Col>
       </Row>
-      <p>{props.review}</p>
+      <p>{review}</p>
       <div>
         <p className="font-weight-bold">Product Images</p>
       </div>

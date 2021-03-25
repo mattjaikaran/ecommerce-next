@@ -8,7 +8,7 @@ const NewReviewModal = (props) => {
   const [reviewHeadline, setReviewHeadline] = useState('')
   const [reviewText, setReviewText] = useState('')
   const [reviewFitRange, setReviewFitRange] = useState(0)
-  const [reviewStatus, setReviewStatus] = useState('false')
+  const [reviewStatus, setReviewStatus] = useState(false)
 
   const [show, setShow] = useState(false)
   const target = useRef(null)
@@ -16,23 +16,33 @@ const NewReviewModal = (props) => {
   const handleSubmitReview = async (e) => {
     e.preventDefault()
     console.log('Review Submitted!')
-    const reviewObj = {
-      email: reviewEmail,
-      displayName: reviewName,
-      size: reviewSize,
-      headline: reviewHeadline,
-      reviewText: reviewText,
-      fit: `${reviewFitRange}/100`
+
+    // api call
+    try {
+      const reviewObj = {
+        email: reviewEmail,
+        displayName: reviewName,
+        size: reviewSize,
+        headline: reviewHeadline,
+        reviewText: reviewText,
+        fit: `${reviewFitRange}/100`,
+      }
+      console.log(reviewObj)
+      // const response = await axios.post(url, reviewObj)
+      // console.log(response)
+      setReviewStatus('success')
+
+      // clear values/state
+      setReviewEmail('')
+      setReviewName('')
+      setReviewSize('')
+      setReviewHeadline('')
+      setReviewText('')
+      setReviewFitRange(0)
+    } catch (err) {
+      setReviewStatus('danger')
+      console.error(err.message)
     }
-    console.log(reviewObj)
-    setReviewStatus('success')
-    // try {
-    //   const response = await axios.post(url, reviewObj)
-    //   setReviewStatus('success')
-    // } catch (err) {
-    //   setReviewStatus('danger')
-    //   console.error(err.message)
-    // }
   }
   return (
     <Modal
@@ -81,11 +91,11 @@ const NewReviewModal = (props) => {
             <Form.Control
               as="select"
               onChange={(e) => setReviewSize(e.target.value)}>
-              <option value="1">X-Small</option>
-              <option value="2">Small</option>
-              <option value="3">Medium</option>
-              <option value="4">Large</option>
-              <option value="5">X-Large</option>
+              <option value="x-small">X-Small</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="x-large">X-Large</option>
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="reviewForm.reviewHeadline">
