@@ -60,11 +60,13 @@ const ProductVariants = () => {
         <Form>
           <Form.Check
             type="radio"
+            value="standard"
             label={`Shipping - Standard`}
             id="custom-shipping-1"
           />
           <Form.Check
             type="radio"
+            value="overnight"
             label={`Shipping - Overnight`}
             id="custom-shipping-2"
           />

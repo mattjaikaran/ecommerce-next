@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import { Row, Col, Button, ProgressBar } from 'react-bootstrap'
 import '../ProductDetail.module.scss'
 import ProductReview from './ProductReview'
+import NewReviewModal from './NewReviewModal'
 
 const ProductReviews = () => {
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
   return (
     <div>
       <Row>
@@ -74,7 +80,7 @@ const ProductReviews = () => {
           </Row>
         </Col>
         <Col className="mt-md-3" sm={6} md={3} lg={3}>
-          <Button variant="outline-dark" block>
+          <Button variant="outline-dark" onClick={handleShow} block>
             Write a Review
           </Button>
         </Col>
@@ -100,6 +106,7 @@ const ProductReviews = () => {
         width="slightly small"
         review="This one is almost perfect."
       />
+      <NewReviewModal show={show} onHide={handleClose} />
     </div>
   )
 }
