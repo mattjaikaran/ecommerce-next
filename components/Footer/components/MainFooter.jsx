@@ -54,13 +54,13 @@ const MainFooter = () => {
           <Col className={`${styles.footerCol} mb-3`} sm={4} md={4} lg={2}>
             <Nav className={`flex-column ${styles.navCustom}`}>
               <h6 className={styles.navTitle}>Latest News</h6>
-              <Nav.Link className={styles.navLink} href="/home">
+              <Nav.Link className={styles.navLink} href="/">
                 Active
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="link-3">
+              <Nav.Link className={styles.navLink} href="/product/1">
                 Link
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="link-3">
+              <Nav.Link className={styles.navLink} href="product/2">
                 Link
               </Nav.Link>
             </Nav>

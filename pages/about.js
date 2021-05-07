@@ -1,14 +1,12 @@
 import { Row , Col } from 'react-bootstrap'
 import Layout from '@components/Layout'
-import FAQ from '@components/FAQ'
 
-const FaqPage = () => {
+const AboutPage = () => {
   return (
     <Layout>
-      <h1>FAQ</h1>
-      <FAQ />
+      <h1>About Page</h1>
     </Layout>
   )
 }
 
-export default FaqPage
+export default AboutPage
