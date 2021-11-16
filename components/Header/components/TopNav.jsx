@@ -1,11 +1,12 @@
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap'
+import CartComponent from './CartComponent'
 import styles from '../Header.module.scss'
 
 const TopNav = () => {
   return (
     <Container className={styles.topNavContainer}>
-      <Row>
-        <Col md={6} lg={7} xl={8} className={styles.leftSide}>
+      <Row className="text-center">
+        <Col md={5} lg={6} xl={7} className={styles.leftSide}>
           <Nav>
             <Nav.Link href="#">
               <small>(888)-555-0197</small>
@@ -16,7 +17,7 @@ const TopNav = () => {
             </Nav.Link>
           </Nav>
         </Col>
-        <Col md={6} lg={5} xl={4} className={styles.rightSide}>
+        <Col md={7} lg={6} xl={5} className={styles.rightSide}>
           <Nav>
             <Nav.Link href="#">
               <small>Account</small>
@@ -33,6 +34,7 @@ const TopNav = () => {
             <Nav.Link href="/login">
               <small>Login</small>
             </Nav.Link>
+            <CartComponent className="ml-auto" />
           </Nav>
         </Col>
       </Row>

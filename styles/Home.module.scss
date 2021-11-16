@@ -2,15 +2,15 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
-  .productCardColumn {
-    &:nth-child(odd) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    &:nth-child(even) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-}
+// @media (max-width: 767px) {
+//   .productCardColumn {
+//     &:nth-child(odd) {
+//       padding-left: 10px;
+//       padding-right: 10px;
+//     }
+//     &:nth-child(even) {
+//       padding-left: 10px;
+//       padding-right: 10px;
+//     }
+//   }
+// }

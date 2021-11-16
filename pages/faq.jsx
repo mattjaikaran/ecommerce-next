@@ -1,11 +1,11 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@components/Layout'
-import FAQ from '@components/FAQ'
+import Layout from '@/components/Layout'
+import FAQ from '@/components/FAQ'
 
 const FaqPage = () => {
   return (
     <Layout>
-      <h1>FAQ Page</h1>
+      <h1>FAQ</h1>
       <FAQ />
     </Layout>
   )

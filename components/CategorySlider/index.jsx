@@ -1,5 +1,5 @@
-import ProductCard from '@components/ProductCard'
-import { Row, Col, Carousel, Image, Button } from 'react-bootstrap'
+import ProductCard from '@/components/ProductCard'
+import { Container, Row, Col, Carousel, Button } from 'react-bootstrap'
 import styles from './CategorySlider.module.scss'
 
 const productObj = {
@@ -39,42 +39,42 @@ const productObjFour = {
 
 const CategorySlider = ({ title, description }) => {
   return (
-    <div className="mt-3">
+    <Container className="mt-3">
       <Row>
-        <Col className="mt-md-5 mb-xs-3" md={3}>
+        <Col className="mt-md-5 mb-5" md={3}>
           <h5 className="font-weight-light">{title}</h5>
           <p className="pr-5">
             <small className="text-muted">{description}</small>
           </p>
           <Button>Shop Now</Button>
         </Col>
-        <Col md={9} className="px-1">
+        <Col md={9} className="">
           <Carousel
             className={styles.categoryCarousel}
             interval={null}
             indicators={false}>
             <Carousel.Item className={styles.categoryCarouselItem}>
               <Row className={styles.categoryCarouselItemRow}>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObj} />
                 </Col>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObjTwo} />
                 </Col>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObjThree} />
                 </Col>
               </Row>
             </Carousel.Item>
             <Carousel.Item className={styles.categoryCarouselItem}>
               <Row className={styles.categoryCarouselItemRow}>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObj} />
                 </Col>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObjTwo} />
                 </Col>
-                <Col className={`px-md-3 ${styles.categoryCarouselItemRowCol}`}>
+                <Col className={`${styles.categoryCarouselItemRowCol}`}>
                   <ProductCard product={productObjFour} />
                 </Col>
               </Row>
@@ -82,7 +82,7 @@ const CategorySlider = ({ title, description }) => {
           </Carousel>
         </Col>
       </Row>
-    </div>
+    </Container>
   )
 }
 

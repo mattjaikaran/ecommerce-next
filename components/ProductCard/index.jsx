@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { addToCart } from '../../hooks/addToCart'
-import { Card, Row, Col, Badge, Image, Button } from 'react-bootstrap'
+import { Card, Row, Col, Badge, Image, Button, ButtonGroup } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
-import ShoppingCart from '@icons/shopping-cart.svg'
-import View from '@icons/view.svg'
+import { BsCart3 } from 'react-icons/bs'
+import { AiOutlineEye } from "react-icons/ai"
+import ShoppingCart from '@/icons/shopping-cart.svg'
+import View from '@/icons/view.svg'
 import styles from './ProductCard.module.scss'
 
 const ProductCard = (props) => {
@@ -46,13 +48,12 @@ const ProductCard = (props) => {
       <Row>{renderBadge()}</Row>
       <Card
         onClick={handleShow}
-        className={`${styles.productCard} ${
-          !sale && !newProduct ? "mt-3" : ""
-        }`}>
+        className={`${styles.productCard} ${!sale && !newProduct && "mt-3"}`}>
         <Card.Img
           variant="top"
           src="https://dummyimage.com/275x360/ccc/000"
-          fluid="true" />
+          fluid="true"
+        />
         <Card.Body
           className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}>
           <Card.Title className={`${styles.cardTitle} text-muted`}>
@@ -69,28 +70,23 @@ const ProductCard = (props) => {
         </Card.Body>
       </Card>
       <div className={styles.addToCartBtnWrapper}>
-        <Button
-          variant="outline-secondary"
-          className={styles.addToCartBtn}
-          onClick={() => addToCart(props.product)}>
-          <span className="">Add To Cart</span>
-          {/* <Image
-            src={ShoppingCart}
-            className={styles.shoppingCartIcon}
-            alt="cart"
-          /> */}
-        </Button>
-        <Button
-          className={styles.quickView}
-          variant="primary"
-          onClick={handleShow}>
-          <span className="">Quick View</span>
-          {/* <Image src={View} className={styles.shoppingCartIcon} alt="cart" /> */}
-        </Button>
+        <ButtonGroup aria-label="Product Card Button Group">
+          <Button
+            size="sm"
+            variant="outline-secondary"
+            className={styles.addToCartBtn}
+            onClick={() => addToCart(props.product)}>
+            <BsCart3 />
+          </Button>
+          <Button
+            size="sm"
+            variant="primary"
+            className={styles.quickView}
+            onClick={handleShow}>
+            <AiOutlineEye />
+          </Button>
+        </ButtonGroup>
       </div>
-      {/* <Button className={`${styles.quickViewDesktop} d-xs-none`} variant="primary" onClick={handleShow}>
-        Quick View
-      </Button> */}
       <ProductModal show={show} product={props.product} onHide={handleClose} />
     </div>
   )
