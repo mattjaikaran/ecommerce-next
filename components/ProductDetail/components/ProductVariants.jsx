@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Row,
   Col,
@@ -7,16 +8,43 @@ import {
   FormControl,
   InputGroup,
   Button,
-} from "react-bootstrap"
+} from 'react-bootstrap'
+import axios from 'axios'
+import { useForm } from 'react-hook-form'
 import styles from '../ProductDetail.module.scss'
 
-const ProductVariants = () => {
+const ProductVariants = (props) => {
+  const [shippingType, setShippingType] = useState(null)
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+  console.log(errors);
+
+
+  const handleAddToBag = async (e) => {
+    e.preventDefault()
+    // const productObj = {
+    //   ...props.exercise,
+    //   size,
+    //   shippingType
+    // }
+
+    console.log('Loading.')
+    try {
+      const response = axios.post('url', productObj)
+      console.log('added to bag')
+    } catch (err) {
+      console.log(err.message)
+    }
+  }
+  
+  
   return (
     <div>
       <div>
         <p>Review Component</p>
-        <h5>Pocket Fleece Joggers</h5>
-        <p>ZELLA</p>
+        <h5>Product Name</h5>
+        <p>Brand Name</p>
 
         <div className="mt-3">
           <div className="">
@@ -27,12 +55,14 @@ const ProductVariants = () => {
             <p className="d-md-inline ml-md-2">20% off</p>
             <p className="d-md-inline ml-md-2">FREE SHIPPING</p>
           </div>
-          <p className="">
-            Get a $40 Bonus Note when you use a new Shop credit card.
+          <p className="mt-2">
+            <small className="creditCardTag">
+              Get a $40 Bonus Note when you use a new Shop credit card.
+            </small>
             <br />
             <a href="#">Apply Now</a>
           </p>
-          <p>
+          <p className="shortDescription">
             A soft and stretchy cotton blend means easy comfort in modern jogger
             pants with versatile appeal.
           </p>
@@ -40,40 +70,56 @@ const ProductVariants = () => {
 
         <Row className="mt-3">
           <Col xs={6}>
-            <p>
+            <p className="fit">
               <span className="font-weight-bold">Fit:</span>
               <span className="ml-1">True to size.</span>
             </p>
           </Col>
           <Col xs={6}>
-            <DropdownButton id="dropdown-item-button" title="Dropdown button">
-              <Dropdown.ItemText>Choose a Size: True to Size</Dropdown.ItemText>
-              <Dropdown.Item as="button">X-Small</Dropdown.Item>
-              <Dropdown.Item as="button">Small</Dropdown.Item>
-              <Dropdown.Item as="button">Medium</Dropdown.Item>
-              <Dropdown.Item as="button">Large</Dropdown.Item>
-              <Dropdown.Item as="button">X-Large</Dropdown.Item>
+            <DropdownButton id="dropdown-item-button" title="Choose a Size">
+              {/* <Dropdown.ItemText>Choose a Size:</Dropdown.ItemText> */}
+              <Dropdown.Item as="button" value="x-small">
+                X-Small
+              </Dropdown.Item>
+              <Dropdown.Item as="button" value="small">
+                Small
+              </Dropdown.Item>
+              <Dropdown.Item as="button" value="medium">
+                Medium
+              </Dropdown.Item>
+              <Dropdown.Item as="button" value="large">
+                Large
+              </Dropdown.Item>
+              <Dropdown.Item as="button" value="x-large">
+                X-Large
+              </Dropdown.Item>
             </DropdownButton>
           </Col>
         </Row>
 
-        <Form>
-          <Form.Check
-            type="radio"
-            value="standard"
-            label={`Shipping - Standard`}
-            id="custom-shipping-1"
-          />
-          <Form.Check
-            type="radio"
-            value="overnight"
-            label={`Shipping - Overnight`}
-            id="custom-shipping-2"
-          />
+        <Form onSubmit={handleSubmit(handleAddToBag)}>
+            {['radio'].map((type) => (
+            <div key={`custom-inline-${type}`} className="mb-3">
+              <Form.Check
+                custom
+                inline
+                label="Standard Shipping"
+                type={type}
+                id={`custom-inline-${type}-1`}
+              />
+              <Form.Check
+                custom
+                inline
+                label="Overnight Shipping"
+                type={type}
+                id={`custom-inline-${type}-2`}
+              />
+            </div>
+          ))}
+          <Button variant="outline-dark" type="submit" block>
+            Add To Bag
+          </Button>
         </Form>
-        <Button variant="outline-dark" block>
-          Add To Bag
-        </Button>
       </div>
     </div>
   )

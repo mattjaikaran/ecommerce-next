@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Layout from '@components/Layout'
-import Login from '@components/Login'
+import Layout from '@/components/Layout'
+import Login from '@/components/Login'
 import { Row, Col, Card } from 'react-bootstrap'
 
 const LoginPage = () => {

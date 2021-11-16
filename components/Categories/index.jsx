@@ -1,18 +1,18 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import Category from './components/Category'
-import table from '@images/table.png'
-import barstoolBlack from '@images/barstool-black.png'
-import chair from '@images/chair.png'
-import chair2 from '@images/chair2.png'
-import couch from '@images/couch.png'
+import table from '@/images/table.png'
+import barstoolBlack from '@/images/barstool-black.png'
+import chair from '@/images/chair.png'
+import chair2 from '@/images/chair2.png'
+import couch from '@/images/couch.png'
 
 const Categories = () => {
   return (
-    <div className="text-center mt-5">
+    <Container className="text-center mt-5">
       <Row>
-        <Col sm={12} md={12} lg={9}>
+        <Col lg={9} className="px-0 px-md-1">
           <Row>
-            <Col className="mb-3 px-sm-2" xs={12} sm={12} md={6} lg={7}>
+            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={7}>
               <Category
                 color="pink"
                 img={table}
@@ -21,7 +21,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-3 px-sm-2" xs={12} sm={12} md={6} lg={5}>
+            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={5}>
               <Category
                 color="teal"
                 img={chair}
@@ -30,7 +30,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-3 px-sm-2" xs={12} sm={12} md={6} lg={5}>
+            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={5}>
               <Category
                 color="green"
                 img={chair2}
@@ -39,7 +39,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-3 px-sm-2" sm={12} md={6} lg={7}>
+            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={7}>
               <Category
                 color="purple"
                 img={couch}
@@ -50,7 +50,7 @@ const Categories = () => {
             </Col>
           </Row>
         </Col>
-        <Col className="mb-3 px-sm-2" lg={3} md={12} sm={12}>
+        <Col className="mb-md-3 px-md-3 px-0" lg={3}>
           <Category
             imgRight
             color="yellow"
@@ -61,7 +61,7 @@ const Categories = () => {
           />
         </Col>
       </Row>
-    </div>
+    </Container>
   )
 }
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import cx from 'classnames'
-import { Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 import styles from '../Categories.module.scss'
 
 
@@ -21,33 +21,31 @@ const Category = ({ color, hashtag, img, title, link, imgRight }) => {
 
   if (imgRight) {
     return (
-      <div className={`${colorProp} ${styles.categoryCard} text-left`}>
-        <Row className="py-3">
-          <Col className="text-left py-4 px-5">
+      <Container className={`${colorProp} ${styles.categoryCard} text-left`} fluid>
+        <Row className="py-3 px-0">
+          <Col className="text-left pt-3 px-5">
             <p>
               <small>#{hashtag}</small>
             </p>
             <h6>{title}</h6>
             <Link href={link}>Shop Now</Link>
           </Col>
-        </Row>
-        <Row>
-          <Col sm={12} className="pb-3 text-center">
+          <Col sm={12} className="pb-3 text-center mt-5 px-0">
             <Image src={img} fluid />
           </Col>
         </Row>
-      </div>
+      </Container>
     )
   }
   return (
-    <div className={`${colorProp} ${styles.categoryCard}`}>
-      <Row className="py-3">
+    <Container className={`${colorProp} ${styles.categoryCard}`} fluid>
+      <Row className="py-3 px-0">
         <Col
           className="text-center"
           xs={{ order: 2, span: 12 }}
           sm={{ order: 2, span: 6 }}
           md={7}>
-          <Image className={styles.productImg} src={img} />
+          <Image className={`${styles.productImg}`} src={img} fluid />
         </Col>
         <Col
           className="text-left pt-5 pr-sm-0 pl-5"
@@ -61,7 +59,7 @@ const Category = ({ color, hashtag, img, title, link, imgRight }) => {
           <Link href={link}>Shop Now</Link>
         </Col>
       </Row>
-    </div>
+    </Container>
   )
 }
 
