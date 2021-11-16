@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-// import { useAsync } from '@hooks/useAsync'
+// import { useAsync } from '@/hooks/useAsync'
 import axios from 'axios'
-import { Row, Col } from 'react-bootstrap'
-import MiniProductCard from '@components/MiniProductCard'
+import { Container, Row, Col } from 'react-bootstrap'
+import MiniProductCard from '@/components/MiniProductCard'
 
 const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://ecommerce-store-nextjs.vercel.app/'
 
@@ -32,11 +32,11 @@ const MiniProductCardGrid = () => {
   useEffect(() => renderData(), [])
 
   return (
-    <div className="pl-4 ml-lg-5">
+    <Container className="pl-4 ml-lg-5 mt-5">
       <Row className="text-center">
         {renderCards()}
       </Row>
-    </div>
+    </Container>
   )
 }
 

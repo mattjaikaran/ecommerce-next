@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Layout from "@components/Layout"
-import Register from "@components/Register"
+import Layout from "@/components/Layout"
+import Register from "@/components/Register"
 import { Row, Col, Card } from "react-bootstrap"
 
 const RegisterPage = () => {

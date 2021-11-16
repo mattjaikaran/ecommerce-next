@@ -1,6 +1,6 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@components/Layout'
-import ContactForm from '@components/ContactForm'
+import Layout from '@/components/Layout'
+import ContactForm from '@/components/ContactForm'
 
 const ContactPage = () => {
   return (

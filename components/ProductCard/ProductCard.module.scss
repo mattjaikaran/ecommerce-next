@@ -1,4 +1,5 @@
 .productCardContainer {
+  margin-top: 1rem;
   .badgeContainer {
     .badge {
       padding: 5px 10px;
@@ -12,10 +13,10 @@
   }
 
   .addToCartBtnWrapper {
-    position: relative;
+    // position: absolute;
     text-align: center;
     .shoppingCartIcon {
-      color: white;
+      color: white !important;
       max-width: 25px;
     }
   }
@@ -31,14 +32,18 @@
 @media (max-width: 767px) {
   .productCard {
     .cardBody {
+      text-align: center;
       .cardTitle, 
       .cardSubtitle {
         font-size: 0.75rem;
       }
+      .cardTitle {
+        height: 30px;
+      }
     }
   }
   .addToCartBtnWrapper {
-    bottom: 100px;
+    // bottom: 80px;
     .addToCartBtn {
       font-size: 10px;
       display: inline;
@@ -63,7 +68,7 @@
     }
   }
   .addToCartBtnWrapper {
-    bottom: 130px;
+    // bottom: 90px;
   }
 }
 

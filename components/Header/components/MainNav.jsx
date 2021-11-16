@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import { 
   Container,
   Navbar, 
@@ -28,31 +29,38 @@ const MainNav = () => {
             className={styles.navbarCollapse}
             id="basic-navbar-nav">
             <Nav className={`text-left mx-auto ${styles.navItems}`}>
-              <Nav.Link className={`${styles.navLink}`} href="/">
+              <Nav.Link 
+                className={styles.navLink} 
+                as={Link} 
+                href="/">
                 Home
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
+                as={Link}
                 href="/category/bedroom">
                 Bedroom
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
+                as={Link}
                 href="/category/living-room">
                 Living Room
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
+                as={Link}
                 href="/category/dining-room">
                 Dining Room
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
+                as={Link}
                 href="/category/kitchen">
                 Kitchen
               </Nav.Link>
             </Nav>
-            {/* <Form onSubmit={handleSubmit} inline>
+            <Form onSubmit={handleSubmit} inline>
               <FormControl
                 type="text"
                 placeholder="Search"
@@ -63,7 +71,7 @@ const MainNav = () => {
               <Button variant="outline-success" type="submit">
                 Search
               </Button>
-            </Form> */}
+            </Form>
           </Navbar.Collapse>
         </Navbar>
       </Container>

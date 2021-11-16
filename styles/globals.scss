@@ -29,9 +29,20 @@ a {
   text-decoration: line-through;
 }
 
+.card-footer {
+  background-color: white !important;
+}
+
 @media (max-width: 767px) {
+  .container-fluid, .container-xl {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .d-xs-none {
     display: none !important;
+  }
+  .d-xs-block {
+    display: block !important;
   }
   .btn-xs-block {
     display: block !important;

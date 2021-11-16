@@ -29,6 +29,13 @@
     .brandContainer {
       text-align: left;
     }
+    .navbarCollapse {
+      .navItems {
+        a {
+          padding: 10px 5px;
+        }
+      }
+    }
     .toggleDropdownContainer {}
   }
   .topNavContainer {
@@ -82,5 +89,12 @@
   }
   .navbarContainer {
     padding: 3%;
+    .navbarCollapse {
+      .navItems {
+        a {
+          padding: 10px;
+        }
+      }
+    }
   }
 }

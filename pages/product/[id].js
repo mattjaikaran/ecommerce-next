@@ -1,5 +1,5 @@
-import ProductDetail from '@components/ProductDetail'
-import ProductLayout from '@components/Layout/ProductLayout'
+import ProductDetail from '@/components/ProductDetail'
+import ProductLayout from '@/components/Layout/ProductLayout'
 
 const ProductID = () => {
   return (

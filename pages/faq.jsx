@@ -1,6 +1,6 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@components/Layout'
-import FAQ from '@components/FAQ'
+import Layout from '@/components/Layout'
+import FAQ from '@/components/FAQ'
 
 const FaqPage = () => {
   return (
