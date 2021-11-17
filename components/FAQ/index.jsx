@@ -20,16 +20,14 @@ const FAQ = () => {
     return mockFaqData.map(faq => {
       const { id, question, answer } = faq
       return (
-        <Card key={id}>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey={id}>
-              {question}
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey={id}>
-            <Card.Body>{answer}</Card.Body>
-          </Accordion.Collapse>
-        </Card>
+        <div key={id}>
+          <Accordion.Item eventKey={id} key={id}>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>
+              {answer}
+            </Accordion.Body>
+          </Accordion.Item>
+        </div>
       )
     })
   }

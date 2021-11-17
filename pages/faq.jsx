@@ -1,4 +1,3 @@
-import { Row , Col } from 'react-bootstrap'
 import Layout from '@/components/Layout'
 import FAQ from '@/components/FAQ'
 
