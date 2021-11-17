@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import { productArr } from '../copy/products'
 import Layout from '@/components/Layout'
 import Hero from '@/components/Hero'
 import ProductCard from '@/components/ProductCard'
@@ -11,41 +12,22 @@ import couchBlue from '@/images/couch-blue.png'
 import entertainmentCenter from '@/images/entertainment-center.png'
 
 const Home = () => {
-  const productObj = {
-    id: 1, 
-    title: 'Buckle Wrap Wooden Table',
-    price: 52,
-    quantity: 1,
-    sale: {
-      salePrice: 40
-    },
-    newProduct: false,
+  const renderProducts = () => {
+    return productArr.map(product => {
+      return (
+        <Col
+          // className={styles.productCardColumn}
+          key={product.id}
+          xs={6}
+          sm={6}
+          md={6}
+          lg={3}
+        >
+          <ProductCard product={product} />
+        </Col>
+      )
+    })
   }
-  const productObjTwo = {
-    id: 2, 
-    title: 'Wooden Coffee Mug',
-    price: 23.99,
-    quantity: 1,
-    sale: false,
-    newProduct: false,
-  }
-  const productObjThree = {
-    id: 3, 
-    title: 'Wooden Bluetooth Speaker',
-    price: 23,
-    quantity: 1,
-    sale: false,
-    newProduct: true,
-  }
-  const productObjFour = {
-    id: 4, 
-    title: 'Wood White Chair',
-    price: 45,
-    quantity: 1,
-    sale: false,
-    newProduct: false,
-  }
-
   return (
     <Layout>
       <Hero />
@@ -75,47 +57,14 @@ const Home = () => {
         </Row>
       </Container>
       <Container>
-        <Row>
-          <Col
-            // className={styles.productCardColumn}
-            xs={6}
-            sm={6}
-            md={6}
-            lg={3}>
-            <ProductCard product={productObj} />
-          </Col>
-          <Col
-            // className={styles.productCardColumn}
-            xs={6}
-            sm={6}
-            md={6}
-            lg={3}>
-            <ProductCard product={productObjTwo} />
-          </Col>
-          <Col
-            // className={styles.productCardColumn}
-            xs={6}
-            sm={6}
-            md={6}
-            lg={3}>
-            <ProductCard product={productObjThree} />
-          </Col>
-          <Col
-            // className={styles.productCardColumn}
-            xs={6}
-            sm={6}
-            md={6}
-            lg={3}>
-            <ProductCard product={productObjFour} />
-          </Col>
-        </Row>
+        <Row>{renderProducts()}</Row>
         <MiniProductCardGrid />
         <Categories />
-
         <CategorySlider
           title="Featured"
           description="Small be and the rain would phase distance, succeed align."
         />
+        <hr className="mt-5" />
         <CategorySlider
           title="New Arrivals"
           description="Small be and the rain would phase distance, succeed align."

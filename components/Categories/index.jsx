@@ -12,7 +12,7 @@ const Categories = () => {
       <Row>
         <Col lg={9} className="px-0 px-md-1">
           <Row>
-            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={7}>
+            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={7}>
               <Category
                 color="pink"
                 img={table}
@@ -21,7 +21,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={5}>
+            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={5}>
               <Category
                 color="teal"
                 img={chair}
@@ -30,7 +30,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={5}>
+            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={5}>
               <Category
                 color="green"
                 img={chair2}
@@ -39,7 +39,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-md-3 px-md-3 px-0" md={6} lg={7}>
+            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={7}>
               <Category
                 color="purple"
                 img={couch}
@@ -48,9 +48,19 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
+            <Col className="mb-sm-3 px-md-2 px-0 d-lg-none" sm={12} lg={0}>
+              <Category
+                imgRight
+                color="yellow"
+                img={barstoolBlack}
+                hashtag="Trending Now"
+                title="Kitchen Barstools"
+                link="/product-detail"
+              />
+            </Col>
           </Row>
         </Col>
-        <Col className="mb-md-3 px-md-3 px-0" lg={3}>
+        <Col className="mb-sm-3 px-md-2 px-0 d-md-none" lg={3}>
           <Category
             imgRight
             color="yellow"

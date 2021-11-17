@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import cx from 'classnames'
-import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import styles from '../Categories.module.scss'
 
 
@@ -21,44 +22,59 @@ const Category = ({ color, hashtag, img, title, link, imgRight }) => {
 
   if (imgRight) {
     return (
-      <Container className={`${colorProp} ${styles.categoryCard} text-left`} fluid>
-        <Row className="py-3 px-0">
-          <Col className="text-left pt-3 px-5">
+      <Container
+        className={`${colorProp} ${styles.categoryCard} text-left`}
+        fluid
+      >
+        <Container>
+          <Row className="py-3 px-0">
+            <Col className="text-left pt-3">
+              <p>
+                <small>#{hashtag}</small>
+              </p>
+              <h6>{title}</h6>
+              <Link href={link}>Shop Now</Link>
+            </Col>
+            <Col sm={12} className="pb-3 text-center mt-5 px-0">
+              <Image src={img} layout="responsive" />
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+    )
+  }
+  return (
+    <Container className={`${colorProp} ${styles.categoryCard}`} fluid>
+      <Container>
+        <Row className="py-5 py-sm-5 py-md-5 px-0">
+          <Col
+            className="text-center"
+            xs={{ order: 2, span: 12 }}
+            sm={{ order: 2, span: 6 }}
+            md={7}
+          >
+            <Image
+              className={`${styles.productImg}`}
+              src={img}
+              width={600}
+              height={400}
+              layout="responsive"
+            />
+          </Col>
+          <Col
+            className="text-left pt-5 pt-sm-3 pr-sm-0 pl-5"
+            xs={{ order: 1, span: 12 }}
+            sm={{ order: 1, span: 6 }}
+            md={5}
+          >
             <p>
               <small>#{hashtag}</small>
             </p>
             <h6>{title}</h6>
             <Link href={link}>Shop Now</Link>
           </Col>
-          <Col sm={12} className="pb-3 text-center mt-5 px-0">
-            <Image src={img} fluid />
-          </Col>
         </Row>
       </Container>
-    )
-  }
-  return (
-    <Container className={`${colorProp} ${styles.categoryCard}`} fluid>
-      <Row className="py-3 px-0">
-        <Col
-          className="text-center"
-          xs={{ order: 2, span: 12 }}
-          sm={{ order: 2, span: 6 }}
-          md={7}>
-          <Image className={`${styles.productImg}`} src={img} fluid />
-        </Col>
-        <Col
-          className="text-left pt-5 pr-sm-0 pl-5"
-          xs={{ order: 1, span: 12 }}
-          sm={{ order: 1, span: 6 }}
-          md={5}>
-          <p>
-            <small>#{hashtag}</small>
-          </p>
-          <h6>{title}</h6>
-          <Link href={link}>Shop Now</Link>
-        </Col>
-      </Row>
     </Container>
   )
 }

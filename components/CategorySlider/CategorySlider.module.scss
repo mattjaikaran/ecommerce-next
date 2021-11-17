@@ -1,4 +1,5 @@
-
+.categoryTitle {}
+.categoryDescription {}
 .categoryCarousel {
   // a {
   //   width: 14% !important;
@@ -16,6 +17,10 @@
 
 
 @media (max-width: 767px) {
+  .categoryDescription {
+    margin-top: 2rem;
+    text-align: center;
+  }
   .categoryCarousel {
     a {
       width: 6% !important;

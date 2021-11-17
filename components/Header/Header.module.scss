@@ -1,11 +1,12 @@
 .navbarContainer {
-  // padding: 3% 0;
   text-transform: uppercase;
   font-weight: 300;
-  a {
-    text-decoration: none !important;
-    &:hover {
-      text-decoration: underline;
+  .navbarCollapse {
+    .navItems {
+      a {
+        color: black !important;
+        text-decoration: none !important;
+      }
     }
   }
 }

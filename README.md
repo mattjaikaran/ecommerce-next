@@ -1,11 +1,11 @@
 # Ecommerce Store Next
 
-Built with:\
--NextJS\
--SCSS\
--React Bootstrap\
--React Hook Form\
--Axios
+### Built with: 
+- NextJS 12
+- SCSS 
+- React Bootstrap 2/Bootstrap 5
+- React Hook Form
+- Axios
 
 
 ## Getting Started

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Row, Col, Image } from 'react-bootstrap'
+import Image from 'next/image'
+import { Row, Col } from 'react-bootstrap'
 import styles from "./ProductGraphic.module.scss"
 
 const ProductGraphic = ({ leftSide, img, description, product, productDescription, ctaText, ctaLink }) => {
@@ -26,7 +27,7 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
         </Row>
         <Row className={styles.imgContainer}>
           <Col sm={6}>
-            <Image src={img} alt="asset" fluid />
+            <Image src={img} alt="asset" />
           </Col>
         </Row>
       </div>
@@ -54,7 +55,7 @@ const ProductGraphic = ({ leftSide, img, description, product, productDescriptio
       <Row className={styles.imgContainer}>
         <Col sm={5} />
         <Col sm={7}>
-          <Image src={img} alt="asset" fluid />
+          <Image src={img} alt="asset" />
         </Col>
       </Row>
     </div>

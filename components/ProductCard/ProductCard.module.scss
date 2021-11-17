@@ -61,6 +61,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .productCard {
     .cardBody {
+      text-align: center;
       .cardTitle, 
       .cardSubtitle {
         font-size: 0.8rem;
@@ -76,6 +77,7 @@
 @media (min-width: 991px) and (max-width: 1199px) {
   .productCard {
     .cardBody {
+      text-align: center;
       .cardTitle, 
       .cardSubtitle {
         font-size: 0.8rem;

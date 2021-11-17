@@ -34,7 +34,7 @@ const TopNav = () => {
             <Nav.Link href="/login">
               <small>Login</small>
             </Nav.Link>
-            <CartComponent className="ml-auto" />
+            {/* <CartComponent className="ml-auto" /> */}
           </Nav>
         </Col>
       </Row>

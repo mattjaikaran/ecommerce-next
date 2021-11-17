@@ -8,6 +8,8 @@ import {
   FormControl, 
   Button 
 } from 'react-bootstrap'
+import CartComponent from './CartComponent'
+import { AiOutlineSearch } from 'react-icons/ai'
 import styles from '../Header.module.scss'
 
 const MainNav = () => {
@@ -27,51 +29,42 @@ const MainNav = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             className={styles.navbarCollapse}
-            id="basic-navbar-nav">
+            id="basic-navbar-nav"
+          >
             <Nav className={`text-left mx-auto ${styles.navItems}`}>
-              <Nav.Link 
-                className={styles.navLink} 
-                as={Link} 
-                href="/">
+              <Nav.Link className={styles.navLink} as={Link} href="/">
                 Home
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
                 as={Link}
-                href="/category/bedroom">
+                href="/category/bedroom"
+              >
                 Bedroom
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
                 as={Link}
-                href="/category/living-room">
+                href="/category/living-room"
+              >
                 Living Room
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
                 as={Link}
-                href="/category/dining-room">
+                href="/category/dining-room"
+              >
                 Dining Room
               </Nav.Link>
               <Nav.Link
                 className={`${styles.navLink}`}
                 as={Link}
-                href="/category/kitchen">
+                href="/category/kitchen"
+              >
                 Kitchen
               </Nav.Link>
             </Nav>
-            <Form onSubmit={handleSubmit} inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success" type="submit">
-                Search
-              </Button>
-            </Form>
+            <CartComponent />
           </Navbar.Collapse>
         </Navbar>
       </Container>

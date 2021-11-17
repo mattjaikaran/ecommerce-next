@@ -20,7 +20,7 @@ const ProductCard = (props) => {
          <Col>
           <div className={`${styles.badgeContainer} text-left ml-2`}>
             <Badge 
-              variant="success" 
+              bg="success" 
               className={styles.badge}>
               New
             </Badge>
@@ -33,7 +33,7 @@ const ProductCard = (props) => {
         <Col>
           <div className={`${styles.badgeContainer} text-right mr-2`}>
             <Badge 
-              variant="danger" 
+              bg="danger" 
               className={styles.badge}>
               Sale
             </Badge>
