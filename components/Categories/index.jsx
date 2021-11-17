@@ -48,7 +48,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-sm-3 px-md-2 px-0 d-lg-none" sm={12} lg={0}>
+            <Col className="mb-sm-3 px-md-2 px-0 d-lg-none" sm={12}>
               <Category
                 imgRight
                 color="yellow"
@@ -60,7 +60,7 @@ const Categories = () => {
             </Col>
           </Row>
         </Col>
-        <Col className="mb-sm-3 px-md-2 px-0 d-md-none" lg={3}>
+        <Col className="mb-sm-3 px-md-2 px-0 d-none d-lg-block" lg={3}>
           <Category
             imgRight
             color="yellow"
