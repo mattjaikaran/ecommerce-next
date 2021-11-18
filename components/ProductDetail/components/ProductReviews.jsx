@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Row, Col, Button, ProgressBar } from 'react-bootstrap'
 import '../ProductDetail.module.scss'
+import { productReviews, renderReviewAverage } from '../../../copy/reviews'
 import ProductReview from './ProductReview'
 import NewReviewModal from './NewReviewModal'
 
@@ -9,12 +10,27 @@ const ProductReviews = () => {
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+
+  const renderProductReviews = () => (
+    productReviews.map(({ id, title, date, fit, width, rating, reviewText }) => (
+      <ProductReview
+        key={id}
+        title={title}
+        date={date}
+        fit={fit}
+        width={width}
+        rating={rating}
+        reviewText={reviewText}
+      />
+    ))
+  )
+  
   return (
     <div>
       <Row>
         <Col md={3} lg={3}>
           <h3>Reviews</h3>
-          <h5>4.2 out of 5</h5>
+          <h5>{renderReviewAverage(productReviews)} out of 5</h5>
           <p>
             <span className="">Fit Rating:</span> runs slightly large
           </p>
@@ -80,32 +96,13 @@ const ProductReviews = () => {
           </Row>
         </Col>
         <Col className="mt-md-3" sm={6} md={3} lg={3}>
-          <Button variant="outline-dark" onClick={handleShow} block>
+          <Button variant="outline-dark btn-xs-block" onClick={handleShow}>
             Write a Review
           </Button>
         </Col>
       </Row>
-      <ProductReview
-        title="This product is awesome. I love it."
-        date="Jan 24, 2020"
-        fit="true to size"
-        width="slightly small"
-        review="The shoes are very nice looking but they started squeaking after a couple of hours of wearing them. I would recommend buying a different boot."
-      />
-      <ProductReview
-        title="This product is terrible. I hate it."
-        date="Jan 24, 2020"
-        fit="slightly large"
-        width="slightly large"
-        review="Ordered the black leather 1st. Boot looks, fits so good, ordered the black, gray, tan suede. Looks like the more expensive boot costing 3-4-5x's more. L"
-      />
-      <ProductReview
-        title="This product is ok."
-        date="Jan 24, 2020"
-        fit="slightly small"
-        width="slightly small"
-        review="This one is almost perfect."
-      />
+      <hr className="mt-5" />
+      <div className="mt-5">{renderProductReviews()}</div>
       <NewReviewModal show={show} onHide={handleClose} />
     </div>
   )

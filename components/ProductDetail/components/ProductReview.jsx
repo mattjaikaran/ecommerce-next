@@ -1,15 +1,63 @@
 import { Row, Col, Button } from 'react-bootstrap'
+import { AiFillStar } from 'react-icons/ai'
 import styles from '../ProductDetail.module.scss'
 
 
 // single review
-const ProductReview = ({ title, date, fit, width, review }) => {
+const ProductReview = ({ title, date, fit, width, rating, reviewText }) => {
+  const renderRatingStars = () => {
+    if (rating === 1) {
+      return (
+        <>
+          <AiFillStar />
+        </>
+      )
+    }
+    if (rating === 2) {
+      return (
+        <>
+          <AiFillStar />
+          <AiFillStar />
+        </>
+      )
+    }
+    if (rating === 3) {
+      return (
+        <>
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+        </>
+      )
+    }
+    if (rating === 4) {
+      return (
+        <>
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+        </>
+      )
+    }
+    if (rating === 5) {
+      return (
+        <>
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+        </>
+      )
+    }
+  }
   return (
     <div>
       <Row>
         <Col lg={6}>
-          <p>Stars</p>
-          <p className="font-weight-bold">{title}</p>
+          <div>{renderRatingStars()}</div>
+          <p className="mt-3">{title}</p>
         </Col>
         <Col lg={6}>
           <p className="">{date}</p>
@@ -19,9 +67,10 @@ const ProductReview = ({ title, date, fit, width, review }) => {
           <p>Width: {width}</p>
         </Col>
       </Row>
-      <p>{review}</p>
+      <p>{reviewText}</p>
       <div>
-        <p className="font-weight-bold">Product Images</p>
+        <p className="font-weight-bold">Product Imageshere</p>
+        {/* {productImages.map(productImg = {})} */}
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ const ProductLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <Container fluid>
+      <Container>
         {children}
       </Container>
       <Footer />

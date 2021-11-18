@@ -22,7 +22,6 @@ const ProductVariants = (props) => {
 
 
   const handleAddToBag = async (e) => {
-    e.preventDefault()
     // const productObj = {
     //   ...props.exercise,
     //   size,
@@ -31,7 +30,7 @@ const ProductVariants = (props) => {
 
     console.log('Loading.')
     try {
-      const response = axios.post('url', productObj)
+      // const response = axios.post('url', productObj)
       console.log('added to bag')
     } catch (err) {
       console.log(err.message)
@@ -50,10 +49,10 @@ const ProductVariants = (props) => {
           <div className="">
             <h6 className="d-inline">$39.20</h6>
             <p className="text-muted d-inline ml-2">
-              <small className="line-through">49.00</small>
+              <small className="line-through"> 49.00</small>
             </p>
-            <p className="d-md-inline ml-md-2">20% off</p>
-            <p className="d-md-inline ml-md-2">FREE SHIPPING</p>
+            <p className="ml-md-2">20% off</p>
+            <p className="ml-md-2">FREE SHIPPING</p>
           </div>
           <p className="mt-2">
             <small className="creditCardTag">
@@ -71,13 +70,12 @@ const ProductVariants = (props) => {
         <Row className="mt-3">
           <Col xs={6}>
             <p className="fit">
-              <span className="font-weight-bold">Fit:</span>
+              <span className="font-weight-bold">Fit: </span>
               <span className="ml-1">True to size.</span>
             </p>
           </Col>
           <Col xs={6}>
             <DropdownButton id="dropdown-item-button" title="Choose a Size">
-              {/* <Dropdown.ItemText>Choose a Size:</Dropdown.ItemText> */}
               <Dropdown.Item as="button" value="x-small">
                 X-Small
               </Dropdown.Item>
@@ -98,25 +96,21 @@ const ProductVariants = (props) => {
         </Row>
 
         <Form onSubmit={handleSubmit(handleAddToBag)}>
-            {['radio'].map((type) => (
-            <div key={`custom-inline-${type}`} className="mb-3">
-              <Form.Check
-                custom
-                inline
-                label="Standard Shipping"
-                type={type}
-                id={`custom-inline-${type}-1`}
-              />
-              <Form.Check
-                custom
-                inline
-                label="Overnight Shipping"
-                type={type}
-                id={`custom-inline-${type}-2`}
-              />
-            </div>
-          ))}
-          <Button variant="outline-dark" type="submit" block>
+          <div key={`custom-inline-radio`} className="mb-3">
+            <Form.Check
+              inline
+              label="Standard Shipping"
+              type="radio"
+              id="custom-inline-radio-1"
+            />
+            <Form.Check
+              inline
+              label="Overnight Shipping"
+              type="radio"
+              id="custom-inline-radio-2"
+            />
+          </div>
+          <Button variant="outline-dark btn-xs-block" type="submit">
             Add To Bag
           </Button>
         </Form>

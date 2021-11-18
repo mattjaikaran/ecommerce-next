@@ -44,23 +44,39 @@ const ProductCard = (props) => {
   }
 
   return (
-    <div className={`${styles.productCardContainer}`}>
-      <Row>{renderBadge()}</Row>
+    <div className={styles.productCardContainer}>
+      {sale || newProduct ? (
+        <Row>
+          <Col>
+            <div className={`${styles.badgeContainer} text-left ml-2`}>
+              <Badge bg={sale ? 'danger' : 'success'} className={styles.badge}>
+                {newProduct ? 'New' : 'Sale'}
+              </Badge>
+            </div>
+          </Col>
+        </Row>
+      ) : (
+        ''
+      )}
       <Card
         onClick={handleShow}
-        className={`${styles.productCard} ${!sale && !newProduct && "mt-3"}`}>
+        className={`${styles.productCard} ${
+          !sale && !newProduct ? styles.productCardMargin : ''
+        }`}
+      >
         <Card.Img
           variant="top"
           src="https://dummyimage.com/275x360/ccc/000"
           fluid="true"
         />
         <Card.Body
-          className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}>
+          className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}
+        >
           <Card.Title className={`${styles.cardTitle} text-muted`}>
             {title}
           </Card.Title>
           <Card.Subtitle className={`${styles.cardSubtitle}`}>
-            <span className={`${sale && "text-danger"}`}>
+            <span className={`${sale && 'text-danger'}`}>
               ${sale ? sale.salePrice.toFixed(2) : price.toFixed(2)}
             </span>
             {sale && (
@@ -75,14 +91,16 @@ const ProductCard = (props) => {
             size="sm"
             variant="outline-secondary"
             className={styles.addToCartBtn}
-            onClick={() => addToCart(props.product)}>
+            onClick={() => addToCart(props.product)}
+          >
             <BsCart3 />
           </Button>
           <Button
             size="sm"
             variant="primary"
             className={styles.quickView}
-            onClick={handleShow}>
+            onClick={handleShow}
+          >
             <AiOutlineEye />
           </Button>
         </ButtonGroup>
