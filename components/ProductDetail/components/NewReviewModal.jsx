@@ -119,8 +119,7 @@ const NewReviewModal = (props) => {
           </Form.Group>
           <Form.Group controlId="reviewRange">
             <Form.Label>How does it fit?</Form.Label>
-            <Form.Control
-              type="range"
+            <Form.Range
               value={reviewFitRange}
               onChange={(e) => setReviewFitRange(e.target.value)}
             />
@@ -128,7 +127,7 @@ const NewReviewModal = (props) => {
         </Form>
         <p>
           <small>
-            By submitting this review, you agree to our
+            By submitting this review, you agree to our {' '}
             <a
               href="#"
               ref={target}
@@ -136,8 +135,7 @@ const NewReviewModal = (props) => {
                 e.preventDefault()
                 setShow(!show)
               }}>
-              {" "}
-              Customer Review Terms &amp Conditions
+              Customer Review Terms &amp; Conditions
             </a>
             .
           </small>
