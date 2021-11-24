@@ -39,101 +39,123 @@ const Register = () => {
         <h3>Register</h3>
       </Card.Title>
       <Card.Body>
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          <Row>
-            <Col md={6}>
-              <Form.Group className="mb-3" controlId="registerFirstName">
-                <Form.Label>First Name</Form.Label>
+        <Row>
+          <Col sm={0} md={2}></Col>
+          <Col md={8}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <Row>
+                <Col md={6}>
+                  <Form.Group className="mb-3" controlId="registerFirstName">
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="First name"
+                      {...register('First name', {
+                        required: true,
+                        maxLength: 80,
+                      })}
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md={6}>
+                  <Form.Group className="mb-3" controlId="registerLastName">
+                    <Form.Label>Last Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Last name"
+                      {...register('Last name', {
+                        required: true,
+                        maxLength: 100,
+                      })}
+                    />
+                  </Form.Group>
+                </Col>
+              </Row>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="First name"
-                  {...register('First name', { required: true, maxLength: 80 })}
+                  placeholder="Email"
+                  {...register('Email', {
+                    required: true,
+                    pattern: /^\S+@\S+$/i,
+                  })}
                 />
               </Form.Group>
-            </Col>
-            <Col md={6}>
-              <Form.Group className="mb-3" controlId="registerLastName">
-                <Form.Label>Last Name</Form.Label>
+
+              <Form.Group className="mb-3" controlId="registerPhone">
+                <Form.Label>Phone #</Form.Label>
+                <Form.Control
+                  type="tel"
+                  placeholder="Mobile number"
+                  {...register('Mobile number', {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 12,
+                  })}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="registerEmail">
+                <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Last name"
-                  {...register('Last name', { required: true, maxLength: 100 })}
+                  placeholder="Email"
+                  {...register('Email', {
+                    required: true,
+                    pattern: /^\S+@\S+$/i,
+                  })}
                 />
               </Form.Group>
-            </Col>
-          </Row>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Email"
-              {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-            />
-          </Form.Group>
+              <Form.Group className="mb-3" controlId="registerPassword">
+                <Form.Label>Password</Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    type={passwordShown ? 'text' : 'password'}
+                    placeholder="Password"
+                    {...register('Password', { required: true })}
+                  />
+                  <InputGroup.Text
+                    id="basic-addon"
+                    onClick={togglePasswordVisiblity}
+                  >
+                    {passwordShown ? (
+                      <AiOutlineEyeInvisible />
+                    ) : (
+                      <AiOutlineEye />
+                    )}
+                  </InputGroup.Text>
+                </InputGroup>
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="registerPhone">
-            <Form.Label>Phone #</Form.Label>
-            <Form.Control
-              type="tel"
-              placeholder="Mobile number"
-              {...register('Mobile number', {
-                required: true,
-                minLength: 6,
-                maxLength: 12,
-              })}
-            />
-          </Form.Group>
+              <Form.Group className="mb-3" controlId="registerPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    type={passwordConfirmationShown ? 'text' : 'password'}
+                    placeholder="Confirm Password"
+                    {...register('Confirm Password', { required: true })}
+                  />
+                  <InputGroup.Text
+                    id="basic-addon"
+                    onClick={togglePasswordVisiblityTwo}
+                  >
+                    {passwordConfirmationShown ? (
+                      <AiOutlineEyeInvisible />
+                    ) : (
+                      <AiOutlineEye />
+                    )}
+                  </InputGroup.Text>
+                </InputGroup>
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="registerEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Email"
-              {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="registerPassword">
-            <Form.Label>Password</Form.Label>
-            <InputGroup>
-              <Form.Control
-                type={passwordShown ? 'text' : 'password'}
-                placeholder="Password"
-                {...register('Password', { required: true })}
-              />
-              <InputGroup.Text
-                id="basic-addon"
-                onClick={togglePasswordVisiblity}
-              >
-                {passwordShown ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-              </InputGroup.Text>
-            </InputGroup>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="registerPassword">
-            <Form.Label>Confirm Password</Form.Label>
-            <InputGroup>
-              <Form.Control
-                type={passwordConfirmationShown ? 'text' : 'password'}
-                placeholder="Confirm Password"
-                {...register('Confirm Password', { required: true })}
-              />
-              <InputGroup.Text
-                id="basic-addon"
-                onClick={togglePasswordVisiblityTwo}
-              >
-                {passwordConfirmationShown ? (
-                  <AiOutlineEyeInvisible />
-                ) : (
-                  <AiOutlineEye />
-                )}
-              </InputGroup.Text>
-            </InputGroup>
-          </Form.Group>
-
-          <CustomButton type="submit" btnText="Register" />
-        </Form>
+              <CustomButton type="submit" btnText="Register" />
+            </Form>
+          </Col>
+          <Col sm={0} md={2}></Col>
+        </Row>
       </Card.Body>
     </Card>
     // <>

@@ -1,5 +1,4 @@
-import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap'
-import CartComponent from './CartComponent'
+import { Container, Nav, Row, Col } from 'react-bootstrap'
 import styles from '../Header.module.scss'
 
 const TopNav = () => {
@@ -34,7 +33,6 @@ const TopNav = () => {
             <Nav.Link href="/login">
               <small>Login</small>
             </Nav.Link>
-            {/* <CartComponent className="ml-auto" /> */}
           </Nav>
         </Col>
       </Row>

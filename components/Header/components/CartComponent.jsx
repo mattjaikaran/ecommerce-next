@@ -4,8 +4,6 @@ import styles from '../Header.module.scss'
 
 const CartComponent = () => {
 
-  const renderCartItems = () => {}
-
   const CartDetails = ({ align, style }) => (
     <Dropdown align={align} id="dropdown-split-basic">
       <Dropdown.Toggle variant="light" id="dropdown-split-basic">

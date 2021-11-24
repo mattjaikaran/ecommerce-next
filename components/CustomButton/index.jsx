@@ -4,7 +4,7 @@ const CustomButton = (props) => {
   return (
     <div className="mt-3">
       <Button
-        className="d-none d-sm-block"
+        className="d-none d-md-block"
         variant={props.variant}
         onClick={props.onClick}
         href={props.btnLink}
@@ -14,7 +14,7 @@ const CustomButton = (props) => {
       </Button>
       <div className="d-grid">
         <Button
-          className="d-block d-sm-none"
+          className="d-block d-md-none"
           onClick={props.onClick}
           href={props.btnLink}
           type={props.type}

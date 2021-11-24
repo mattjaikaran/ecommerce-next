@@ -1,15 +1,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { 
-  Container,
-  Navbar, 
-  Nav, 
-  Form, 
-  FormControl, 
-  Button 
-} from 'react-bootstrap'
-import CartComponent from './CartComponent'
-import { AiOutlineSearch } from 'react-icons/ai'
+import { Container, Navbar, Nav } from 'react-bootstrap'
+import Cart from '@/components/Cart'
+import { VscColorMode } from 'react-icons/vsc'
+import { navigation } from '@/copy/navigation'
 import styles from '../Header.module.scss'
 
 const MainNav = () => {
@@ -21,50 +15,35 @@ const MainNav = () => {
     console.log(searchQuery)
   }
 
+  const renderNavItems = () => (
+    navigation.map(({ id, title, link }) => (
+      <Nav.Link
+        key={id}
+        className={styles.navLink}
+        as={Link}
+        href={link}
+      >
+        {title}
+      </Nav.Link>
+    ))
+  
+)
   return (
     <Container className="bg-light" fluid>
       <Container>
         <Navbar className={styles.navbarContainer} expand="lg">
-          <Navbar.Brand href="/">Store</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <VscColorMode />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             className={styles.navbarCollapse}
             id="basic-navbar-nav"
           >
             <Nav className={`text-left mx-auto ${styles.navItems}`}>
-              <Nav.Link className={styles.navLink} as={Link} href="/">
-                Home
-              </Nav.Link>
-              <Nav.Link
-                className={`${styles.navLink}`}
-                as={Link}
-                href="/category/bedroom"
-              >
-                Bedroom
-              </Nav.Link>
-              <Nav.Link
-                className={`${styles.navLink}`}
-                as={Link}
-                href="/category/living-room"
-              >
-                Living Room
-              </Nav.Link>
-              <Nav.Link
-                className={`${styles.navLink}`}
-                as={Link}
-                href="/category/dining-room"
-              >
-                Dining Room
-              </Nav.Link>
-              <Nav.Link
-                className={`${styles.navLink}`}
-                as={Link}
-                href="/category/kitchen"
-              >
-                Kitchen
-              </Nav.Link>
+              {renderNavItems()}
             </Nav>
-            <CartComponent />
+            <Cart />
           </Navbar.Collapse>
         </Navbar>
       </Container>

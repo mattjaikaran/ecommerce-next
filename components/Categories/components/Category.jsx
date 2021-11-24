@@ -27,8 +27,8 @@ const Category = ({ color, hashtag, img, title, link, imgRight }) => {
         fluid
       >
         <Container>
-          <Row className="py-3 px-0">
-            <Col className="text-left pt-3">
+          <Row className="py-5 px-0">
+            <Col className="text-left pt-md-3">
               <p>
                 <small>#{hashtag}</small>
               </p>
@@ -62,7 +62,7 @@ const Category = ({ color, hashtag, img, title, link, imgRight }) => {
             />
           </Col>
           <Col
-            className="text-left pt-5 pt-sm-3 pr-sm-0 pl-5"
+            className="text-left pt-3 pb-5 pt-sm-3 pr-sm-0 pl-5"
             xs={{ order: 1, span: 12 }}
             sm={{ order: 1, span: 6 }}
             md={5}
