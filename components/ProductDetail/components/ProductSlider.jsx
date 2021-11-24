@@ -1,48 +1,41 @@
 import { Carousel, Image } from 'react-bootstrap'
+import { renderCarouselImages } from '@/hooks/carousel'
 import styles from '../ProductDetail.module.scss'
 
-const ProductSlider = () => {
-  return (
-    <Carousel interval={null} fade>
-      <Carousel.Item>
-        <Image
-          className="d-block w-100"
-          src="https://dummyimage.com/800x400/ccc/fff&text=+"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image
-          className="d-block w-100"
-          src="https://dummyimage.com/800x400/ccc/fff&text=+"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image
-          className="d-block w-100"
-          src="https://dummyimage.com/800x400/ccc/fff&text=+"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  )
+const ProductSlider = ({ imgArray }) => {
+  const renderCarouselImages = () => {
+    return imgArray.map((img) => {
+      return (
+        <Carousel.Item>
+          {/* desktop image/ */}
+          <Image
+            className="d-none d-md-block w-100"
+            width={800}
+            height={400}
+            layout="responsive"
+            src={img.img}
+            alt={img.caption || `Carousel Image ${img.id}`}
+          />
+          {/* mobile image */}
+          <Image
+            className="d-block d-md-none w-100"
+            width={400}
+            height={600}
+            layout="fill"
+            src={img.imgMobile}
+            alt={img.caption || `Carousel Image ${img.id}`}
+          />
+          {img.caption && (
+            <Carousel.Caption>
+              <h3>{img.caption}</h3>
+              {img.subCaption && <p>{img.subCaption}</p>}
+            </Carousel.Caption>
+          )}
+        </Carousel.Item>
+      )
+    })
+  }
+  return <Carousel interval={null} controls={false}>{renderCarouselImages()}</Carousel>
 }
 
 export default ProductSlider

@@ -5,11 +5,11 @@ import './Layout.module.scss'
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <Container fluid="xl" className="my-3">{children}</Container>
       <Footer />
-    </div>
+    </>
   )
 }
 

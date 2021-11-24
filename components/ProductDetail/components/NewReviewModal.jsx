@@ -88,15 +88,14 @@ const NewReviewModal = (props) => {
           </Form.Group>
           <Form.Group controlId="reviewForm.size">
             <Form.Label>Size</Form.Label>
-            <Form.Control
-              as="select"
+            <Form.Select
               onChange={(e) => setReviewSize(e.target.value)}>
               <option value="x-small">X-Small</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>
               <option value="x-large">X-Large</option>
-            </Form.Control>
+            </Form.Select>
           </Form.Group>
           <Form.Group controlId="reviewForm.reviewHeadline">
             <Form.Label>Review Headline</Form.Label>

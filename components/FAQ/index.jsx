@@ -1,16 +1,16 @@
 import './FAQ.module.scss'
-import { Accordion, Card, Button } from 'react-bootstrap'
+import { Accordion } from 'react-bootstrap'
 
 const mockFaqData = [
   {
     id: 1,
-    question: 'Is this site legit?',
-    answer: 'No. Not yet'
+    question: 'Who are you?',
+    answer: 'We are a brand that lorem ipsum..'
   },
   {
     id: 2,
-    question: 'Should you consider hiring the developers who worked on this web app?',
-    answer: 'Yes, of course.'
+    question: 'How do?',
+    answer: 'Yes, of course. And overnight shipping.'
   },
 ]
 
