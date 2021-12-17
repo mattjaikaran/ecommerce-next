@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { addToCart } from '../../hooks/addToCart'
+import { addItemToCart } from '../../hooks/cartHooks'
 import { Card, Row, Col, Badge, Image, Button, ButtonGroup } from 'react-bootstrap'
 import ProductModal from './components/ProductModal'
 import { BsCart3 } from 'react-icons/bs'

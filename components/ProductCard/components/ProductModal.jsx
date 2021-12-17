@@ -1,4 +1,4 @@
-import { addToCart } from '../../../hooks/addToCart'
+import { addToCart } from '../../../hooks/cartHooks'
 import { 
   Modal, 
   Carousel, 
