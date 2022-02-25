@@ -15,6 +15,7 @@ const CustomButton = (props) => {
       <div className="d-grid">
         <Button
           className="d-block d-md-none"
+          variant={props.variant}
           onClick={props.onClick}
           href={props.btnLink}
           type={props.type}

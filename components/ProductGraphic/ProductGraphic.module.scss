@@ -20,15 +20,38 @@
   }
 }
 
+.productGraphicLarge {
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .cardBody {
+    position: absolute;
+    bottom: 20px;
+  }
+  .cardBodyFullWidth {
+    text-align: right;
+    position: absolute;
+  }
+}
+
 @media (max-width: 767px) {
-  .title {
+  .productGraphicLarge {
+    background-position: top;
+    .cardBodyFullWidth {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .productGraphic {
+    .title {
+      text-align: center;
+    }
+    .productDescriptionContainer {
     text-align: center;
-  }
-  .productDescriptionContainer {
-  text-align: center;
-  }
-  .imgContainer {
-    margin-top: 50px;
+    }
+    .imgContainer {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -37,6 +60,12 @@
     height: 250px;
     .imgContainer {
       margin-top: -2%;
+    }
+  }
+  .productGraphicLarge {
+    .cardBodyFullWidth {
+      bottom: 10px;
+      right: 30px;
     }
   }
 }
