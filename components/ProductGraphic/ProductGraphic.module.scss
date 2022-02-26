@@ -21,7 +21,6 @@
 }
 
 .productGraphicLarge {
-  height: 450px;
   background-repeat: no-repeat;
   background-size: cover;
   .cardBody {
@@ -36,7 +35,7 @@
 
 @media (max-width: 767px) {
   .productGraphicLarge {
-    background-position: top;
+    height: 250px;
     .cardBodyFullWidth {
       bottom: 10px;
       right: 10px;
@@ -63,6 +62,7 @@
     }
   }
   .productGraphicLarge {
+    height: 550px;
     .cardBodyFullWidth {
       bottom: 10px;
       right: 30px;

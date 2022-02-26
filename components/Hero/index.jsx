@@ -1,11 +1,10 @@
 import { Carousel } from 'react-bootstrap'
-import { homeHeroImages } from '@/copy/homepage'
 import { renderCarouselImages } from '@/hooks/carousel'
 
-const Hero = () => {
+const Hero = ({ images }) => {
   return (
     <Carousel interval={null} controls={false} fade={true}>
-      {renderCarouselImages(homeHeroImages)}
+      {renderCarouselImages(images)}
     </Carousel>
   )
 }

@@ -19,9 +19,9 @@ export const navigation = [
     title: 'Accessories',
     link: '/categories/accessories',
   },
-  {
-    id: 5,
-    title: 'Custom Label',
-    link: '/categories/custom-label',
-  },
+  // {
+  //   id: 5,
+  //   title: 'Custom Label',
+  //   link: '/categories/custom-label',
+  // },
 ]

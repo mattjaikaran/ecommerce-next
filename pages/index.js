@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { productArr } from '../copy/products'
+import { homeHeroImages } from '@/copy/homepage'
 import Layout from '@/components/Layout'
 import Hero from '@/components/Hero'
 import ProductCard from '@/components/ProductCard'
@@ -34,7 +35,7 @@ const Home = () => {
   }
   return (
     <Layout>
-      <Hero />
+      <Hero images={homeHeroImages} />
       <Container>
         <Row className="mt-3">
           <Col md={6}>
