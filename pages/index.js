@@ -35,8 +35,8 @@ const Home = () => {
   }
   return (
     <Layout>
-      <Hero images={homeHeroImages} />
-      <Container>
+      <Container fluid="xl">
+        <Hero images={homeHeroImages} />
         <Row className="mt-3">
           <Col md={6}>
             <ProductGraphic
@@ -60,7 +60,7 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container fluid>
         <Row>{renderProducts()}</Row>
         <MiniProductCardGrid />
         <Categories />

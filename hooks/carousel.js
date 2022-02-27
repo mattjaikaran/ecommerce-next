@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Carousel } from 'react-bootstrap'
 
-export const renderCarouselImages = (slides) => {
+export const renderCarouselImages = (slides = []) => {
   return slides.map((slide) => {
     const { id, img, imgMobile, caption, description } = slide
     return (

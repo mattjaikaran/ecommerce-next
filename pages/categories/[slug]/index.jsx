@@ -28,7 +28,7 @@ const CategoryID = () => {
   }
   return (
     <Layout>
-      <Link href={`${slug}/gallery`}>View Gallery</Link>
+      {/* <Link href={`${slug}/gallery`}>View Gallery</Link> */}
       {renderCategoryScreen()}
     </Layout>
   )
