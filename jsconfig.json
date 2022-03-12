@@ -19,6 +19,9 @@
       ],
       "@/screens/*": [
         "screens/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
       ]
     }
   }

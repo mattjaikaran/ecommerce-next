@@ -11,6 +11,7 @@ const ProductGraphicLarge = ({
   fullWidth,
   whiteText,
   contain,
+  bgCenter,
   img,
   product,
   ctaText,
@@ -25,6 +26,7 @@ const ProductGraphicLarge = ({
         style={{
           backgroundImage: `url(${img.src})`,
           backgroundSize: contain && 'contain',
+          backgroundPosition: bgCenter && 'center',
         }}
         border="light"
       >
@@ -44,6 +46,7 @@ const ProductGraphicLarge = ({
       style={{
         backgroundImage: `url(${img.src})`,
         backgroundSize: contain && 'contain',
+        backgroundPosition: bgCenter && 'center',
       }}
       border="light"
     >

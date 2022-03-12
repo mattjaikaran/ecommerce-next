@@ -116,18 +116,18 @@ export const productArr = [
     thumbnail: 'https://dummyimage.com/150x150/ccc/000',
     newProduct: false,
   },
-  {
-    id: 9,
-    title: 'Wood White Chair',
-    brand: 'Brand Name',
-    description: '',
-    price: 25,
-    quantity: 1,
-    sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
-    newProduct: false,
-  },
+  // {
+  //   id: 9,
+  //   title: 'Wood White Chair',
+  //   brand: 'Brand Name',
+  //   description: '',
+  //   price: 25,
+  //   quantity: 1,
+  //   sale: false,
+  //   img: 'https://dummyimage.com/275x360/ccc/000',
+  //   thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+  //   newProduct: false,
+  // },
 ]
 
 export const productObj = {

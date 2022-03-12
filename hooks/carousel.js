@@ -5,7 +5,7 @@ export const renderCarouselImages = (slides = []) => {
   return slides.map((slide) => {
     const { id, img, imgMobile, caption, description } = slide
     return (
-      <Carousel.Item key={id} className="pt-0">
+      <Carousel.Item key={id} className="px-0">
         <div>
           {/* <Image
             layout="responsive"
@@ -25,8 +25,8 @@ export const renderCarouselImages = (slides = []) => {
           {/* mobile image */}
           {/* <Image
             className="d-block d-md-none"
-            width={600}
-            height={700}
+            width={400}
+            height={800}
             layout="responsive"
             src={imgMobile}
             alt={img.caption || `Carousel Image ${img.id}`}

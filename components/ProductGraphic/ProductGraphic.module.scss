@@ -23,6 +23,7 @@
 .productGraphicLarge {
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
   .cardBody {
     position: absolute;
     bottom: 20px;
@@ -35,7 +36,8 @@
 
 @media (max-width: 767px) {
   .productGraphicLarge {
-    height: 250px;
+    height: 350px;
+    background-position: center;
     .cardBodyFullWidth {
       bottom: 10px;
       right: 10px;
@@ -62,7 +64,7 @@
     }
   }
   .productGraphicLarge {
-    height: 550px;
+    height: 600px;
     .cardBodyFullWidth {
       bottom: 10px;
       right: 30px;

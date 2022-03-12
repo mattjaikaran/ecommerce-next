@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Container, Row, Col } from 'react-bootstrap'
 import MiniProductCard from '@/components/MiniProductCard'
 
-const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://ecommerce-store-nextjs.vercel.app/'
+// const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://ecommerce-store-nextjs.vercel.app/'
 
 const MiniProductCardGrid = () => {
   const [products, setProducts] = useState(null)
@@ -25,14 +25,14 @@ const MiniProductCardGrid = () => {
   }
 
   const renderData = async () => {
-    const response = await axios.get(`${server}/api/products`)
+    const response = await axios.get(`/api/products`)
     return setProducts(response.data.products)
   }
 
   useEffect(() => renderData(), [])
 
   return (
-    <Container className="pl-4 ml-lg-5 mt-5">
+    <Container className="px-4 px-md-5 mt-lg-3 mt-5">
       <Row className="text-center">
         {renderCards()}
       </Row>
