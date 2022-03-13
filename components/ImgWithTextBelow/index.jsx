@@ -16,7 +16,11 @@ const ImgWithTextBelow = ({
 }) => {
   return (
     <Card style={{ border: 'none' }} border="light">
-      <Card.Img variant="top" src={img} alt={imgAlt} />
+      <Card.Img
+        variant="top"
+        src={img}
+        alt={imgAlt}
+      />
       <Card.Body>
         {title && <Card.Title className="h6">{title}</Card.Title>}
         {description && <p>{description}</p>}

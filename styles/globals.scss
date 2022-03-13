@@ -17,6 +17,10 @@ a {
 .card-footer {
   background-color: white !important;
 }
+.card-img-top {
+  border-radius: 0 !important;
+  border: none !important;
+}
 
 @media (max-width: 767px) {
   .container-fluid, .container-xl {
