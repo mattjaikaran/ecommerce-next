@@ -1,23 +1,15 @@
 import Image from 'next/image'
 import { Carousel } from 'react-bootstrap'
 
-export const renderCarouselImages = (slides) => {
+export const renderCarouselImages = (slides = []) => {
   return slides.map((slide) => {
     const { id, img, imgMobile, caption, description } = slide
     return (
-      <Carousel.Item key={id} className="pt-0">
+      <Carousel.Item key={id} className="px-0">
         <div>
-          {/* <Image
-            layout="responsive"
-            width={800}
-            height={400}
-            src={img}
-            alt={caption}
-          /> */}
           <Image
-            // className="d-none d-md-block"
-            width={800}
-            height={400}
+            width={500}
+            height={300}
             layout="responsive"
             src={img}
             alt={img.caption || `Carousel Image ${img.id}`}
@@ -25,8 +17,8 @@ export const renderCarouselImages = (slides) => {
           {/* mobile image */}
           {/* <Image
             className="d-block d-md-none"
-            width={600}
-            height={700}
+            width={400}
+            height={800}
             layout="responsive"
             src={imgMobile}
             alt={img.caption || `Carousel Image ${img.id}`}
@@ -42,3 +34,8 @@ export const renderCarouselImages = (slides) => {
     )
   })
 }
+
+
+// export const renderProductSlider = (slides = []) => {
+//   return slides.map()
+// }

@@ -1,0 +1,65 @@
+@media (max-width: 767px) {
+  .categoryDescription {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .categoryCarousel {
+    a {
+      width: 6% !important;
+      bottom: 170px !important;
+    }
+    .carousel-control-prev {
+    }
+    .categoryCarouselItemRowCol {
+      div {
+        left: 0;
+        div {
+          bottom: 45px;
+          margin-left: 0px;
+          
+          button {
+            width: 90px;
+            font-size: 10px;
+          }
+        }
+        // quick view btn
+        button {
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .categoryCarousel {
+    a {
+      width: 8% !important;
+      bottom: 130px !important;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .categoryCarousel {
+    a {
+      width: 5% !important;
+      bottom: 130px !important;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .categoryCarousel {
+    a {
+      bottom: 80px !important;
+      width: 8% !important;
+    }
+    .categoryCarouselItemRowCol {
+      div {
+        div {
+        }
+      }
+    }
+  }
+}

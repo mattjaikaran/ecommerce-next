@@ -1,4 +1,5 @@
-// .footerContainerFluid {
+.footerContainerFluid {
+  margin-top: 1rem;
   .footerContainer {
     background-color: #397B60; 
     color: white;
@@ -18,23 +19,23 @@
       }
     }
   }
-// }
+}
 
 @media (max-width: 767px) {
-  // .footerContainerFluid {
-  .footerContainer {
-    .footerRow {
-      text-align: center;
-      .footerCol {
-        .navTitle {
-          text-align: center;
-        }
-        .navCustom {
-          .navLink {
+  .footerContainerFluid {
+    .footerContainer {
+      .footerRow {
+        text-align: center;
+        .footerCol {
+          .navTitle {
+            text-align: center;
+          }
+          .navCustom {
+            .navLink {
+            }
           }
         }
       }
     }
   }
 }
-// }

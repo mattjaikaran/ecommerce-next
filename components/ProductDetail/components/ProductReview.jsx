@@ -60,7 +60,7 @@ const ProductReview = ({ title, date, fit, width, rating, reviewText }) => {
           <p className="mt-3">{title}</p>
         </Col>
         <Col lg={6}>
-          <p className="">{date}</p>
+          <p>{date}</p>
           <p>
             Fit: <span>{fit}</span>
           </p>

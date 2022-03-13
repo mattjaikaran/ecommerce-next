@@ -12,7 +12,7 @@ const ProductCard = (props) => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-  const { title, price, sale, newProduct } = props.product
+  const { title, brand, price, sale, newProduct } = props.product
 
   const renderBadge = () => {
     if (newProduct) {
@@ -66,12 +66,15 @@ const ProductCard = (props) => {
       >
         <Card.Img
           variant="top"
-          src="https://dummyimage.com/275x360/ccc/000"
+          src="https://dummyimage.com/275x360/ebebeb/000"
           fluid="true"
         />
         <Card.Body
           className={`${styles.cardBody} d-flex flex-column pt-2 px-0`}
         >
+          <p className="mt-2 mb-1">
+            <small className={styles.cardBrand}>{brand}</small>
+          </p>
           <Card.Title className={`${styles.cardTitle} text-muted`}>
             {title}
           </Card.Title>

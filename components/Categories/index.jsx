@@ -10,9 +10,9 @@ const Categories = () => {
   return (
     <Container className="text-center mt-5">
       <Row>
-        <Col lg={9} className="px-0 px-md-1">
+        <Col lg={9} className="px-0 px-md-2">
           <Row>
-            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={6} xl={7}>
+            <Col className="mb-sm-3 px-md-1 px-0" md={6} lg={6} xl={7}>
               <Category
                 color="pink"
                 img={table}
@@ -30,7 +30,7 @@ const Categories = () => {
                 link="/product-detail"
               />
             </Col>
-            <Col className="mb-sm-3 px-md-2 px-0" md={6} lg={6} xl={5}>
+            <Col className="mb-sm-3 px-md-1 px-0" md={6} lg={6} xl={5}>
               <Category
                 color="green"
                 img={chair2}
