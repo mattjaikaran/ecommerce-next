@@ -1,3 +1,4 @@
+import featuredCollection from '@/images/models-featured.jpeg'
 export const homeHeroImages = [
   {
     id: 1,
@@ -8,7 +9,7 @@ export const homeHeroImages = [
   },
   {
     id: 2,
-    img: 'https://dummyimage.com/800x400/f1b23b/fff',
+    img: featuredCollection,
     imgMobile: 'https://dummyimage.com/400x800/f1b23b/fff',
     caption: '',
     description: '',

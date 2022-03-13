@@ -43,7 +43,7 @@ const ProductGraphic = (props) => {
     )
   }
   return (
-    <div className={`bg-light text-center p-3 mb-3 ${styles.productGraphic}`}>
+    <div className={`bg-light text-center p-3 ${styles.productGraphic}`}>
       <Row>
         <Col sm={12}>
           <h5 className={styles.title}>

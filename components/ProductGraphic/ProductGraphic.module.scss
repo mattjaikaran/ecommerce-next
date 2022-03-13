@@ -24,6 +24,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
+  border: none;
+  border-radius: 0;
   .cardBody {
     position: absolute;
     bottom: 20px;
@@ -41,6 +43,10 @@
     .cardBodyFullWidth {
       bottom: 10px;
       right: 10px;
+    }
+    .cardBody {
+      bottom: 10px;
+      left: 10px;
     }
   }
   .productGraphic {
@@ -68,6 +74,10 @@
     .cardBodyFullWidth {
       bottom: 10px;
       right: 30px;
+    }
+    .cardBody {
+      bottom: 10px;
+      left: 10px;
     }
   }
 }

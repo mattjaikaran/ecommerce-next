@@ -9,8 +9,8 @@ export const productArr = [
     sale: {
       salePrice: 40,
     },
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
     productImages: [
       {
@@ -38,8 +38,8 @@ export const productArr = [
     price: 23.99,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
   },
   {
@@ -50,8 +50,8 @@ export const productArr = [
     price: 23,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: true,
   },
   {
@@ -62,8 +62,8 @@ export const productArr = [
     price: 17,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
   },
   {
@@ -76,8 +76,8 @@ export const productArr = [
     sale: {
       salePrice: 49.99,
     },
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
   },
   {
@@ -88,8 +88,8 @@ export const productArr = [
     price: 23.99,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
   },
   {
@@ -100,8 +100,8 @@ export const productArr = [
     price: 72,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: true,
   },
   {
@@ -112,8 +112,8 @@ export const productArr = [
     price: 45,
     quantity: 1,
     sale: false,
-    img: 'https://dummyimage.com/275x360/ccc/000',
-    thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+    img: 'https://dummyimage.com/275x360/ebebeb/000',
+    thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
     newProduct: false,
   },
   // {
@@ -124,8 +124,8 @@ export const productArr = [
   //   price: 25,
   //   quantity: 1,
   //   sale: false,
-  //   img: 'https://dummyimage.com/275x360/ccc/000',
-  //   thumbnail: 'https://dummyimage.com/150x150/ccc/000',
+  //   img: 'https://dummyimage.com/275x360/ebebeb/000',
+  //   thumbnail: 'https://dummyimage.com/150x150/ebebeb/000',
   //   newProduct: false,
   // },
 ]

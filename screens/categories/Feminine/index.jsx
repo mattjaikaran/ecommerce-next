@@ -7,24 +7,24 @@ import denim from '@/images/pexels-mica-asato-1082529.jpeg'
 import womenRack from '@/images/women-rack.jpeg'
 import women1 from '@/images/women1.jpeg'
 
-const Womens = () => {
+const Feminine = () => {
   return (
     <Container fluid>
       <Container fluid="xl">
-        <h1>Womens</h1>
+        <h1 className="mobile-center my-5">Feminine</h1>
         <Row>
-          <Col md={12} className="p-0 px-md-1">
+          <Col md={12} className="p-0">
             <ProductGraphicLarge
               fullWidth
               whiteText
               img={women1}
               description="Featured"
-              product="Womens Fall"
+              product="Fem Fall"
               ctaText="View Now"
-              ctaLink="/categories/womens/featured"
+              ctaLink="/categories/feminine/featured"
             />
           </Col>
-          <Col md={6} className="p-0 px-md-0">
+          <Col md={6} className="p-0">
             <ProductGraphicLarge
               whiteText
               img={womenRack}
@@ -34,7 +34,7 @@ const Womens = () => {
               ctaLink="/categories/accessories"
             />
           </Col>
-          <Col md={6} className="p-0 px-md-0">
+          <Col md={6} className="p-0">
             <ProductGraphicLarge
               img={denim}
               description="Featured"
@@ -59,4 +59,4 @@ const Womens = () => {
   )
 }
 
-export default Womens
+export default Feminine

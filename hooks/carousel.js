@@ -7,17 +7,9 @@ export const renderCarouselImages = (slides = []) => {
     return (
       <Carousel.Item key={id} className="px-0">
         <div>
-          {/* <Image
-            layout="responsive"
-            width={800}
-            height={400}
-            src={img}
-            alt={caption}
-          /> */}
           <Image
-            // className="d-none d-md-block"
-            width={800}
-            height={400}
+            width={500}
+            height={300}
             layout="responsive"
             src={img}
             alt={img.caption || `Carousel Image ${img.id}`}
@@ -42,3 +34,8 @@ export const renderCarouselImages = (slides = []) => {
     )
   })
 }
+
+
+// export const renderProductSlider = (slides = []) => {
+//   return slides.map()
+// }

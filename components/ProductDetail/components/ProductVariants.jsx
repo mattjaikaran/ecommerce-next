@@ -46,7 +46,7 @@ const ProductVariants = (props) => {
         <p>Brand Name</p>
 
         <div className="mt-3">
-          <div className="">
+          <div>
             <h6 className="d-inline">$39.20</h6>
             <p className="text-muted d-inline ml-2">
               <small className="line-through"> 49.00</small>

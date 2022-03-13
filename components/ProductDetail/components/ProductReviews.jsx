@@ -32,10 +32,10 @@ const ProductReviews = () => {
           <h3>Reviews</h3>
           <h5>{renderReviewAverage(productReviews)} out of 5</h5>
           <p>
-            <span className="">Fit Rating:</span> runs slightly large
+            <span>Fit Rating:</span> runs slightly large
           </p>
           <p>
-            <span className="">Width Rating:</span> fits true to size
+            <span>Width Rating:</span> fits true to size
           </p>
         </Col>
         <Col className="mb-3" sm={8} md={6} lg={4} xl={3}>

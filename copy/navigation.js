@@ -1,13 +1,13 @@
 export const navigation = [
   {
     id: 1,
-    title: 'Womens',
-    link: '/categories/womens',
+    title: 'Masculine',
+    link: '/categories/masculine',
   },
   {
     id: 2,
-    title: 'Mens',
-    link: '/categories/mens',
+    title: 'Feminine',
+    link: '/categories/feminine',
   },
   {
     id: 3,

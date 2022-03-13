@@ -66,7 +66,7 @@ const ProductCard = (props) => {
       >
         <Card.Img
           variant="top"
-          src="https://dummyimage.com/275x360/ccc/000"
+          src="https://dummyimage.com/275x360/ebebeb/000"
           fluid="true"
         />
         <Card.Body

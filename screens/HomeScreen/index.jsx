@@ -8,10 +8,12 @@ import MiniProductCardGrid from '@/components/MiniProductCardGrid'
 import CategorySlider from '@/components/CategorySlider'
 import ProductGraphic from '@/components/ProductGraphic'
 import ProductGraphicLarge from '@/components/ProductGraphic/ProductGraphicLarge'
+import ImgWithTextBelow from '@/components/ImgWithTextBelow'
 import couchBlue from '@/images/couch-blue.png'
 import entertainmentCenter from '@/images/entertainment-center.png'
 import denim from '@/images/pexels-mica-asato-1082529.jpeg'
 import mensFall from '@/images/joao-vitor-duarte-AZG5_AzcMto-unsplash.jpeg'
+import menSpring from '@/images/men-spring.jpeg'
 import styles from '@/styles/Home.module.scss'
 
 const HomeScreen = () => {
@@ -20,7 +22,7 @@ const HomeScreen = () => {
       return (
         <Col
           key={product.id}
-          className="mb-sm-3 px-md-2 px-"
+          className="mb-sm-3 px-md-2 px-1"
           xs={6}
           sm={6}
           md={6}
@@ -34,10 +36,10 @@ const HomeScreen = () => {
   return (
     <Container>
       <Row className="mt-3">
-        <Col md={12}>
-          <Hero images={homeHeroImages} className="px-0" />
+        <Col md={12} className="mb-md-3 px-0">
+          <Hero images={homeHeroImages} />
         </Col>
-        <Col md={6} className="mb-sm-3 px-md-2 px-0">
+        <Col md={6} className="px-md-2 p-0">
           <ProductGraphic
             img={couchBlue}
             description="Comfortable"
@@ -47,7 +49,7 @@ const HomeScreen = () => {
             ctaLink="/product/123"
           />
         </Col>
-        <Col md={6} className="mb-sm-3 px-0">
+        <Col md={6} className="p-0">
           <ProductGraphic
             img={entertainmentCenter}
             description="Modern"
@@ -71,7 +73,7 @@ const HomeScreen = () => {
         description="Small be and the rain would phase distance, succeed align."
       />
       <Row className="mt-3">
-        <Col md={6} className="px-0 px-md-1">
+        <Col md={6} className="px-0">
           <ProductGraphicLarge
             img={entertainmentCenter}
             description="New"
@@ -80,7 +82,7 @@ const HomeScreen = () => {
             ctaLink="/categories/home-living"
           />
         </Col>
-        <Col md={6} className="px-0 px-md-1">
+        <Col md={6} className="px-0">
           <ProductGraphicLarge
             img={denim}
             description="Featured"
@@ -89,7 +91,7 @@ const HomeScreen = () => {
             ctaLink="/categories/123"
           />
         </Col>
-        <Col md={12} className="px-0 px-md-1">
+        <Col md={12} className="px-0">
           <ProductGraphicLarge
             fullWidth
             whiteText
@@ -97,7 +99,33 @@ const HomeScreen = () => {
             description="Featured"
             product="Mens Fall"
             ctaText="View Now"
-            ctaLink="/categories/mens"
+            ctaLink="/categories/masculine"
+          />
+        </Col>
+        <Col md={6} className="px-0">
+          <ImgWithTextBelow
+            img="https://dummyimage.com/800x400/000/fff"
+            imgAlt="Spring is here"
+            title="Spring is here"
+            description="Time to let loose with all the newest trends."
+            ctaText="Shop Inspiration"
+            ctaLink="/product/456"
+            ctaText2="Explore Now"
+            ctaLink2="/categories/feminine"
+          />
+        </Col>
+        <Col md={6} className="px-0">
+          <ImgWithTextBelow
+            img="https://dummyimage.com/800x400/fff/000"
+            imgAlt="Shop Sales"
+            title="Shop Sales"
+            description="Trying to spend that tax return? Lets go"
+            ctaText="Explore Sales"
+            ctaLink="/product/789"
+            ctaText2="Shop Clearance"
+            ctaLink2="/categories/masculine"
+            ctaText3="Accessories Clearance"
+            ctaLink3="/categories/feminine"
           />
         </Col>
       </Row>

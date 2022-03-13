@@ -25,13 +25,13 @@ const ProductGraphicLarge = ({
         className={`${styles.productGraphicLarge} ${whiteText && 'text-white'}`}
         style={{
           backgroundImage: `url(${img.src})`,
+          border: 'none',
           backgroundSize: contain && 'contain',
           backgroundPosition: bgCenter && 'center',
         }}
-        border="light"
       >
         <Card.Body className={`text-right ${styles.cardBodyFullWidth}`}>
-          <Card.Title>{product}</Card.Title>
+          <Card.Title className="h6">{product}</Card.Title>
           <Button variant="light" onClick={() => router.push(ctaLink)}>
             {ctaText}
           </Button>
@@ -51,7 +51,7 @@ const ProductGraphicLarge = ({
       border="light"
     >
       <Card.Body className={styles.cardBody}>
-        <Card.Title>{product}</Card.Title>
+        <Card.Title className="h6">{product}</Card.Title>
         <Button variant="light" onClick={() => router.push(ctaLink)}>
           {ctaText}
         </Button>
