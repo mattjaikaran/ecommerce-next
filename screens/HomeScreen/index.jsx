@@ -104,7 +104,7 @@ const HomeScreen = () => {
         </Col>
         <Col md={6} className="px-0">
           <ImgWithTextBelow
-            img="https://dummyimage.com/800x400/000/fff"
+            img="https://dummyimage.com/650x600/000/fff"
             imgAlt="Spring is here"
             title="Spring is here"
             description="Time to let loose with all the newest trends."
@@ -116,7 +116,7 @@ const HomeScreen = () => {
         </Col>
         <Col md={6} className="px-0">
           <ImgWithTextBelow
-            img="https://dummyimage.com/800x400/fff/000"
+            img="https://dummyimage.com/650x600/fff/000"
             imgAlt="Shop Sales"
             title="Shop Sales"
             description="Trying to spend that tax return? Lets go"
