@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Container, Nav, Row, Col } from "react-bootstrap"
 import styles from "../Footer.module.scss"
 
@@ -31,22 +32,26 @@ const MainFooter = () => {
           <Col className={`${styles.footerCol} mb-3`} sm={4} md={4} lg={2}>
             <Nav className={`flex-column ${styles.navCustom}`}>
               <h6 className={styles.navTitle}>Useful Links</h6>
-              <Nav.Link className={styles.navLink} href="/about">
+              <Nav.Link as={Link} className={styles.navLink} href="/about">
                 About Shop
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/contact-us">
+              <Nav.Link as={Link} className={styles.navLink} href="/contact-us">
                 Contact Us
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/faq">
+              <Nav.Link as={Link} className={styles.navLink} href="/faq">
                 FAQ
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/support">
+              <Nav.Link as={Link} className={styles.navLink} href="/support">
                 Support
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/blog">
+              <Nav.Link as={Link} className={styles.navLink} href="/blog">
                 Blog
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/privacy-policy">
+              <Nav.Link
+                as={Link}
+                className={styles.navLink}
+                href="/privacy-policy"
+              >
                 Privacy Policy
               </Nav.Link>
             </Nav>
@@ -54,13 +59,13 @@ const MainFooter = () => {
           <Col className={`${styles.footerCol} mb-3`} sm={4} md={4} lg={2}>
             <Nav className={`flex-column ${styles.navCustom}`}>
               <h6 className={styles.navTitle}>Latest News</h6>
-              <Nav.Link className={styles.navLink} href="/">
+              <Nav.Link as={Link} className={styles.navLink} href="/">
                 Active
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="/product/1">
+              <Nav.Link as={Link} className={styles.navLink} href="/product/1">
                 Link
               </Nav.Link>
-              <Nav.Link className={styles.navLink} href="product/2">
+              <Nav.Link as={Link} className={styles.navLink} href="product/2">
                 Link
               </Nav.Link>
             </Nav>

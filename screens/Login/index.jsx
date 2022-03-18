@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { useForm } from 'react-hook-form'
-import CustomButton from '@/components/CustomButton'
 import { Card, Form, Row, Col } from 'react-bootstrap'
+import CustomButton from '@/components/CustomButton'
 import './Login.module.scss'
 
 const Login = () => {
@@ -14,7 +15,7 @@ const Login = () => {
 
   console.log(watch('example'))
   return (
-    <Card>
+    <Card border="light">
       <Card.Title className="text-center mt-5">
         <h3>Login</h3>
       </Card.Title>
@@ -48,6 +49,11 @@ const Login = () => {
           </Col>
           <Col sm={0} md={2}></Col>
         </Row>
+        <div className="mt-3 text-center">
+          <Link href="/register">Forgot Password?</Link>
+          <br />
+          <Link href="/register">Click here to Register</Link>
+        </div>
       </Card.Body>
     </Card>
   )

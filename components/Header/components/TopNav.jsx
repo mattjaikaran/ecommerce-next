@@ -4,8 +4,8 @@ import styles from '../Header.module.scss'
 const TopNav = () => {
   return (
     <Container className={styles.topNavContainer}>
-      <Row className="text-center">
-        <Col md={5} lg={6} xl={7} className={styles.leftSide}>
+      <Row>
+        <Col md={5} lg={6} xl={8} className={styles.leftSide}>
           <Nav>
             <Nav.Link href="#">
               <small>(888)-555-0197</small>
@@ -16,7 +16,7 @@ const TopNav = () => {
             </Nav.Link>
           </Nav>
         </Col>
-        <Col md={7} lg={6} xl={5} className={styles.rightSide}>
+        <Col md={7} lg={6} xl={4} className={styles.rightSide}>
           <Nav>
             <Nav.Link href="#">
               <small>Account</small>

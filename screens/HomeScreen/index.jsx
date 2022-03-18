@@ -9,6 +9,7 @@ import CategorySlider from '@/components/CategorySlider'
 import ProductGraphic from '@/components/ProductGraphic'
 import ProductGraphicLarge from '@/components/ProductGraphic/ProductGraphicLarge'
 import ImgWithTextBelow from '@/components/ImgWithTextBelow'
+import HalfTextHalfImg from '@/components/HalfTextHalfImg'
 import couchBlue from '@/images/couch-blue.png'
 import entertainmentCenter from '@/images/entertainment-center.png'
 import denim from '@/images/pexels-mica-asato-1082529.jpeg'
@@ -63,6 +64,7 @@ const HomeScreen = () => {
       <Row className="px-3">{renderProducts()}</Row>
       <MiniProductCardGrid />
       <Categories />
+      <HalfTextHalfImg />
       <CategorySlider
         title="Featured"
         description="Small be and the rain would phase distance, succeed align."
@@ -116,7 +118,7 @@ const HomeScreen = () => {
         </Col>
         <Col md={6} className="px-0">
           <ImgWithTextBelow
-            img="https://dummyimage.com/650x600/fff/000"
+            img="https://dummyimage.com/650x600/ebebeb/000"
             imgAlt="Shop Sales"
             title="Shop Sales"
             description="Trying to spend that tax return? Lets go"

@@ -7,9 +7,9 @@
     .footerRow {
       .footerCol {
         .navCustom {
-          .navLink {
-            color: white;
-            line-height: 1.5rem;
+          a {
+            color: white !important;
+            line-height: 2.5rem !important;
             text-decoration: none;
             &:hover {
               text-decoration: underline;
@@ -31,8 +31,7 @@
             text-align: center;
           }
           .navCustom {
-            .navLink {
-            }
+            a {}
           }
         }
       }

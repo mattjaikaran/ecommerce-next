@@ -34,7 +34,7 @@ const Register = () => {
   }
 
   return (
-    <Card>
+    <Card border="light">
       <Card.Title className="text-center mt-5">
         <h3>Register</h3>
       </Card.Title>

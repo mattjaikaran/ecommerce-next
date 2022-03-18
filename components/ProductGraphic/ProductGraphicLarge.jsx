@@ -1,8 +1,4 @@
 import { useRouter } from 'next/router'
-import Link from 'next/link'
-import Image from 'next/image'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import styles from './ProductGraphic.module.scss'

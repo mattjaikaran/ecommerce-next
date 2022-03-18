@@ -10,10 +10,13 @@ const CategorySlider = ({ title, description, reverse }) => {
     return (
       <Container className="mt-3">
         <Row>
-          <Col md={9}>
+          <Col md={9} className="order-2 order-md-1">
             <ProductSlider />
           </Col>
-          <Col className={`${styles.categoryDescription} mt-md-5 mb-5`} md={3}>
+          <Col
+            md={3}
+            className={`${styles.categoryDescription} mt-md-5 mb-5 order-1 order-md-2`}
+          >
             <h5 className="font-weight-light">{title}</h5>
             <p className="pr-5">
               <small className="text-muted">{description}</small>
@@ -27,7 +30,7 @@ const CategorySlider = ({ title, description, reverse }) => {
   return (
     <Container className="mt-3">
       <Row>
-        <Col className={`${styles.categoryDescription} mt-md-5 mb-5`} md={3}>
+        <Col md={3} className={`${styles.categoryDescription} mt-md-5 mb-5`}>
           <h5 className="font-weight-light">{title}</h5>
           <p className="pr-5">
             <small className="text-muted">{description}</small>

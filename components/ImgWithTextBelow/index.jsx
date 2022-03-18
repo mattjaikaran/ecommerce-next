@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 
 const ImgWithTextBelow = ({
+  categoryCardList,
   img,
   imgAlt,
   title,
@@ -16,12 +16,8 @@ const ImgWithTextBelow = ({
 }) => {
   return (
     <Card style={{ border: 'none' }} border="light">
-      <Card.Img
-        variant="top"
-        src={img}
-        alt={imgAlt}
-      />
-      <Card.Body>
+      <Card.Img variant="top" src={img} alt={imgAlt} />
+      <Card.Body className={categoryCardList && 'px-0 pt-2'}>
         {title && <Card.Title className="h6">{title}</Card.Title>}
         {description && <p>{description}</p>}
         <div>
