@@ -14,7 +14,6 @@ import couchBlue from '@/images/couch-blue.png'
 import entertainmentCenter from '@/images/entertainment-center.png'
 import denim from '@/images/pexels-mica-asato-1082529.jpeg'
 import mensFall from '@/images/joao-vitor-duarte-AZG5_AzcMto-unsplash.jpeg'
-import menSpring from '@/images/men-spring.jpeg'
 import styles from '@/styles/Home.module.scss'
 
 const HomeScreen = () => {
@@ -106,6 +105,7 @@ const HomeScreen = () => {
         </Col>
         <Col md={6} className="px-0">
           <ImgWithTextBelow
+            categoryCardList
             img="https://dummyimage.com/650x600/000/fff"
             imgAlt="Spring is here"
             title="Spring is here"
@@ -118,6 +118,7 @@ const HomeScreen = () => {
         </Col>
         <Col md={6} className="px-0">
           <ImgWithTextBelow
+            categoryCardList
             img="https://dummyimage.com/650x600/ebebeb/000"
             imgAlt="Shop Sales"
             title="Shop Sales"

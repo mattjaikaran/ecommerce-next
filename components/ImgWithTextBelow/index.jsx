@@ -17,12 +17,12 @@ const ImgWithTextBelow = ({
   return (
     <Card style={{ border: 'none' }} border="light">
       <Card.Img variant="top" src={img} alt={imgAlt} />
-      <Card.Body className={categoryCardList && 'px-0 pt-2'}>
+      <Card.Body className={categoryCardList && 'px-md-0 pt-md-3'}>
         {title && <Card.Title className="h6">{title}</Card.Title>}
         {description && <p>{description}</p>}
         <div>
           {ctaText && (
-            <div className="d-inline">
+            <div className="d-md-inline">
               <Link href={ctaLink}>
                 <small>
                   <u>{ctaText}</u>
@@ -31,7 +31,7 @@ const ImgWithTextBelow = ({
             </div>
           )}
           {ctaText2 && (
-            <div className="d-inline mx-3">
+            <div className="d-md-inline mx-md-3">
               <Link href={ctaLink2}>
                 <small>
                   <u>{ctaText2}</u>
@@ -40,7 +40,7 @@ const ImgWithTextBelow = ({
             </div>
           )}
           {ctaText3 && (
-            <div className="d-inline">
+            <div className="d-md-inline">
               <Link href={ctaLink3}>
                 <small>
                   <u>{ctaText3}</u>

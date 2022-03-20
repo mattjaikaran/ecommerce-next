@@ -14,81 +14,79 @@ import { sampleCategoryList } from '@/copy/categoryLists'
 
 const Masculine = () => {
   return (
-    <Container fluid>
-      <Container fluid="xl">
-        <h1 className="mobile-center my-5">Masculine</h1>
-        <Row>
-          <Col md={12} className="p-0">
-            <ProductGraphicLarge
-              fullWidth
-              whiteText
-              img={mens1}
-              description="Featured"
-              product="Masculine Fall"
-              ctaText="View Now"
-              ctaLink="/categories/masculine"
-            />
-          </Col>
-          <Col md={6} className="p-0">
-            <ProductGraphicLarge
-              whiteText
-              img={menJacket}
-              description="New"
-              product="New Arrivals"
-              ctaText="Shop This Style"
-              ctaLink="/categories/home-living"
-            />
-          </Col>
-          <Col md={6} className="p-0">
-            <ProductGraphicLarge
-              whiteText
-              img={menSuits}
-              description="Featured"
-              product="Masculine Featured Collection"
-              ctaText="View Now"
-              ctaLink="/categories/masculine"
-            />
-          </Col>
-        </Row>
+    <Container>
+      <h1 className="mobile-center my-5">Masculine</h1>
+      <Row>
+        <Col md={12} className="p-0">
+          <ProductGraphicLarge
+            fullWidth
+            whiteText
+            img={mens1}
+            description="Featured"
+            product="Masculine Fall"
+            ctaText="View Now"
+            ctaLink="/categories/masculine"
+          />
+        </Col>
+        <Col md={6} className="p-0">
+          <ProductGraphicLarge
+            whiteText
+            img={menJacket}
+            description="New"
+            product="New Arrivals"
+            ctaText="Shop This Style"
+            ctaLink="/categories/home-living"
+          />
+        </Col>
+        <Col md={6} className="p-0">
+          <ProductGraphicLarge
+            whiteText
+            img={menSuits}
+            description="Featured"
+            product="Masculine Featured Collection"
+            ctaText="View Now"
+            ctaLink="/categories/masculine"
+          />
+        </Col>
+      </Row>
 
-        <CategorySlider
-          title="Featured"
-          description="Our Featured Collection is what you need"
-        />
-        <hr className="mt-5" />
-        <CategorySlider
-          title="New Arrivals"
-          description="Shop our newest trends"
-        />
+      <CategorySlider
+        title="Featured"
+        description="Our Featured Collection is what you need"
+      />
+      <hr className="mt-5" />
+      <CategorySlider
+        title="New Arrivals"
+        description="Shop our newest trends"
+      />
 
-        <Row className="mt-3">
-          <Col md={6} className="p-0">
-            <ProductGraphicLarge
-              whiteText
-              bgCenter
-              img={mensModel1}
-              description="New"
-              product="New Arrivals"
-              ctaText="Shop This Style"
-              ctaLink="/categories/home-living"
-            />
-          </Col>
-          <Col md={6} className="p-0">
-            <ProductGraphicLarge
-              bgCenter
-              img={menSneakers}
-              description="Featured"
-              product="Masculine Featured Collection"
-              ctaText="View Now"
-              ctaLink="/categories/123"
-            />
-          </Col>
-          <Col md={12} className="px-5">
-            <ProductSlider />
-          </Col>
-        </Row>
-        <CategoryCardList categoryList={sampleCategoryList} />
-      </Container>
+      <Row className="mt-3">
+        <Col md={6} className="p-0">
+          <ProductGraphicLarge
+            whiteText
+            bgCenter
+            img={mensModel1}
+            description="New"
+            product="New Arrivals"
+            ctaText="Shop This Style"
+            ctaLink="/categories/home-living"
+          />
+        </Col>
+        <Col md={6} className="p-0">
+          <ProductGraphicLarge
+            bgCenter
+            img={menSneakers}
+            description="Featured"
+            product="Masculine Featured Collection"
+            ctaText="View Now"
+            ctaLink="/categories/123"
+          />
+        </Col>
+        <Col md={12} className="px-5">
+          <ProductSlider />
+        </Col>
+      </Row>
+      <CategoryCardList categoryList={sampleCategoryList} />
     </Container>
   )
 }

@@ -11,7 +11,7 @@ const ProductDetail = () => {
   return (
     <>
       <Row>
-        <Col className="mb-3" md={6} lg={8}>
+        <Col className="mb-3 px-0 px-md-3" md={6} lg={8}>
           <ProductSlider imgArray={productArr[0].productImages} />
         </Col>
         <Col className="mb-3" md={6} lg={4}>
