@@ -5,7 +5,6 @@ import ContactForm from '@/components/ContactForm'
 const ContactPage = () => {
   return (
     <Layout>
-      <h1>Contact Us</h1>
       <ContactForm />
     </Layout>
   )
