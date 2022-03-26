@@ -74,8 +74,8 @@ const ProductModal = (props) => {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={onHide}>Close</Button>
         <Button onClick={() => addToCart(props.product)}>Add to Cart</Button>
+        <Button variant="light" onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   )

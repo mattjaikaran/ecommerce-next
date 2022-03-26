@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
-// import { useAsync } from '@/hooks/useAsync'
 import axios from 'axios'
 import { Container, Row, Col } from 'react-bootstrap'
 import MiniProductCard from '@/components/MiniProductCard'
-
-// const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://ecommerce-store-nextjs.vercel.app/'
 
 const MiniProductCardGrid = () => {
   const [products, setProducts] = useState(null)

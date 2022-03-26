@@ -101,7 +101,7 @@ const NewReviewModal = (props) => {
             <Form.Label>Review Headline</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Your name will be displayed in the review"
+              placeholder="Review title"
               value={reviewHeadline}
               onChange={(e) => setReviewHeadline(e.target.value)}
             />
@@ -149,10 +149,10 @@ const NewReviewModal = (props) => {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button type="submit" onClick={handleSubmitReview}>
+        <Button type="submit" variant="primary" onClick={handleSubmitReview}>
           Submit Review
         </Button>
-        <Button onClick={props.onHide}>Cancel</Button>
+        <Button variant="light" onClick={props.onHide}>Cancel</Button>
       </Modal.Footer>
     </Modal>
   )

@@ -15,11 +15,6 @@ const sampleCartItems = [
     title: 'Sample Product 2',
     price: 64.99,
   },
-  // {
-  //   id: 2122,
-  //   title: 'Sample Product 3',
-  //   price: 99.99,
-  // },
 ]
 
 

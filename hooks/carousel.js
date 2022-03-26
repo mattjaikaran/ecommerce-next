@@ -34,8 +34,3 @@ export const renderCarouselImages = (slides = []) => {
     )
   })
 }
-
-
-// export const renderProductSlider = (slides = []) => {
-//   return slides.map()
-// }
