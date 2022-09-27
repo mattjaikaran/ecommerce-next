@@ -1,7 +1,7 @@
 import { Row, Col } from 'react-bootstrap'
-import Layout from '../components/Layout'
-import Login from '../screens/Login'
-import Register from '../screens/Register'
+import Layout from '@/views/layouts/MainLayout'
+import Login from '@/views/auth/Login'
+import Register from '@/views/auth/Register'
 
 const Auth = () => {
   return (

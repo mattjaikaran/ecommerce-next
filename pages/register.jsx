@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Layout from '@/components/Layout'
-import Register from 'screens/Register'
+import Layout from '@/views/layouts/MainLayout'
+import Register from '@/views/auth/Register'
 
 const RegisterPage = () => {
   return (

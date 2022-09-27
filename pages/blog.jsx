@@ -1,5 +1,5 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@/components/Layout'
+import Layout from '@/views/layouts/MainLayout'
 
 const BlogPage = () => {
   return (

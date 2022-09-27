@@ -1,12 +1,12 @@
-import Layout from "@/components/Layout"
+import Layout from '@/views/layouts/MainLayout'
 
-const CategoryPage = () => {
+const AllCategoriesPage = () => {
   return (
     <Layout>
-      <h1>CategoryPage</h1>
+      <h1>AllCategoriesPage</h1>
       <p>All categories</p>
     </Layout>
   )
 }
 
-export default CategoryPage
+export default AllCategoriesPage

@@ -1,5 +1,5 @@
-import Layout from '@/components/Layout'
-import HomeScreen from '@/screens/HomeScreen'
+import Layout from '@/views/layouts/MainLayout'
+import HomeScreen from '@/views/HomeScreen'
 
 const Home = () => {
   return (

@@ -1,5 +1,5 @@
-import Layout from '@/components/Layout'
-import FAQ from '@/components/FAQ'
+import Layout from '@/views/layouts/MainLayout'
+import FAQ from '@/components/shared/FAQ'
 
 const FaqPage = () => {
   return (

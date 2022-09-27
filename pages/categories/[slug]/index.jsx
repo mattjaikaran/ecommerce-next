@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import Layout from '@/components/Layout'
-import Masculine from '@/screens/categories/Masculine'
-import Feminine from '@/screens/categories/Feminine'
-import HomeLiving from '@/screens/categories/HomeLiving'
-import Accessories from '@/screens/categories/Accessories'
-import CustomLabel from '@/screens/categories/CustomLabel'
+import Layout from '@/views/layouts/MainLayout'
+import Masculine from '@/views/categories/Masculine'
+import Feminine from '@/views/categories/Feminine'
+import HomeLiving from '@/views/categories/HomeLiving'
+import Accessories from '@/views/categories/Accessories'
+import CustomLabel from '@/views/categories/CustomLabel'
 
-const CategoryID = () => {
+const CategoryDetailPage = () => {
   const router = useRouter()
   const slug = router.query.slug
   const renderCategoryScreen = () => {
@@ -32,4 +32,4 @@ const CategoryID = () => {
   )
 }
 
-export default CategoryID
+export default CategoryDetailPage
