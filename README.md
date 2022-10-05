@@ -1,14 +1,19 @@
 # Ecommerce Next
 
-### Technologies 
+### Technologies
+
 - NextJS 12
-- SCSS 
+- SCSS
 - React Bootstrap 2/Bootstrap 5
 - React Hook Form
 - Axios
-Coming soon:
+
+##### Coming soon:
+
 - TypeScript
 - Global State
+
+##### Related:
 
 - [Django API](https://github.com/mattjaikaran/ecommerce-api)
 - [Strapi CMS](https://github.com/mattjaikaran/ecommerce-cms)
