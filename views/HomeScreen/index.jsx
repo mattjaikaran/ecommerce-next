@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { productArr } from '@/copy/products'
 import { homeHeroImages } from '@/copy/homepage'
-import Hero from '@/components/Hero'
+import Hero from '@/components/shared/Hero'
 import ProductCard from '@/components/products/ProductCard'
 import Categories from '@/components/categories/AllCategories'
 import MiniProductCardGrid from '@/components/products/MiniProductCardGrid'

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { addToCart } from '../../../hooks/addToCart'
+import { addToCart } from '@/hooks/addToCart'
 import {
   Card,
   Row,

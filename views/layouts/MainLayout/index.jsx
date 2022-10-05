@@ -1,9 +1,9 @@
 import { Container } from 'react-bootstrap'
 import Header from '@/components/nav/Header'
 import Footer from '@/components/nav/Footer'
-import styles from './Layout.module.scss'
+import styles from './MainLayout.module.scss'
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
   return (
     <div className={styles.layoutContainer}>
       <Header />
@@ -13,4 +13,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default MainLayout

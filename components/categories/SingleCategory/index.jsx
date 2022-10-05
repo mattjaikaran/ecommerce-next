@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import cx from 'classnames'
 import { Container, Row, Col } from 'react-bootstrap'
-import styles from '../Categories.module.scss'
+import styles from './SingleCategory.module.scss'
 
 // single category
 const SingleCategory = ({ color, hashtag, img, title, link, imgRight }) => {

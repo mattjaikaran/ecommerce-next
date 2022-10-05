@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Container, Navbar, Nav } from 'react-bootstrap'
-import Cart from '@/components/Cart'
+import CartButton from '@/components/cart/CartButton'
 import { VscColorMode } from 'react-icons/vsc'
 import { navigation } from '@/copy/navigation'
 import styles from '../Header.module.scss'
@@ -15,19 +15,12 @@ const MainNav = () => {
     console.log(searchQuery)
   }
 
-  const renderNavItems = () => (
+  const renderNavItems = () =>
     navigation.map(({ id, title, link }) => (
-      <Nav.Link
-        key={id}
-        className={styles.navLink}
-        as={Link}
-        href={link}
-      >
+      <Nav.Link key={id} className={styles.navLink} as={Link} href={link}>
         {title}
       </Nav.Link>
     ))
-  
-)
   return (
     <Container className="bg-light" fluid>
       <Container>
@@ -43,7 +36,7 @@ const MainNav = () => {
             <Nav className={`text-left mx-auto ${styles.navItems}`}>
               {renderNavItems()}
             </Nav>
-            <Cart />
+            <CartButton />
           </Navbar.Collapse>
         </Navbar>
       </Container>

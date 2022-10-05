@@ -17,7 +17,6 @@ const sampleCartItems = [
   },
 ]
 
-
 function CartDrawer({ name, ...props }) {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
@@ -100,14 +99,12 @@ function CartDrawer({ name, ...props }) {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          {renderCartItems()}
-        </Offcanvas.Body>
+        <Offcanvas.Body>{renderCartItems()}</Offcanvas.Body>
       </Offcanvas>
     </>
   )
 }
 
-const Cart = () => <CartDrawer placement="end" name="end" scroll />
+const CartButton = () => <CartDrawer placement="end" name="end" scroll />
 
-export default Cart
+export default CartButton
