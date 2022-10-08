@@ -1,11 +1,11 @@
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 import HomeScreen from '@/views/HomeScreen'
 
 const Home = () => {
   return (
-    <Layout>
+    <MainLayout>
       <HomeScreen />
-    </Layout>
+    </MainLayout>
   )
 }
 

@@ -1,6 +1,19 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300 !important;
+}
 a {
-  color: black;
-  text-decoration: underline;
+  color: black !important;
+  font-weight: 300 !important;
+  text-decoration: none !important;
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 ul {
   padding-left: 1rem !important;

@@ -1,50 +1,35 @@
 ---
-to: components/forms/<%= type || 'utils' %>/<%= h.changeCase.pascal(name) || 'new-form' %>.jsx
+to: components/forms/<%= type || 'utils' %>/<%= h.changeCase.pascal(name) || 'new-form' %>/index.jsx
 ---
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import Form from 'react-bootstrap/Form'
-
-type Inputs = {
-  example: string,
-  exampleRequired: string,
-};
+import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
+import CustomButton from '@/components/shared/CustomButton'
 
 const <%= h.changeCase.pascal(name) || 'NewForm' %> = () => {
-  const { 
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting } 
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data): void => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2))
-        console.log(JSON.stringify(values, null, 2))
-        resolve()
-      }, 3000)
+  const { register, handleSubmit, formState: { errors } } = useForm()
+  const onSubmit = (data, event) => {
+    console.log('data', data)
+    console.log('event', event)
   }
+  errors && console.log(errors)
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isInvalid={errors.firstName}>
-        <FormLabel htmlFor="firstName">First Name</FormLabel>
-        <Input
-          id="firstName"
-          placeholder="firstName"
-          {...register("firstName", {
-            required: "This is required",
-            minLength: { value: 4, message: "Minimum length should be 4" },
-          })}
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form.Group controlId="<%= h.changeCase.camel(name) %>.firstName">
+        <Form.Label>First Name</Form.Label>
+        <Form.Control
+          type="text"
+          name="firstName"
+          placeholder="Sarah"
+          {...register('firstName', { required: true, maxLength: 80 })}
         />
-        <FormErrorMessage>
-          {errors.firstName && errors.firstName.message}
-        </FormErrorMessage>
-      </FormControl>
-      <Button mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
-        Submit
-      </Button>
-    </form>
+      </Form.Group>
+
+      {errors && <Alert>{errors.message}</Alert>}
+      <CustomButton type="submit" btnText="Submit" />
+    </Form>
   )
 }
 

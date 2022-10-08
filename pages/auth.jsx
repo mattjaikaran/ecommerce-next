@@ -1,11 +1,11 @@
 import { Row, Col } from 'react-bootstrap'
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 import Login from '@/views/auth/Login'
 import Register from '@/views/auth/Register'
 
 const Auth = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Row>
         <Col md={6}>
           <Login />
@@ -14,7 +14,7 @@ const Auth = () => {
           <Register />
         </Col>
       </Row>
-    </Layout>
+    </MainLayout>
   )
 }
 

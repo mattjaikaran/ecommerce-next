@@ -1,21 +1,17 @@
-import { useState } from 'react'
-import { Row, Col, Form, Button } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
 
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [emailAddress, setEmailAddress] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
-  const [message, setMessage] = useState('')
-
   const { register, handleSubmit, formState: { errors } } = useForm()
   const onSubmit = (data, event) => {
     console.log('data', data)
     console.log('event', event)
   }
   errors && console.log(errors)
-
 
   return (
     <Form className="px-md-5 px-3" onSubmit={handleSubmit(onSubmit)}>
@@ -28,8 +24,6 @@ const ContactForm = () => {
               type="text"
               name="firstName"
               placeholder="Sarah"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
               {...register('firstName', { required: true, maxLength: 80 })}
             />
           </Form.Group>
@@ -40,8 +34,6 @@ const ContactForm = () => {
             <Form.Control
               type="text"
               name="lastName"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
               placeholder="Marshall"
               {...register('lastName', { required: true, maxLength: 80 })}
             />
@@ -53,8 +45,6 @@ const ContactForm = () => {
             <Form.Control
               type="email"
               name="emailAddress"
-              value={emailAddress}
-              onChange={(e) => setEmailAddress(e.target.value)}
               placeholder="name@example.com"
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
             />
@@ -66,8 +56,6 @@ const ContactForm = () => {
             <Form.Control
               type="tel"
               name="phoneNumber"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
               placeholder="212-555-1234"
               {...register('phoneNumber', {
                 required: true,
@@ -84,14 +72,13 @@ const ContactForm = () => {
               as="textarea"
               name="message"
               rows={3}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
               {...register}
               placeholder="Enter your message"
             />
           </Form.Group>
         </Col>
       </Row>
+      {errors && <Alert>{errors}</Alert>}
       <Button className="btn-xs-block mt-3" type="submit">
         Submit
       </Button>

@@ -1,11 +1,11 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 
 const PrivacyPolicyPage = () => {
   return (
-    <Layout>
+    <MainLayout>
       <h1>Privacy Policy</h1>
-    </Layout>
+    </MainLayout>
   )
 }
 

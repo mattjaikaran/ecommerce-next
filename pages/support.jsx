@@ -1,11 +1,11 @@
 import { Row , Col } from 'react-bootstrap'
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 
 const SupportPage = () => {
   return (
-    <Layout>
+    <MainLayout>
       <h1>Support</h1>
-    </Layout>
+    </MainLayout>
   )
 }
 

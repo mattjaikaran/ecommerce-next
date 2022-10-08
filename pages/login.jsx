@@ -1,11 +1,11 @@
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 import Login from '@/views/auth/Login'
 
 const LoginPage = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Login />
-    </Layout>
+    </MainLayout>
   )
 }
 

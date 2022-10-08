@@ -1,10 +1,14 @@
 import { useRouter } from 'next/router'
-import Layout from '@/views/layouts/MainLayout'
+import MainLayout from '@/views/layouts/MainLayout'
 import Masculine from '@/views/categories/Masculine'
 import Feminine from '@/views/categories/Feminine'
 import HomeLiving from '@/views/categories/HomeLiving'
 import Accessories from '@/views/categories/Accessories'
 import CustomLabel from '@/views/categories/CustomLabel'
+import NewArrivals from '@/views/categories/NewArrivals'
+import BestSellers from '@/views/categories/BestSellers'
+import Sale from '@/views/categories/Sale'
+import Clearance from '@/views/categories/Clearance'
 
 const CategoryDetailPage = () => {
   const router = useRouter()
@@ -21,14 +25,22 @@ const CategoryDetailPage = () => {
         return <Accessories />
       case 'custom-label':
         return <CustomLabel />
+      case 'new-arrivals':
+        return <NewArrivals />
+      case 'best-sellers':
+        return <BestSellers />
+      case 'sale':
+        return <Sale />
+      case 'clearance':
+        return <Clearance />
       default:
         return ''
     } 
   }
   return (
-    <Layout>
+    <MainLayout>
       {renderCategoryScreen()}
-    </Layout>
+    </MainLayout>
   )
 }
 
