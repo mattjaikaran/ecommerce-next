@@ -1,4 +1,5 @@
-import { Row, Col } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import MainLayout from '@/views/layouts/MainLayout'
 import Login from '@/views/auth/Login'
 import Register from '@/views/auth/Register'

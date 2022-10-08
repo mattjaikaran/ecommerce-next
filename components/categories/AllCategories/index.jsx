@@ -1,4 +1,6 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Category from '../SingleCategory'
 import table from '@/images/table.png'
 import barstoolBlack from '@/images/barstool-black.png'

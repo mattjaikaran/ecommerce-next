@@ -1,4 +1,10 @@
-import { Dropdown, DropdownMenu, Button, ButtonGroup, Container, Row, Col, Image } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownMenu from 'react-bootstrap/DropdownMenu'
+import Image from 'react-bootstrap/Image'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import styles from '../Header.module.scss'
 

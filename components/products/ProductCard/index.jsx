@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import { addToCart } from '@/hooks/addToCart'
-import {
-  Card,
-  Row,
-  Col,
-  Badge,
-  Image,
-  Button,
-  ButtonGroup,
-} from 'react-bootstrap'
+import Card from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Badge from 'react-bootstrap/Badge'
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import ProductModal from './components/ProductModal'
 import { BsCart3 } from 'react-icons/bs'
 import { AiOutlineEye } from 'react-icons/ai'

@@ -1,4 +1,6 @@
-import { Row, Col, Button } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 import { AiFillStar } from 'react-icons/ai'
 
 // single review

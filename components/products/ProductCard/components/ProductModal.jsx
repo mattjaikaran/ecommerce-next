@@ -1,13 +1,11 @@
 import { addToCart } from '@/hooks/addToCart'
-import {
-  Modal,
-  Carousel,
-  Container,
-  Row,
-  Col,
-  Image,
-  Button,
-} from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Modal from 'react-bootstrap/Modal'
+import Carousel from 'react-bootstrap/Carousel'
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
 
 const slides = [
   {

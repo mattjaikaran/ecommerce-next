@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Container, Row, Col } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import styles from './SingleCategory.module.scss'
 
 // single category

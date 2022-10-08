@@ -1,4 +1,7 @@
-import { Card, Row, Col, Image } from 'react-bootstrap'
+import Card from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 import styles from './MiniProductcard.module.scss'
 
 const MiniProductCard = ({ title, price, sale, thumbnail }) => {

@@ -1,10 +1,10 @@
-import { Carousel } from 'react-bootstrap'
+import Carousel from 'react-bootstrap/Carousel'
 import { renderCarouselImages } from '@/hooks/carousel'
 
 const ProductDetailSlider = ({ imgArray }) => {
   return (
     <Carousel interval={null} controls={false}>
-      {renderCarouselImages()}
+      {renderCarouselImages(imgArray)}
     </Carousel>
   )
 }

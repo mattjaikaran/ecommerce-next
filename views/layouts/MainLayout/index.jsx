@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
 import Header from '@/components/nav/Header'
 import Footer from '@/components/nav/Footer'
 import styles from './MainLayout.module.scss'

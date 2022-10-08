@@ -1,4 +1,4 @@
-import { Container, Nav, Row, Col } from "react-bootstrap"
+import Container from 'react-bootstrap/Container'
 import styles from "../Footer.module.scss"
 
 const Legal = () => {

@@ -1,15 +1,10 @@
 import { useState } from 'react'
-import {
-  Row,
-  Col,
-  Dropdown,
-  DropdownButton,
-  Form,
-  FormControl,
-  InputGroup,
-  Button,
-} from 'react-bootstrap'
-import axios from 'axios'
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Button from 'react-bootstrap/Button'
 import { useForm } from 'react-hook-form'
 
 const ProductVariants = (props) => {

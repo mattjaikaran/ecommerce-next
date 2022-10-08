@@ -1,4 +1,3 @@
-import { Row , Col } from 'react-bootstrap'
 import MainLayout from '@/views/layouts/MainLayout'
 
 const PrivacyPolicyPage = () => {

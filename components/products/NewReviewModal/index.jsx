@@ -1,4 +1,4 @@
-import NewReviewForm from '@/components/forms/NewReviewForm'
+import NewReviewForm from '@/components/forms/products/NewReviewForm'
 import Modal from 'react-bootstrap/Modal'
 
 const NewReviewModal = (props) => {

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Container } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
 import ProductLayout from '@/views/layouts/ProductLayout'
 import ProductDetail from '@/components/products/ProductDetail'
 

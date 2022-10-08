@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import { Offcanvas, Button, Row, Col } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import Button from 'react-bootstrap/Button'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import './Cart.module.scss'
 

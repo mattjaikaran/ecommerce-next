@@ -1,4 +1,4 @@
-import { Carousel } from 'react-bootstrap'
+import Carousel from 'react-bootstrap/Carousel'
 import { renderCarouselImages } from '@/hooks/carousel'
 import styles from './Hero.module.scss'
 
