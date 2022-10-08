@@ -1,5 +1,5 @@
 ---
-to: pages/<%= h.changeCase.paramCase(title) || 'NewPage' %>.ts
+to: pages/<%= h.changeCase.paramCase(title) || 'NewPage' %>.jsx
 ---
 import Head from 'next/head'
 import type { NextPage } from 'next'
@@ -9,7 +9,7 @@ const <%= h.changeCase.pascal(title) || 'NewPage' %>: NextPage = () => {
   return (
     <MainLayout>
       <Head>
-        <title>Matt Jaikaran - <%= h.changeCase.pascal(title) || 'NewPage' %></title>
+        <title>E-Commerce Store - <%= h.changeCase.pascal(title) || 'NewPage' %></title>
         <meta
           name="<%= h.changeCase.pascal(title) || 'NewPage' %> Page"
           content="meta content for <%= h.changeCase.pascal(title) || 'NewPage' %>" />

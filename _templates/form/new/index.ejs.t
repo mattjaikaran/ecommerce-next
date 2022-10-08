@@ -1,5 +1,5 @@
 ---
-to: components/forms/<%= type || 'utils' %>/<%= h.changeCase.pascal(name) || 'new-form' %>.tsx
+to: components/forms/<%= type || 'utils' %>/<%= h.changeCase.pascal(name) || 'new-form' %>.jsx
 ---
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Form from 'react-bootstrap/Form'
