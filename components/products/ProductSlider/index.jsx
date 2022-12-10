@@ -7,7 +7,7 @@ import {
   productObjTwo,
   productObjThree,
   productObjFour,
-} from '../../../copy/products'
+} from '@/copy/products'
 import styles from './ProductSlider.module.scss'
 
 const ProductSlider = () => {
